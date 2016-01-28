@@ -26,7 +26,7 @@ public class TeleportationController : MonoBehaviour {
         //if (vDistance.sqrMagnitude < fMovementRange)
         //{
             vPos = new Vector3(0, 0, 0);
-            //Move teleportation object left
+            //Move teleportation object 
             if (Input.GetKey("i"))
             {
                 vPos.z += fSpacing;
@@ -50,7 +50,7 @@ public class TeleportationController : MonoBehaviour {
         //Teleport player to object
         if (Input.GetKey("e"))
         {
-            Vector3 vTeleLocation = new Vector3(TeleportationObj.transform.position.x, 1.08f, TeleportationObj.transform.position.z);
+            Vector3 vTeleLocation = new Vector3(TeleportationObj.transform.position.x, 1.58f, TeleportationObj.transform.position.z);
             PlayerObj.transform.position = vTeleLocation;
         }
 
