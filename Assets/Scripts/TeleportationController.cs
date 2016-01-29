@@ -20,9 +20,9 @@ public class TeleportationController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Vector3 vDistance = TeleportationObj.transform.position - PlayerObj.transform.position;
+        //Vector3 vDistance = TeleportationObj.transform.position - PlayerObj.transform.position;
         Debug.DrawLine(PlayerObj.transform.position, TeleportationObj.transform.position, new Color(1, 0 ,0));
-        Debug.Log(vDistance.sqrMagnitude);
+        //Debug.Log(vDistance.sqrMagnitude);
         //if (vDistance.sqrMagnitude < fMovementRange)
         //{
             vPos = new Vector3(0, 0, 0);
@@ -50,7 +50,7 @@ public class TeleportationController : MonoBehaviour {
         //Teleport player to object
         if (Input.GetKey("e"))
         {
-            Vector3 vTeleLocation = new Vector3(TeleportationObj.transform.position.x, 1.58f, TeleportationObj.transform.position.z);
+            Vector3 vTeleLocation = new Vector3(TeleportationObj.transform.position.x, 0, TeleportationObj.transform.position.z);
             PlayerObj.transform.position = vTeleLocation;
         }
 
