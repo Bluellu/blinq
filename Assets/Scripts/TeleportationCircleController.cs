@@ -10,7 +10,8 @@ public class TeleportationCircleController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         float posX = PlayerChar.transform.position.x ;
         float posY = PlayerChar.transform.position.y + 0.2f;
         float posZ = PlayerChar.transform.position.z ;
