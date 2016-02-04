@@ -3,56 +3,118 @@ using System.Collections;
 
 public class TeleportationController : MonoBehaviour {
     public GameObject PlayerObj;
-    public GameObject TeleportationObj;
-    public float fMovementRange = 10;
-    public float fSpeed = 4.5f;
-    private float fSpacing = 1.0f;
-    private Vector3 vPos;
+    MeshRenderer modelRen;
 
+    public bool canPlayerControl;
+
+    public int nState;
+    private Vector3 vPos;
+    private Vector3 axis = Vector3.up;
+    private Vector3 vPlayerOrigin, vMarkerPosition, vMarkerDirection, vSavedDestination, vPlayerOriginEnd, vPlayerOriginStart;
+    public float fRotationSpeed = 2.0f;
+
+    private GameObject playerObject;
+    private PlayerController playerController;
+  
+
+    private float fLerpingValue;
+    
 
     // Use this for initialization
     void Start () {
-        //vPos = TeleportationObj.transform.position;
-        //vPos = new Vector3(0, 0, 0);
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        playerController = playerObject.GetComponent<PlayerController>();
+        canPlayerControl = true;
+        
+        vPlayerOrigin = PlayerObj.transform.position;
 
+        transform.position = vPlayerOrigin + new Vector3(4, 0 ,4);
+        modelRen = playerObject.GetComponentInChildren<MeshRenderer>();
+        fLerpingValue = 0.0f;
+        nState = 0;
+        
     }
-	
-	// Update is called once per frame
-	void Update () {
 
-        //Vector3 vDistance = TeleportationObj.transform.position - PlayerObj.transform.position;
-        Debug.DrawLine(PlayerObj.transform.position, TeleportationObj.transform.position, new Color(1, 0 ,0));
-        //Debug.Log(vDistance.sqrMagnitude);
-        //if (vDistance.sqrMagnitude < fMovementRange)
-        //{
-            vPos = new Vector3(0, 0, 0);
-            //Move teleportation object 
-            if (Input.GetKey("i"))
-            {
-                vPos.z += fSpacing;
-            }
-            if (Input.GetKey("j"))
-            {
-                vPos.x -= fSpacing;
-            }
-            if (Input.GetKey("k"))
-            {
-                vPos.z -= fSpacing;
-            }
-            if (Input.GetKey("l"))
-            {
-                vPos.x += fSpacing;
-            }
 
-            TeleportationObj.transform.Translate(vPos * fSpeed * Time.deltaTime);
-        //}
+    // Update is called once per frame
+    void Update()
+    {
+        vPlayerOrigin = PlayerObj.transform.position;
 
-        //Teleport player to object
-        if (Input.GetKey("e"))
+        //state 0 is movement
+        if (nState == 0)
         {
-            Vector3 vTeleLocation = new Vector3(TeleportationObj.transform.position.x, 0, TeleportationObj.transform.position.z);
-            PlayerObj.transform.position = vTeleLocation;
+            if (canPlayerControl)
+            {
+                if (Input.GetKey("j"))
+                {
+                    transform.RotateAround(vPlayerOrigin, axis, fRotationSpeed);
+
+                }
+                if (Input.GetKey("l"))
+                {
+                    transform.RotateAround(vPlayerOrigin, axis, -fRotationSpeed);
+                }
+
+                if (Input.GetKeyUp("e"))
+                {
+
+                    ResetMandala();
+                }
+            }
         }
+        //move player to telelocation
+        else if (nState == 1)
+        {
+            transform.parent = null;
+
+            if (LerpingTranslate(vPlayerOriginEnd, vMarkerPosition, playerObject))
+            {
+                vSavedDestination = vPlayerOriginStart + vMarkerDirection;
+                vPlayerOriginEnd = vMarkerPosition;
+                nState = 2;
+            }
+        }
+        //Move marker to saved angle location
+        else if (nState == 2)
+        {
+            if (LerpingTranslate(vPlayerOriginEnd, vSavedDestination, transform.root.gameObject))
+            {
+                nState = 0;
+                transform.parent = PlayerObj.transform;
+                modelRen.enabled = true;
+                canPlayerControl = true;
+                playerController.canPlayerControl = true;
+            }
+        }
+    }
+
+    void ResetMandala() {
+        canPlayerControl = false;
+        playerController.canPlayerControl = false;
+        vMarkerDirection = transform.position - playerObject.transform.position;
+        modelRen.enabled = false;
+        vMarkerPosition = transform.position;
+        vPlayerOriginEnd = PlayerObj.transform.position;
+        vPlayerOriginStart = transform.position;
+        nState = 1;
 
     }
+
+    bool LerpingTranslate(Vector3 vStart, Vector3 vEnd, GameObject goToMove) {
+        Debug.Log(fLerpingValue);
+        if (fLerpingValue < 1.0f)
+        {
+            fLerpingValue += Time.deltaTime * 2.4f;
+            goToMove.transform.position = Vector3.Lerp(vStart, vEnd, fLerpingValue);
+        }
+        else
+        {
+            goToMove.transform.position = Vector3.Lerp(vStart, vEnd, 1);
+            fLerpingValue = 0.0f;
+            return true;
+        }
+        return false;
+    }
+
 }
