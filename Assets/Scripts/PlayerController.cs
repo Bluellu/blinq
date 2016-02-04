@@ -8,40 +8,15 @@ public class PlayerController : MonoBehaviour
     public float gravity = 20.0F;
     public float rotateSpeed = 1.0F;
     private Vector3 moveDirection = Vector3.zero;
+    public bool canPlayerControl;
 
     private TeleportationController teleportationController;
-    /*
-    void FixedUpdate()
+    void Start()
     {
-        CharacterController controller = GetComponent<CharacterController>();
-        
-        teleportationController = gameObject.GetComponent<TeleportationController>();
-        if (Input.GetAxis("Vertical") > 0)
-        {
-            
-            //teleportationController.nState = 3;
-        }
-        
-        
-
-        transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);
-        if (controller.isGrounded)
-        {
-            moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
-            
-                moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
-
-        }
-        moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * Time.deltaTime);
-
+        canPlayerControl = true;
     }
-    */
 
-    void Update()
+    void FixedUpdate()
     {
         CharacterController controller = GetComponent<CharacterController>();
         if (controller.isGrounded)
@@ -57,6 +32,9 @@ public class PlayerController : MonoBehaviour
 
         }
         moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * Time.deltaTime);
+        if (canPlayerControl)
+        {
+            controller.Move(moveDirection * Time.deltaTime);
+        }
     }
 }

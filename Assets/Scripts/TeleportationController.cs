@@ -8,23 +8,38 @@ public class TeleportationController : MonoBehaviour {
     public float fSpeed = 4.5f;
     public float fRadius =5;
 
-    //State 0, tele marker follows
+    public bool canPlayerControl;
+
     public int nState;
     private float fSpacing;
     private Vector3 vPos;
     private Vector3 axis = Vector3.up;
-    private Vector3 vPlayerOrigin;
+    private Vector3 vPlayerOrigin, vMarkerPosition;
     public float fRotationSpeed = 2.0f;
 
+    private GameObject playerObject;
+    private PlayerController playerController;
+
+
+    public float speed = 1.0F;
+    private float startTime;
+    private float journeyLength;
+
+    private float t = 0.0f;
 
     // Use this for initialization
     void Start () {
+        startTime = Time.time;
+        journeyLength = 50.0f;
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        playerController = playerObject.GetComponent<PlayerController>();
+        canPlayerControl = true;
         vPlayerOrigin = PlayerObj.transform.position;
 
         transform.position = new Vector3(vPlayerOrigin.x + 4, vPlayerOrigin.y, vPlayerOrigin.z);
         
 
-        nState = 3;
+        nState = 0;
         fRadius = 4.0f;
 
         fSpacing = 1.0f;
@@ -38,45 +53,72 @@ public class TeleportationController : MonoBehaviour {
     {
         vPlayerOrigin = PlayerObj.transform.position;
 
-        Vector3 vFixedDistance = (transform.position - vPlayerOrigin).normalized * fRadius + vPlayerOrigin;
-
-        transform.position = new Vector3(vFixedDistance.x, 1, vFixedDistance.z);
-
-        //if (Input.GetKey("a"))
-        //{
-        //    transform.RotateAround(vPlayerOrigin, axis, rotationSpeed * Time.deltaTime);
-        //}
-
-        if (Input.GetKey("j"))
+        //state 0 is movement
+        if (nState == 0)
         {
-            transform.RotateAround(vPlayerOrigin, axis, fRotationSpeed);
-            
+            if (canPlayerControl)
+            {
+                if (Input.GetKey("j"))
+                {
+                    transform.RotateAround(vPlayerOrigin, axis, fRotationSpeed);
+
+                }
+                if (Input.GetKey("l"))
+                {
+                    transform.RotateAround(vPlayerOrigin, axis, -fRotationSpeed);
+                }
+
+                if (Input.GetKeyUp("e"))
+                {
+
+                    ResetMandala();
+                }
+            }
         }
-        if (Input.GetKey("l"))
+        //move player to telelocation
+        else if (nState == 1)
         {
-            transform.RotateAround(vPlayerOrigin, axis, -fRotationSpeed);
-            
+
+            if (t < 0.1f)
+            {
+                t += Time.deltaTime * 0.1f;
+                playerObject.transform.position = Vector3.Lerp(vPlayerOrigin, vMarkerPosition, t);
+                Debug.Log(t);
+            }
+            else
+            {
+                playerObject.transform.position = Vector3.Lerp(vPlayerOrigin, vMarkerPosition, 1);
+                nState = 0;
+                t = 0.0f;
+                canPlayerControl = true;
+                playerController.canPlayerControl = true;
+                
+            }
+
         }
 
-        if (Input.GetKeyUp("e"))
-        {
-            Vector3 vTeleLocation = new Vector3(transform.position.x, 1.22f, transform.position.z);
-
-            PlayerObj.transform.position = vTeleLocation;
-            //Needs to save rotation
-            //transform.position = new Vector3(vTeleLocation.x + 4, vTeleLocation.y, vTeleLocation.z);
-        }
-        //transform.RotateAround(PlayerObj.transform.position, axis, rotationSpeed * Time.deltaTime);
-        //var desiredPosition = (transform.position - PlayerObj.transform.position).normalized * fRadius + PlayerObj.transform.position;
-        //transform.position = Vector3.MoveTowards(transform.position, desiredPosition, Time.deltaTime * radiusSpeed);
     }
 
 
 
     void ResetMandala() {
+        canPlayerControl = false;
+        playerController.canPlayerControl = false;
+        MeshRenderer modelRen = playerObject.GetComponentInChildren<MeshRenderer>();
+
+        //modelRen.enabled = false;
+        vMarkerPosition = transform.position;
+        nState = 1;
+        /*
+        Vector3 vTeleLocation = new Vector3(transform.position.x, 1.22f, transform.position.z);
+
+        PlayerObj.transform.position = vTeleLocation;
+        
         vPlayerOrigin = PlayerObj.transform.position;
+        
 
         transform.position = new Vector3(vPlayerOrigin.x + 4, vPlayerOrigin.y, vPlayerOrigin.z);
+        */
     }
 
 }
