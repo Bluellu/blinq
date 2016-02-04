@@ -16,7 +16,7 @@ public class MovingPlatform : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+		ChangeTarget ();
     }
 
     // Update is called once per frame
@@ -43,6 +43,6 @@ public class MovingPlatform : MonoBehaviour
             newPosition = end.position;
         }
 
-        Invoke("ChangeTarget", resetTime);
+		Invoke("ChangeTarget", resetTime);
     }
 }
