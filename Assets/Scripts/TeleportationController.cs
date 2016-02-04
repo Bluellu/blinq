@@ -6,6 +6,7 @@ public class TeleportationController : MonoBehaviour {
     MeshRenderer modelRen;
 
     public bool canPlayerControl;
+	public bool canTeleport;
 
     public int nState;
     private Vector3 vPos;
@@ -25,7 +26,7 @@ public class TeleportationController : MonoBehaviour {
         playerObject = GameObject.FindGameObjectWithTag("Player");
         playerController = playerObject.GetComponent<PlayerController>();
         canPlayerControl = true;
-        
+		canTeleport = true;
         vPlayerOrigin = PlayerObj.transform.position;
 
         transform.position = vPlayerOrigin + new Vector3(4, 0 ,4);
@@ -56,7 +57,7 @@ public class TeleportationController : MonoBehaviour {
                     transform.RotateAround(vPlayerOrigin, axis, -fRotationSpeed);
                 }
 
-                if (Input.GetKeyUp("e"))
+				if (Input.GetKeyUp("e") && canTeleport)
                 {
 
                     ResetMandala();
