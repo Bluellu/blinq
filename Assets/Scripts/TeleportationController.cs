@@ -4,28 +4,23 @@ using System.Collections;
 public class TeleportationController : MonoBehaviour {
     public GameObject PlayerObj;
 
-    public float fMovementRange = 10;
-    public float fSpeed = 4.5f;
-    public float fRadius =5;
-
     public bool canPlayerControl;
 
     public int nState;
-    private float fSpacing;
     private Vector3 vPos;
     private Vector3 axis = Vector3.up;
-    private Vector3 vPlayerOrigin, vMarkerPosition;
+    private Vector3 vPlayerOrigin, vMarkerPosition, vMarkerDirection;
     public float fRotationSpeed = 2.0f;
 
     private GameObject playerObject;
     private PlayerController playerController;
-
-
+    
     public float speed = 1.0F;
     private float startTime;
     private float journeyLength;
+    private float fMarkerDistance;
 
-    private float t = 0.0f;
+    private float fLerpingValue = 0.0f;
 
     // Use this for initialization
     void Start () {
@@ -36,13 +31,11 @@ public class TeleportationController : MonoBehaviour {
         canPlayerControl = true;
         vPlayerOrigin = PlayerObj.transform.position;
 
-        transform.position = new Vector3(vPlayerOrigin.x + 4, vPlayerOrigin.y, vPlayerOrigin.z);
+        transform.position = vPlayerOrigin + new Vector3(3, 0 ,3);
         
 
         nState = 0;
-        fRadius = 4.0f;
 
-        fSpacing = 1.0f;
 
 
     }
@@ -78,18 +71,23 @@ public class TeleportationController : MonoBehaviour {
         //move player to telelocation
         else if (nState == 1)
         {
-
-            if (t < 0.1f)
+            transform.parent = null;
+            if (fLerpingValue < 0.1f)
             {
-                t += Time.deltaTime * 0.1f;
-                playerObject.transform.position = Vector3.Lerp(vPlayerOrigin, vMarkerPosition, t);
-                Debug.Log(t);
+                fLerpingValue += Time.deltaTime * 0.1f;
+                playerObject.transform.position = Vector3.Lerp(vPlayerOrigin, vMarkerPosition, fLerpingValue);
+                Debug.Log(fLerpingValue);
             }
             else
             {
                 playerObject.transform.position = Vector3.Lerp(vPlayerOrigin, vMarkerPosition, 1);
+                transform.parent = PlayerObj.transform;
+                MeshRenderer modelRen = playerObject.GetComponentInChildren<MeshRenderer>();
+                modelRen.enabled = true;
+                transform.position = vPlayerOrigin + vMarkerDirection;
+
                 nState = 0;
-                t = 0.0f;
+                fLerpingValue = 0.0f;
                 canPlayerControl = true;
                 playerController.canPlayerControl = true;
                 
@@ -99,26 +97,18 @@ public class TeleportationController : MonoBehaviour {
 
     }
 
-
-
     void ResetMandala() {
         canPlayerControl = false;
         playerController.canPlayerControl = false;
-        MeshRenderer modelRen = playerObject.GetComponentInChildren<MeshRenderer>();
 
-        //modelRen.enabled = false;
+        vMarkerDirection = transform.position - playerObject.transform.position;
+        fMarkerDistance = Vector3.Distance(vMarkerDirection, playerObject.transform.position);
+        MeshRenderer modelRen = playerObject.GetComponentInChildren<MeshRenderer>();
+        
+        modelRen.enabled = false;
         vMarkerPosition = transform.position;
         nState = 1;
-        /*
-        Vector3 vTeleLocation = new Vector3(transform.position.x, 1.22f, transform.position.z);
 
-        PlayerObj.transform.position = vTeleLocation;
-        
-        vPlayerOrigin = PlayerObj.transform.position;
-        
-
-        transform.position = new Vector3(vPlayerOrigin.x + 4, vPlayerOrigin.y, vPlayerOrigin.z);
-        */
     }
 
 }
