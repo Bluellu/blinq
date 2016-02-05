@@ -5,6 +5,8 @@ public class MarkerCollisionController : MonoBehaviour {
 
     private float distanceToGround, distanceToGroundInside;
 
+    public Transform playerObj;
+
     private TeleportationController teleController;
 
     Vector3 vAdjustedOrigin;
@@ -30,7 +32,6 @@ public class MarkerCollisionController : MonoBehaviour {
 
 
         RaycastHit hit_below;
-        Ray rRay = new Ray(vAdjustedOrigin, Vector3.down);
 
         Debug.DrawRay(vAdjustedOrigin, Vector3.down, new Color(0,1, 0));
 
@@ -40,20 +41,19 @@ public class MarkerCollisionController : MonoBehaviour {
         if (Physics.Raycast(vAdjustedOrigin, Vector3.down, out hit_below, Mathf.Infinity, layerMask))
         {
 
-            distanceToGround = hit_below.point.y;
+   
 
-            Debug.Log(distanceToGround);
-            
             if (hit_below.collider.tag == "LevelModel")
             {
 
                 distanceToGround = hit_below.point.y;
 
-                Debug.Log(distanceToGround);
 
                 teleController.ChangeMandalaHeight(distanceToGround);
 
-
+            }
+            else {
+                teleController.ChangeMandalaHeight(playerObj.position.y - 1);
             }
             
         }
