@@ -8,7 +8,7 @@ public class HoldCharacter : MonoBehaviour {
         col.transform.parent = gameObject.transform;
     }
 
-    void OntriggerExit(Collider col)
+    void OnTriggerExit(Collider col)
     {
         col.transform.parent = null;
     }

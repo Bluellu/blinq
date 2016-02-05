@@ -6,6 +6,8 @@ public class TeleportationController : MonoBehaviour {
     MeshRenderer[] modelRen; 
 
     public bool canPlayerControl;
+	public bool canTeleport;
+	public bool onMag;
 
     public int nState;
     private Vector3 vPos;
@@ -32,17 +34,22 @@ public class TeleportationController : MonoBehaviour {
 
         transform.position = vPlayerOrigin + new Vector3(4, fMandelaHeight, 4);
         modelRen = PlayerObj.GetComponentsInChildren<MeshRenderer>();
+
+		canTeleport = true;
+		onMag = false;
+        vPlayerOrigin = PlayerObj.transform.position;
+
         fLerpingValue = 0.0f;
         fRotationSpeed = 4.0f;
         nState = 0;
         
-
+	setRadius(new Vector3(4, 0 ,4));
 
     }
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         vPlayerOrigin = PlayerObj.transform.position;
 
@@ -61,7 +68,7 @@ public class TeleportationController : MonoBehaviour {
                     transform.RotateAround(vPlayerOrigin, axis, -fRotationSpeed);
                 }
 
-                if (Input.GetKeyUp("e"))
+				if (Input.GetKeyUp("e") && canTeleport)
                 {
 
                     ResetMandala();
@@ -116,6 +123,8 @@ public class TeleportationController : MonoBehaviour {
     }
 
     bool LerpingTranslate(Vector3 vStart, Vector3 vEnd, GameObject goToMove) {
+
+        //Debug.Log(fLerpingValue);
         if (fLerpingValue < 1.0f)
         {
             fLerpingValue += Time.deltaTime * 2.4f;
@@ -136,5 +145,26 @@ public class TeleportationController : MonoBehaviour {
         fTeleHeight += fAmount;
         transform.position = transform.position + new Vector3(0, fAmount, 0);
     }
+
+	public void setRadius(Vector3 pos) {
+
+		transform.position = vPlayerOrigin + pos;
+		
+	}
+
+	public Vector3 getPlayerOrigin() 
+	{
+		return vPlayerOrigin;
+	}
+
+	public void increaseRadius() {
+		if (!onMag) {
+			Vector3 origin = getPlayerOrigin (); // Player's position
+			Vector3 distance = transform.position - origin; // Distance of mandala from a player
+			Vector3 new_distance = new Vector3 (distance.x * 2, distance.y, distance.z * 2); // Extend the distance
+			setRadius (new_distance); // Set radius
+		}
+		onMag = true;
+	}
 
 }
