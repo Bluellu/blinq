@@ -7,6 +7,7 @@ public class TeleportationController : MonoBehaviour {
 
     public bool canPlayerControl;
 	public bool canTeleport;
+	public bool onMag;
 
     public int nState;
     private Vector3 vPos;
@@ -27,18 +28,19 @@ public class TeleportationController : MonoBehaviour {
         playerController = playerObject.GetComponent<PlayerController>();
         canPlayerControl = true;
 		canTeleport = true;
+		onMag = false;
         vPlayerOrigin = PlayerObj.transform.position;
 
-        transform.position = vPlayerOrigin + new Vector3(4, 0 ,4);
         modelRen = playerObject.GetComponentInChildren<MeshRenderer>();
         fLerpingValue = 0.0f;
         nState = 0;
         
+		setRadius(new Vector3(4, 0 ,4));
     }
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         vPlayerOrigin = PlayerObj.transform.position;
 
@@ -103,7 +105,7 @@ public class TeleportationController : MonoBehaviour {
     }
 
     bool LerpingTranslate(Vector3 vStart, Vector3 vEnd, GameObject goToMove) {
-        Debug.Log(fLerpingValue);
+        //Debug.Log(fLerpingValue);
         if (fLerpingValue < 1.0f)
         {
             fLerpingValue += Time.deltaTime * 2.4f;
@@ -118,4 +120,24 @@ public class TeleportationController : MonoBehaviour {
         return false;
     }
 
+	public void setRadius(Vector3 pos) {
+
+		transform.position = vPlayerOrigin + pos;
+		
+	}
+
+	public Vector3 getPlayerOrigin() 
+	{
+		return vPlayerOrigin;
+	}
+
+	public void increaseRadius() {
+		if (!onMag) {
+			Vector3 origin = getPlayerOrigin (); // Player's position
+			Vector3 distance = transform.position - origin; // Distance of mandala from a player
+			Vector3 new_distance = new Vector3 (distance.x * 2, distance.y, distance.z * 2); // Extend the distance
+			setRadius (new_distance); // Set radius
+		}
+		onMag = true;
+	}
 }

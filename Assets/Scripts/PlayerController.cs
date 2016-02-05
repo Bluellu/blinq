@@ -37,4 +37,9 @@ public class PlayerController : MonoBehaviour
             controller.Move(moveDirection * Time.deltaTime);
         }
     }
+
+
+	void OnCollisionEnter(Collision col) {
+		Debug.Log ("Collided with " + col.gameObject.name);
+	}
 }
