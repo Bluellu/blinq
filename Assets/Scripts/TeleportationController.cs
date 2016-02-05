@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TeleportationController : MonoBehaviour {
     public GameObject PlayerObj;
-    MeshRenderer modelRen;
+    MeshRenderer[] modelRen; 
 
     public bool canPlayerControl;
 
@@ -11,11 +11,11 @@ public class TeleportationController : MonoBehaviour {
     private Vector3 vPos;
     private Vector3 axis = Vector3.up;
     private Vector3 vPlayerOrigin, vMarkerPosition, vMarkerDirection, vSavedDestination, vPlayerOriginEnd, vPlayerOriginStart;
-    public float fRotationSpeed = 2.0f;
-
+    public float fRotationSpeed;
+    
     private GameObject playerObject;
     private PlayerController playerController;
-  
+    public float fTeleHeight, fMandelaHeight;
 
     private float fLerpingValue;
     
@@ -25,14 +25,19 @@ public class TeleportationController : MonoBehaviour {
         playerObject = GameObject.FindGameObjectWithTag("Player");
         playerController = playerObject.GetComponent<PlayerController>();
         canPlayerControl = true;
-        
+        fTeleHeight = 1.0f;
+        fMandelaHeight = -1.0f;
+
         vPlayerOrigin = PlayerObj.transform.position;
 
-        transform.position = vPlayerOrigin + new Vector3(4, 0 ,4);
-        modelRen = playerObject.GetComponentInChildren<MeshRenderer>();
+        transform.position = vPlayerOrigin + new Vector3(4, fMandelaHeight, 4);
+        modelRen = PlayerObj.GetComponentsInChildren<MeshRenderer>();
         fLerpingValue = 0.0f;
+        fRotationSpeed = 4.0f;
         nState = 0;
         
+
+
     }
 
 
@@ -66,11 +71,11 @@ public class TeleportationController : MonoBehaviour {
         //move player to telelocation
         else if (nState == 1)
         {
-            transform.parent = null;
+            
 
-            if (LerpingTranslate(vPlayerOriginEnd, vMarkerPosition, playerObject))
+            if (LerpingTranslate(vPlayerOriginEnd, new Vector3(vMarkerPosition.x, fTeleHeight, vMarkerPosition.z), playerObject))
             {
-                vSavedDestination = vPlayerOriginStart + vMarkerDirection;
+                vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x, fTeleHeight, vMarkerDirection.z);
                 vPlayerOriginEnd = vMarkerPosition;
                 nState = 2;
             }
@@ -78,11 +83,15 @@ public class TeleportationController : MonoBehaviour {
         //Move marker to saved angle location
         else if (nState == 2)
         {
-            if (LerpingTranslate(vPlayerOriginEnd, vSavedDestination, transform.root.gameObject))
+            foreach (MeshRenderer ren in modelRen)
+            {
+                ren.enabled = true;
+            }
+            
+            if (LerpingTranslate(new Vector3(vPlayerOriginEnd.x, fMandelaHeight, vPlayerOriginEnd.z), new Vector3(vSavedDestination.x, fMandelaHeight, vSavedDestination.z) , transform.root.gameObject))
             {
                 nState = 0;
                 transform.parent = PlayerObj.transform;
-                modelRen.enabled = true;
                 canPlayerControl = true;
                 playerController.canPlayerControl = true;
             }
@@ -90,10 +99,15 @@ public class TeleportationController : MonoBehaviour {
     }
 
     void ResetMandala() {
+        transform.parent = null;
         canPlayerControl = false;
         playerController.canPlayerControl = false;
         vMarkerDirection = transform.position - playerObject.transform.position;
-        modelRen.enabled = false;
+        modelRen = PlayerObj.GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer ren in modelRen)
+        {
+            ren.enabled = false;
+        }
         vMarkerPosition = transform.position;
         vPlayerOriginEnd = PlayerObj.transform.position;
         vPlayerOriginStart = transform.position;
@@ -102,7 +116,6 @@ public class TeleportationController : MonoBehaviour {
     }
 
     bool LerpingTranslate(Vector3 vStart, Vector3 vEnd, GameObject goToMove) {
-        Debug.Log(fLerpingValue);
         if (fLerpingValue < 1.0f)
         {
             fLerpingValue += Time.deltaTime * 2.4f;
@@ -115,6 +128,13 @@ public class TeleportationController : MonoBehaviour {
             return true;
         }
         return false;
+    }
+
+    public void ChangeMandalaHeight(float fAmount)
+    {
+        fMandelaHeight += fAmount;
+        fTeleHeight += fAmount;
+        transform.position = transform.position + new Vector3(0, fAmount, 0);
     }
 
 }
