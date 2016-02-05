@@ -29,7 +29,7 @@ public class TeleportationController : MonoBehaviour {
         fTeleHeight = 1.0f;
 
         vPlayerOrigin = PlayerObj.transform.position;
-
+        fMandelaHeight = vPlayerOrigin.y;
         transform.position = vPlayerOrigin + new Vector3(4, fMandelaHeight, 4);
         modelRen = PlayerObj.GetComponentsInChildren<MeshRenderer>();
 
