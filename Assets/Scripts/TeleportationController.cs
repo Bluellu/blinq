@@ -10,7 +10,6 @@ public class TeleportationController : MonoBehaviour {
 	public bool onMag;
 
     public int nState;
-    private Vector3 vPos;
     private Vector3 axis = Vector3.up;
     private Vector3 vPlayerOrigin, vMarkerPosition, vMarkerDirection, vSavedDestination, vPlayerOriginEnd, vPlayerOriginStart;
     public float fRotationSpeed;
@@ -28,7 +27,6 @@ public class TeleportationController : MonoBehaviour {
         playerController = playerObject.GetComponent<PlayerController>();
         canPlayerControl = true;
         fTeleHeight = 1.0f;
-        fMandelaHeight = -1.0f;
 
         vPlayerOrigin = PlayerObj.transform.position;
 
@@ -56,6 +54,7 @@ public class TeleportationController : MonoBehaviour {
         //state 0 is movement
         if (nState == 0)
         {
+            transform.position = new Vector3(transform.position.x, fMandelaHeight, transform.position.z);
             if (canPlayerControl)
             {
                 if (Input.GetKey("j"))
@@ -78,8 +77,8 @@ public class TeleportationController : MonoBehaviour {
         //move player to telelocation
         else if (nState == 1)
         {
-            
 
+            
             if (LerpingTranslate(vPlayerOriginEnd, new Vector3(vMarkerPosition.x, fTeleHeight, vMarkerPosition.z), playerObject))
             {
                 vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x, fTeleHeight, vMarkerDirection.z);
@@ -119,6 +118,7 @@ public class TeleportationController : MonoBehaviour {
         vPlayerOriginEnd = PlayerObj.transform.position;
         vPlayerOriginStart = transform.position;
         nState = 1;
+        fTeleHeight = fMandelaHeight + 1;
 
     }
 
@@ -141,9 +141,8 @@ public class TeleportationController : MonoBehaviour {
 
     public void ChangeMandalaHeight(float fAmount)
     {
-        fMandelaHeight += fAmount;
-        fTeleHeight += fAmount;
-        transform.position = transform.position + new Vector3(0, fAmount, 0);
+        fMandelaHeight = fAmount;
+
     }
 
 	public void setRadius(Vector3 pos) {
