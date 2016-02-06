@@ -39,7 +39,12 @@ public class PlayerController : MonoBehaviour
     }
 
 
-	void OnCollisionEnter(Collision col) {
-		Debug.Log ("Collided with " + col.gameObject.name);
-	}
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "ActivationBoundary")
+        {
+            Debug.Log("Entered");
+        }
+
+    }
 }
