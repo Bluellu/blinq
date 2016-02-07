@@ -67,12 +67,12 @@ public class TeleportationController : MonoBehaviour {
 
 
 
-                    if (Input.GetKey("j"))
+                    if (Input.GetKey("j") || Input.GetKey("joystick button 1"))
                     {
                         transform.RotateAround(vPlayerOrigin, axis, fRotationSpeed);
 
                     }
-                    if (Input.GetKey("l"))
+                    if (Input.GetKey("l") || Input.GetKey("joystick button 2"))
                     {
                         transform.RotateAround(vPlayerOrigin, axis, -fRotationSpeed);
                     }
