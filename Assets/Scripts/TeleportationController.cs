@@ -55,6 +55,18 @@ public class TeleportationController : MonoBehaviour {
                 transform.position = new Vector3(transform.position.x, fMandelaHeight, transform.position.z);
                 if (canPlayerControl)
                 {
+                    if (Mathf.Abs(Input.GetAxis("RightH")) == 1 || Mathf.Abs(Input.GetAxis("RightV")) == 1)
+                    {
+                        float angH = Input.GetAxis("RightH") * 6.5f;
+                        float angV = Input.GetAxis("RightV") * 6.5f;
+
+                        Vector3 vNewpos = new Vector3(angH, 0, -angV);
+                        transform.position = vPlayerOrigin + vNewpos;
+                      
+                    }
+
+
+
                     if (Input.GetKey("j"))
                     {
                         transform.RotateAround(vPlayerOrigin, axis, fRotationSpeed);
@@ -65,11 +77,12 @@ public class TeleportationController : MonoBehaviour {
                         transform.RotateAround(vPlayerOrigin, axis, -fRotationSpeed);
                     }
 
-                    if (Input.GetKey("e"))
+                    if (Input.GetButton("Teleport"))
                     {
 
                         ResetMandala();
                     }
+                    
                 }
             }
             //move player to telelocation
@@ -118,7 +131,7 @@ public class TeleportationController : MonoBehaviour {
         //Debug.Log(fLerpingValue);
         if (fLerpingValue < 1.0f)
         {
-            fLerpingValue += Time.deltaTime * 2.4f;
+            fLerpingValue += Time.deltaTime * 5.4f;
             goToMove.transform.position = Vector3.Lerp(vStart, vEnd, fLerpingValue);
         }
         else
