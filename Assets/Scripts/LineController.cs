@@ -9,7 +9,7 @@ public class LineController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.SetWidth(0.2F, 0.2F);
+        lineRenderer.SetWidth(0.2F, 0.02F);
         lineRenderer.SetVertexCount(2);
     }
 	

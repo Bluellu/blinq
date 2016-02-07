@@ -15,17 +15,7 @@ public class TeleObjectMovement : MonoBehaviour {
     void FixedUpdate()
     {
         CharacterController controller = GetComponent<CharacterController>();
-        /*
-        teleportationController = gameObject.GetComponent<TeleportationController>();
-        if (Input.GetAxis("Vertical") > 0)
-        {
-            
-            teleportationController.nState = 3;
-        }
-        else {
-            teleportationController.nState = 1;
-        }
-        */
+
 
         transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);
         if (controller.isGrounded)
