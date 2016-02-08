@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TeleportationController : MonoBehaviour {
     public GameObject PlayerObj;
-    MeshRenderer[] modelRen; 
+    SkinnedMeshRenderer[] modelRen; 
 
     public bool canPlayerControl;
 	public bool canTeleport;
@@ -180,8 +180,8 @@ public class TeleportationController : MonoBehaviour {
 	}
     public void RenderPlayerModel(bool bSwitch)
     {
-        modelRen = PlayerObj.GetComponentsInChildren<MeshRenderer>();
-        foreach (MeshRenderer ren in modelRen)
+        modelRen = PlayerObj.GetComponentsInChildren<SkinnedMeshRenderer>();
+        foreach (SkinnedMeshRenderer ren in modelRen)
         {
             ren.enabled = bSwitch;
         }
