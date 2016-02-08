@@ -5,11 +5,18 @@ public class HoldCharacter : MonoBehaviour {
 
 	void OnTriggerEnter (Collider col)
     {
-        col.transform.parent = gameObject.transform;
+        if (col.gameObject.name == "Player")
+        {
+            col.transform.parent = gameObject.transform;
+        }
+        
     }
 
     void OnTriggerExit(Collider col)
     {
-        col.transform.parent = null;
+        if (col.gameObject.name == "Player")
+        {
+            col.transform.parent = null;
+        }
     }
 }

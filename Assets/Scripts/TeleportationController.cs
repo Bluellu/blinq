@@ -8,6 +8,7 @@ public class TeleportationController : MonoBehaviour {
     public bool canPlayerControl;
 	public bool canTeleport;
 	public bool onMag;
+    public bool active;
 
     public int nState;
     private Vector3 axis = Vector3.up;
@@ -20,6 +21,8 @@ public class TeleportationController : MonoBehaviour {
 
     private float fLerpingValue;
     private bool bFirstTime;
+    private float timeBetweenActivation = 0.5f;
+    private float timestamp;
 
     // Use this for initialization
     void Start () {
@@ -33,13 +36,12 @@ public class TeleportationController : MonoBehaviour {
 
 		canTeleport = false;
 		onMag = false;
+        active = false;
         bFirstTime = true;
 
         fLerpingValue = 0.0f;
         fRotationSpeed = 4.0f;
         nState = 0;
-        
-
     }
 
 
@@ -60,7 +62,7 @@ public class TeleportationController : MonoBehaviour {
                 }
                 else
                 {
-                    transform.position = new Vector3(transform.position.x, fMandelaHeight, transform.position.z);
+                    transform.position = new Vector3(transform.position.x, fMandelaHeight + 1, transform.position.z);
                 }
                 if (canPlayerControl)
                 {
@@ -77,10 +79,19 @@ public class TeleportationController : MonoBehaviour {
                       
                     }
 
-                    if (Input.GetKey("i"))
+                    if (Input.GetKey("i") && Time.time >= timestamp)
                     {
-                        Vector3 vNewpos = Vector3.left * 6.5f;
-                        transform.position = vPlayerOrigin + vNewpos;
+                        if (!active)
+                        {
+                            Vector3 vNewpos = Vector3.left * 6.5f;
+                            transform.position = vPlayerOrigin + vNewpos;
+                            active = true;
+                        } else if (active)
+                        {
+                            transform.position = vPlayerOrigin;
+                            active = false;
+                        }
+                        timestamp = Time.time + timeBetweenActivation;
                     }
 
                     
@@ -111,7 +122,6 @@ public class TeleportationController : MonoBehaviour {
 
                 if (LerpingTranslate(vPlayerOriginEnd, new Vector3(vMarkerPosition.x, fTeleHeight, vMarkerPosition.z), playerObject))
                 {
-                    vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x, fTeleHeight, vMarkerDirection.z);
                     vPlayerOriginEnd = vMarkerPosition;
                     nState = 2;
                 }
@@ -132,6 +142,13 @@ public class TeleportationController : MonoBehaviour {
         }
     }
 
+    Vector3 changeSavedDestination(Vector3 savedDestination)
+    {
+        float x = (savedDestination.x - vPlayerOrigin.x) / 2;
+        float z = (savedDestination.z - vPlayerOrigin.z) / 2;
+
+        return vPlayerOrigin + new Vector3(x, fMandelaHeight, z);
+    }
     void ResetMandala() {
         transform.parent = null;
         canPlayerControl = false;
@@ -143,6 +160,18 @@ public class TeleportationController : MonoBehaviour {
         vPlayerOriginStart = transform.position;
         nState = 1;
         fTeleHeight = fMandelaHeight;
+        if (onMag)
+        {
+            Debug.Log("ONMAG");
+            vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x / 2, fTeleHeight, vMarkerDirection.z / 2);
+            onMag = false;
+        }
+        else
+        {
+            Debug.Log("!ONMAG");
+            vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x, fTeleHeight, vMarkerDirection.z);
+        }
+        Debug.Log(vSavedDestination);
 
     }
 
@@ -171,7 +200,7 @@ public class TeleportationController : MonoBehaviour {
 
 	public void setRadius(Vector3 pos) {
 
-		transform.position = new Vector3(pos.x, pos.y, pos.z);
+		transform.position = vPlayerOrigin + new Vector3(pos.x, 0, pos.z);
 		
 	}
 
@@ -187,7 +216,6 @@ public class TeleportationController : MonoBehaviour {
 			Vector3 new_distance = new Vector3 (distance.x * 2, distance.y, distance.z * 2); // Extend the distance
 			setRadius (new_distance); // Set radius
 		}
-		onMag = true;
 	}
     public void RenderPlayerModel(bool bSwitch)
     {

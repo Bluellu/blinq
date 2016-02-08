@@ -18,11 +18,6 @@ public class MarkerCollisionController : MonoBehaviour {
         distanceToGround = 0;
         fYvalueRay = 100;
         vAdjustedOrigin = new Vector3(transform.position.x, fYvalueRay, transform.position.z);
-
-
-
-
-
     }
 	
 	// Update is called once per frame
@@ -53,7 +48,7 @@ public class MarkerCollisionController : MonoBehaviour {
 
             }
             else {
-                teleController.ChangeMandalaHeight(playerObj.position.y - 1);
+                teleController.ChangeMandalaHeight(playerObj.position.y);
             }
             
         }
