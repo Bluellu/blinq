@@ -70,9 +70,20 @@ public class TeleportationController : MonoBehaviour {
                         float distV = Input.GetAxis("RightV") * 6.5f;
 
                         Vector3 vNewpos = new Vector3(distH, 0, -distV);
+                        
+                        
                         transform.position = vPlayerOrigin + vNewpos;
+
                       
                     }
+
+                    if (Input.GetKey("i"))
+                    {
+                        Vector3 vNewpos = Vector3.left * 6.5f;
+                        transform.position = vPlayerOrigin + vNewpos;
+                    }
+
+                    
 
 
 
