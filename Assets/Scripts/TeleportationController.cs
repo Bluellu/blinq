@@ -131,6 +131,10 @@ public class TeleportationController : MonoBehaviour {
             {
                 RenderPlayerModel(true);
 
+                /* If teleporting into a magnification platform */
+                if (onMag)
+                    vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x * 2, fTeleHeight, vMarkerDirection.z * 2);
+
                 if (LerpingTranslate(new Vector3(vPlayerOriginEnd.x, fMandelaHeight, vPlayerOriginEnd.z), new Vector3(vSavedDestination.x, fMandelaHeight, vSavedDestination.z), gameObject))
                 {
                     nState = 0;
@@ -160,19 +164,18 @@ public class TeleportationController : MonoBehaviour {
         vPlayerOriginStart = transform.position;
         nState = 1;
         fTeleHeight = fMandelaHeight;
+
+        /* If teleporting from magnification platform, adjust the size of the radius */
         if (onMag)
         {
-            Debug.Log("ONMAG");
             vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x / 2, fTeleHeight, vMarkerDirection.z / 2);
             onMag = false;
+            active = true;
         }
         else
         {
-            Debug.Log("!ONMAG");
             vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x, fTeleHeight, vMarkerDirection.z);
         }
-        Debug.Log(vSavedDestination);
-
     }
 
     bool LerpingTranslate(Vector3 vStart, Vector3 vEnd, GameObject goToMove) {
