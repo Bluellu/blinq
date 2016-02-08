@@ -19,7 +19,7 @@ public class TeleportationController : MonoBehaviour {
     public float fTeleHeight, fMandelaHeight;
 
     private float fLerpingValue;
-    
+    private bool bFirstTime;
 
     // Use this for initialization
     void Start () {
@@ -29,10 +29,11 @@ public class TeleportationController : MonoBehaviour {
         fTeleHeight = 1.0f;
 
         vPlayerOrigin = PlayerObj.transform.position;
-        fMandelaHeight = vPlayerOrigin.y;
+        fMandelaHeight = vPlayerOrigin.y + 10;
 
 		canTeleport = false;
 		onMag = false;
+        bFirstTime = true;
 
         fLerpingValue = 0.0f;
         fRotationSpeed = 4.0f;
@@ -52,15 +53,23 @@ public class TeleportationController : MonoBehaviour {
             //state 0 is movement
             if (nState == 0)
             {
-                transform.position = new Vector3(transform.position.x, fMandelaHeight, transform.position.z);
+                if (bFirstTime)
+                {
+                    transform.position = new Vector3(transform.position.x, fMandelaHeight + 1, transform.position.z);
+                    
+                }
+                else
+                {
+                    transform.position = new Vector3(transform.position.x, fMandelaHeight, transform.position.z);
+                }
                 if (canPlayerControl)
                 {
                     if (Mathf.Abs(Input.GetAxis("RightH")) == 1 || Mathf.Abs(Input.GetAxis("RightV")) == 1)
                     {
-                        float angH = Input.GetAxis("RightH") * 6.5f;
-                        float angV = Input.GetAxis("RightV") * 6.5f;
+                        float distH = Input.GetAxis("RightH") * 6.5f;
+                        float distV = Input.GetAxis("RightV") * 6.5f;
 
-                        Vector3 vNewpos = new Vector3(angH, 0, -angV);
+                        Vector3 vNewpos = new Vector3(distH, 0, -distV);
                         transform.position = vPlayerOrigin + vNewpos;
                       
                     }
@@ -79,7 +88,7 @@ public class TeleportationController : MonoBehaviour {
 
                     if (Input.GetButton("Teleport"))
                     {
-
+                        bFirstTime = false;
                         ResetMandala();
                     }
                     
@@ -122,7 +131,7 @@ public class TeleportationController : MonoBehaviour {
         vPlayerOriginEnd = PlayerObj.transform.position;
         vPlayerOriginStart = transform.position;
         nState = 1;
-        fTeleHeight = fMandelaHeight + 1;
+        fTeleHeight = fMandelaHeight;
 
     }
 
@@ -151,7 +160,7 @@ public class TeleportationController : MonoBehaviour {
 
 	public void setRadius(Vector3 pos) {
 
-		transform.position = new Vector3(pos.x, fMandelaHeight, pos.z);
+		transform.position = new Vector3(pos.x, pos.y, pos.z);
 		
 	}
 

@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "ActivationBoundary")
         {
             Marker.transform.parent = gameObject.transform;
-            teleportationController.setRadius(new Vector3(transform.position.x, transform.position.y, transform.position.z));
+            teleportationController.setRadius(new Vector3(transform.position.x, transform.position.y + 2, transform.position.z));
             teleportationController.canTeleport = true;
             Destroy(other.gameObject);
         }
