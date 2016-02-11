@@ -19,15 +19,24 @@ public class CameraController : MonoBehaviour
     void Update()
     {
 		
-        Vector3 playerPosit = PlayerChar.transform.position;
-		Vector3 cameraPosit = PlayerChar.transform.position;
+	//Vector3 playerPosit = PlayerChar.transform.position;
+	//cameraPosit = new Vector3(transform.position.x - cameraXval, transform.position.y - cameraYval, transform.position.z - cameraZval);
 
-		float cameraX = ((PlayerChar.transform.position.x + cameraXval)*.2F)+(transform.position.x*.8F);
-		float cameraY = ((PlayerChar.transform.position.y + cameraYval)*.2F)+(transform.position.y*.8F);
-		float cameraZ = ((PlayerChar.transform.position.z + cameraZval)*.2F)+(transform.position.z*.8F);
+		//if (Vector3.Distance(playerPosit,cameraPosit) > .5F)
+		//{
+		
+		Vector3 cameraPosit = transform.position;
+        
+		float cameraX = ((PlayerChar.transform.position.x + cameraXval)*.05F)+(transform.position.x*.95F);
+		float cameraY = ((PlayerChar.transform.position.y + cameraYval)*.05F)+(transform.position.y*.95F);
+		float cameraZ = ((PlayerChar.transform.position.z + cameraZval)*.05F)+(transform.position.z*.95F);
 
         transform.position = new Vector3(cameraX, cameraY, cameraZ);
 		cameraPosit = new Vector3(cameraX - cameraXval, cameraY - cameraYval, cameraZ - cameraZval);
 		transform.LookAt(cameraPosit);
-    }
+
+		//}
+
+	}
+
 }
