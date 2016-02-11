@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
     public float cameraXval = 0;
     public float cameraYval = 3;
     public float cameraZval = -5;
+
     // Use this for initialization
     void Start()
     {
@@ -17,13 +18,16 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		
         Vector3 playerPosit = PlayerChar.transform.position;
-        float cameraX = PlayerChar.transform.position.x + cameraXval;
-        float cameraY = PlayerChar.transform.position.y + cameraYval;
-        float cameraZ = PlayerChar.transform.position.z + cameraZval;
+		Vector3 cameraPosit = PlayerChar.transform.position;
+
+		float cameraX = ((PlayerChar.transform.position.x + cameraXval)*.2F)+(transform.position.x*.8F);
+		float cameraY = ((PlayerChar.transform.position.y + cameraYval)*.2F)+(transform.position.y*.8F);
+		float cameraZ = ((PlayerChar.transform.position.z + cameraZval)*.2F)+(transform.position.z*.8F);
+
         transform.position = new Vector3(cameraX, cameraY, cameraZ);
-        transform.LookAt(playerPosit);
-
-
+		cameraPosit = new Vector3(cameraX - cameraXval, cameraY - cameraYval, cameraZ - cameraZval);
+		transform.LookAt(cameraPosit);
     }
 }
