@@ -4,7 +4,7 @@ using System.Collections;
 public class AnimationController : MonoBehaviour {
 
     private Animator anim;
-    private float vert;
+    private float vert, horiz;
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
@@ -14,7 +14,14 @@ public class AnimationController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         vert = Input.GetAxis("Vertical");
-        anim.SetFloat("walk", vert);
-	
-	}
+        horiz = Input.GetAxis("Horizontal");
+
+        if(Mathf.Abs(vert) != 0 || Mathf.Abs(horiz) !=  0)
+            anim.SetFloat("walk", 1);
+        else
+            anim.SetFloat("walk", 0);
+
+
+
+    }
 }

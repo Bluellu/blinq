@@ -18,18 +18,12 @@ public class MarkerCollisionController : MonoBehaviour {
         distanceToGround = 0;
         fYvalueRay = 100;
         vAdjustedOrigin = new Vector3(transform.position.x, fYvalueRay, transform.position.z);
-
-
-
-
-
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 
         vAdjustedOrigin = new Vector3(transform.position.x, fYvalueRay, transform.position.z);
-
 
         RaycastHit hit_below;
 
@@ -40,31 +34,15 @@ public class MarkerCollisionController : MonoBehaviour {
 
         if (Physics.Raycast(vAdjustedOrigin, Vector3.down, out hit_below, Mathf.Infinity, layerMask))
         {
-
-   
-
             if (hit_below.collider.tag == "LevelModel")
             {
-
                 distanceToGround = hit_below.point.y;
-
-
                 teleController.ChangeMandalaHeight(distanceToGround);
-
             }
             else {
-                teleController.ChangeMandalaHeight(playerObj.position.y - 1);
+                teleController.ChangeMandalaHeight(playerObj.position.y);
             }
             
         }
-
-       
-
-
-
-
-
-
     }
-
 }

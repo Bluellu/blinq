@@ -3,11 +3,12 @@ using System.Collections;
 
 public class TeleportationController : MonoBehaviour {
     public GameObject PlayerObj;
-    MeshRenderer[] modelRen; 
+    SkinnedMeshRenderer[] modelRen; 
 
     public bool canPlayerControl;
 	public bool canTeleport;
 	public bool onMag;
+    public bool active;
 
     public int nState;
     private Vector3 axis = Vector3.up;
@@ -19,7 +20,9 @@ public class TeleportationController : MonoBehaviour {
     public float fTeleHeight, fMandelaHeight;
 
     private float fLerpingValue;
-    
+    private bool bFirstTime;
+    private float timeBetweenActivation = 0.5f;
+    private float timestamp;
 
     // Use this for initialization
     void Start () {
@@ -29,16 +32,16 @@ public class TeleportationController : MonoBehaviour {
         fTeleHeight = 1.0f;
 
         vPlayerOrigin = PlayerObj.transform.position;
-        fMandelaHeight = vPlayerOrigin.y;
+        fMandelaHeight = vPlayerOrigin.y + 10;
 
 		canTeleport = false;
 		onMag = false;
+        active = false;
+        bFirstTime = true;
 
         fLerpingValue = 0.0f;
         fRotationSpeed = 4.0f;
         nState = 0;
-        
-
     }
 
 
@@ -52,24 +55,65 @@ public class TeleportationController : MonoBehaviour {
             //state 0 is movement
             if (nState == 0)
             {
-                transform.position = new Vector3(transform.position.x, fMandelaHeight, transform.position.z);
+                if (bFirstTime)
+                {
+                    transform.position = new Vector3(transform.position.x, fMandelaHeight + 1, transform.position.z);
+                    
+                }
+                else
+                {
+                    transform.position = new Vector3(transform.position.x, fMandelaHeight + 1, transform.position.z);
+                }
                 if (canPlayerControl)
                 {
-                    if (Input.GetKey("j"))
+                    if (Mathf.Abs(Input.GetAxis("RightH")) == 1 || Mathf.Abs(Input.GetAxis("RightV")) == 1)
+                    {
+                        float distH = Input.GetAxis("RightH") * 6.5f;
+                        float distV = Input.GetAxis("RightV") * 6.5f;
+
+                        Vector3 vNewpos = new Vector3(distH, 0, -distV);
+                        
+                        
+                        transform.position = vPlayerOrigin + vNewpos;
+
+                      
+                    }
+
+                    if (Input.GetKey("i") && Time.time >= timestamp)
+                    {
+                        if (!active)
+                        {
+                            Vector3 vNewpos = Vector3.left * 6.5f;
+                            transform.position = vPlayerOrigin + vNewpos;
+                            active = true;
+                        } else if (active)
+                        {
+                            transform.position = vPlayerOrigin;
+                            active = false;
+                        }
+                        timestamp = Time.time + timeBetweenActivation;
+                    }
+
+                    
+
+
+
+                    if (Input.GetKey("j") || Input.GetKey("joystick button 1"))
                     {
                         transform.RotateAround(vPlayerOrigin, axis, fRotationSpeed);
 
                     }
-                    if (Input.GetKey("l"))
+                    if (Input.GetKey("l") || Input.GetKey("joystick button 2"))
                     {
                         transform.RotateAround(vPlayerOrigin, axis, -fRotationSpeed);
                     }
 
-                    if (Input.GetKey("e"))
+                    if (Input.GetButton("Teleport"))
                     {
-
+                        bFirstTime = false;
                         ResetMandala();
                     }
+                    
                 }
             }
             //move player to telelocation
@@ -78,7 +122,6 @@ public class TeleportationController : MonoBehaviour {
 
                 if (LerpingTranslate(vPlayerOriginEnd, new Vector3(vMarkerPosition.x, fTeleHeight, vMarkerPosition.z), playerObject))
                 {
-                    vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x, fTeleHeight, vMarkerDirection.z);
                     vPlayerOriginEnd = vMarkerPosition;
                     nState = 2;
                 }
@@ -87,6 +130,10 @@ public class TeleportationController : MonoBehaviour {
             else if (nState == 2)
             {
                 RenderPlayerModel(true);
+
+                /* If teleporting into a magnification platform */
+                if (onMag)
+                    vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x * 2, fTeleHeight, vMarkerDirection.z * 2);
 
                 if (LerpingTranslate(new Vector3(vPlayerOriginEnd.x, fMandelaHeight, vPlayerOriginEnd.z), new Vector3(vSavedDestination.x, fMandelaHeight, vSavedDestination.z), gameObject))
                 {
@@ -99,6 +146,13 @@ public class TeleportationController : MonoBehaviour {
         }
     }
 
+    Vector3 changeSavedDestination(Vector3 savedDestination)
+    {
+        float x = (savedDestination.x - vPlayerOrigin.x) / 2;
+        float z = (savedDestination.z - vPlayerOrigin.z) / 2;
+
+        return vPlayerOrigin + new Vector3(x, fMandelaHeight, z);
+    }
     void ResetMandala() {
         transform.parent = null;
         canPlayerControl = false;
@@ -109,8 +163,19 @@ public class TeleportationController : MonoBehaviour {
         vPlayerOriginEnd = PlayerObj.transform.position;
         vPlayerOriginStart = transform.position;
         nState = 1;
-        fTeleHeight = fMandelaHeight + 1;
+        fTeleHeight = fMandelaHeight;
 
+        /* If teleporting from magnification platform, adjust the size of the radius */
+        if (onMag)
+        {
+            vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x / 2, fTeleHeight, vMarkerDirection.z / 2);
+            onMag = false;
+            active = true;
+        }
+        else
+        {
+            vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x, fTeleHeight, vMarkerDirection.z);
+        }
     }
 
     bool LerpingTranslate(Vector3 vStart, Vector3 vEnd, GameObject goToMove) {
@@ -118,7 +183,7 @@ public class TeleportationController : MonoBehaviour {
         //Debug.Log(fLerpingValue);
         if (fLerpingValue < 1.0f)
         {
-            fLerpingValue += Time.deltaTime * 2.4f;
+            fLerpingValue += Time.deltaTime * 5.4f;
             goToMove.transform.position = Vector3.Lerp(vStart, vEnd, fLerpingValue);
         }
         else
@@ -138,7 +203,7 @@ public class TeleportationController : MonoBehaviour {
 
 	public void setRadius(Vector3 pos) {
 
-		transform.position = new Vector3(pos.x, fMandelaHeight, pos.z);
+		transform.position = vPlayerOrigin + new Vector3(pos.x, 0, pos.z);
 		
 	}
 
@@ -154,12 +219,11 @@ public class TeleportationController : MonoBehaviour {
 			Vector3 new_distance = new Vector3 (distance.x * 2, distance.y, distance.z * 2); // Extend the distance
 			setRadius (new_distance); // Set radius
 		}
-		onMag = true;
 	}
     public void RenderPlayerModel(bool bSwitch)
     {
-        modelRen = PlayerObj.GetComponentsInChildren<MeshRenderer>();
-        foreach (MeshRenderer ren in modelRen)
+        modelRen = PlayerObj.GetComponentsInChildren<SkinnedMeshRenderer>();
+        foreach (SkinnedMeshRenderer ren in modelRen)
         {
             ren.enabled = bSwitch;
         }

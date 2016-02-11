@@ -28,14 +28,10 @@ public class PlayerController : MonoBehaviour
         if (controller.isGrounded)
         {
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            
-            
-
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= speed;
             if (Input.GetButton("Jump"))
                 moveDirection.y = jumpSpeed;
-
         }
         moveDirection.y -= gravity * Time.deltaTime;
         if (canPlayerControl)
@@ -50,8 +46,9 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "ActivationBoundary")
         {
             Marker.transform.parent = gameObject.transform;
-            teleportationController.setRadius(new Vector3(transform.position.x + 6, transform.position.y, transform.position.z));
+            teleportationController.setRadius(new Vector3(transform.position.x, transform.position.y + 2, transform.position.z));
             teleportationController.canTeleport = true;
+            Destroy(other.gameObject);
         }
 
         if (other.tag == "Floor")
@@ -59,8 +56,6 @@ public class PlayerController : MonoBehaviour
             //Need to implement restart condition if player hits bounding wall
             //transform.position = new Vector3(-45f, 4.7f, -8f);
             SceneManager.LoadScene(0);
-
-
         }
 
         if (other.tag == "LevelEnd")
@@ -69,6 +64,10 @@ public class PlayerController : MonoBehaviour
             bDisplayEnd = true;
         }
 
+        if (other.tag == "NextLevel")
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     void OnGUI()

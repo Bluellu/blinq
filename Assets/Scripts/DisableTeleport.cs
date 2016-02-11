@@ -2,13 +2,27 @@
 using System.Collections;
 
 public class DisableTeleport : MonoBehaviour {
-	void OnTriggerEnter (Collider col)
+    public TeleportationController tc;
+    void OnTriggerEnter (Collider col)
 	{
-		col.transform.Find ("TeleTarget").GetComponent<TeleportationController> ().canTeleport = false;
+        if (col.gameObject.name == "Player")
+        {
+            StartCoroutine(disableTeleport());
+        }
 	}
 
 	void OnTriggerExit(Collider col)
-	{
-		col.transform.Find ("TeleTarget").GetComponent<TeleportationController> ().canTeleport = true;
+    {
+        if (col.gameObject.name == "Player")
+        {
+            tc.canTeleport = true;
+        }
 	}
+
+    IEnumerator disableTeleport()
+    {
+        Debug.Log("Inside disableTeleport()");
+        yield return new WaitForSeconds(1);
+        tc.canTeleport = false;
+    }
 }
