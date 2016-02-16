@@ -19,12 +19,6 @@ public class CameraController : MonoBehaviour
     void Update()
     {
 		
-	//Vector3 playerPosit = PlayerChar.transform.position;
-	//cameraPosit = new Vector3(transform.position.x - cameraXval, transform.position.y - cameraYval, transform.position.z - cameraZval);
-
-		//if (Vector3.Distance(playerPosit,cameraPosit) > .5F)
-		//{
-		
 		Vector3 cameraPosit = transform.position;
         
 		float cameraX = ((PlayerChar.transform.position.x + cameraXval)*.05F)+(transform.position.x*.95F);

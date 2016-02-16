@@ -18,7 +18,6 @@ public class ModelRotationController : MonoBehaviour {
         {
             Quaternion LookRotation = Quaternion.LookRotation(moveDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, LookRotation, Time.deltaTime*10);
-            //transform.rotation = Quaternion.LookRotation(moveDirection);
         }
     }
 }

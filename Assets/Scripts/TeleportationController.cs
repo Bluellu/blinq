@@ -57,8 +57,7 @@ public class TeleportationController : MonoBehaviour {
             {
                 if (bFirstTime)
                 {
-                    transform.position = new Vector3(transform.position.x, fMandelaHeight + 1, transform.position.z);
-                    
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 }
                 else
                 {
@@ -71,12 +70,8 @@ public class TeleportationController : MonoBehaviour {
                         float distH = Input.GetAxis("RightH") * 6.5f;
                         float distV = Input.GetAxis("RightV") * 6.5f;
 
-                        Vector3 vNewpos = new Vector3(distH, 0, -distV);
-                        
-                        
+                        Vector3 vNewpos = new Vector3(distH, 0, -distV); 
                         transform.position = vPlayerOrigin + vNewpos;
-
-                      
                     }
 
                     if (Input.GetKey("i") && Time.time >= timestamp)
@@ -93,10 +88,6 @@ public class TeleportationController : MonoBehaviour {
                         }
                         timestamp = Time.time + timeBetweenActivation;
                     }
-
-                    
-
-
 
                     if (Input.GetKey("j") || Input.GetKey("joystick button 1"))
                     {
