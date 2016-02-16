@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public GameObject Marker;
-    public float speed = 6.0F;
-    public float jumpSpeed = 8.0F;
-    public float gravity = 20.0F;
-    public float rotateSpeed = 1.0F;
-    private Vector3 moveDirection = Vector3.zero;
+    public float speed = 8.0F;
+    public float jumpSpeed = 6.0F;
+    public float gravity = 15.0F;
+    public float rotateSpeed = 3.0F;
+    public Vector3 moveDirection = Vector3.zero;
     public bool canPlayerControl;
+	public bool isGrounded;
 
     private bool bDisplayEnd;
 
@@ -27,14 +28,20 @@ public class PlayerController : MonoBehaviour
         CharacterController controller = GetComponent<CharacterController>();
         if (controller.isGrounded)
         {
+			isGrounded = true;
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= speed;
             if (Input.GetButton("Jump"))
                 moveDirection.y = jumpSpeed;
         }
-        moveDirection.y -= gravity * Time.deltaTime;
-        if (canPlayerControl)
+		else
+		{	
+			isGrounded = false;
+		}
+		moveDirection.y -= gravity * Time.deltaTime;
+
+		if (canPlayerControl)
         {
             controller.Move(moveDirection * Time.deltaTime);
         }
