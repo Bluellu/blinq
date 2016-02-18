@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed = 6.0F;
     public float gravity = 15.0F;
     public float rotateSpeed = 3.0F;
+    public float jumpSpeedAirMove;
     public Vector3 moveDirection = Vector3.zero;
     public bool canPlayerControl;
 	public bool isGrounded;
@@ -28,25 +29,29 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         CharacterController controller = GetComponent<CharacterController>();
+
+        if (!controller)
+            controller = GetComponent<CharacterController>();
+
+        // Setup move directions
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection *= speed;
+
+        // Jump!
         if (controller.isGrounded)
         {
-			isGrounded = true;
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
+            jumpSpeedAirMove = 0;                 // a grounded character has zero vertical speed unless...
             if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
+            {     // ...Jump is pressed!
+                jumpSpeedAirMove = jumpSpeed;
+            }
         }
-		else
-		{	
-			isGrounded = false;
-		}
-		moveDirection.y -= gravity * Time.deltaTime;
 
-		if (canPlayerControl)
-        {
-            controller.Move(moveDirection * Time.deltaTime);
-        }
+        // Apply gravity and move the player controller
+        jumpSpeedAirMove -= gravity * Time.deltaTime;
+        moveDirection.y = jumpSpeedAirMove;
+        controller.Move(moveDirection * Time.deltaTime);
     }
 
 
