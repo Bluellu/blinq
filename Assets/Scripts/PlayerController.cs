@@ -16,11 +16,13 @@ public class PlayerController : MonoBehaviour
     private bool bDisplayEnd;
 
     private TeleportationController teleportationController;
+    private MandalaMovementController mandalaMovementController;
     void Start()
     {
         bDisplayEnd = false;
         canPlayerControl = true;
         teleportationController = Marker.GetComponent<TeleportationController>();
+        mandalaMovementController = Marker.GetComponent<MandalaMovementController>();
     }
 
     void FixedUpdate()
@@ -53,8 +55,9 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "ActivationBoundary")
         {
             Marker.transform.parent = gameObject.transform;
-            teleportationController.setRadius(new Vector3(transform.position.x, transform.position.y + 2, transform.position.z));
+            Marker.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             teleportationController.canTeleport = true;
+            mandalaMovementController.canTeleport = true;
             Destroy(other.gameObject);
         }
 
