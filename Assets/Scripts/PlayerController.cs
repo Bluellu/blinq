@@ -13,12 +13,14 @@ public class PlayerController : MonoBehaviour
     public Vector3 moveDirection = Vector3.zero;
     public bool canPlayerControl;
 	public bool isGrounded;
+	public GameObject Particles;
 
     private bool bDisplayEnd;
 
     private TeleportationController teleportationController;
     private MandalaMovementController mandalaMovementController;
-    void Start()
+
+	void Start()
     {
         bDisplayEnd = false;
         canPlayerControl = true;
@@ -42,16 +44,25 @@ public class PlayerController : MonoBehaviour
         if (controller.isGrounded)
         {
             jumpSpeedAirMove = 0;                 // a grounded character has zero vertical speed unless...
-            if (Input.GetButton("Jump"))
+			if (Input.GetButtonDown("Jump"))
             {     // ...Jump is pressed!
                 jumpSpeedAirMove = jumpSpeed;
+				//Particle effects
+				JumpParticles();
             }
-        }
+        } 
+		else 									// Variable Jump height
+		{
+			if (!Input.GetButton("Jump"))
+			{     // If jump is not held, the characters jump is cut short
+				jumpSpeedAirMove = Mathf.Min(jumpSpeedAirMove, 1);
+			}
+		}
 
         // Apply gravity and move the player controller
         jumpSpeedAirMove -= gravity * Time.deltaTime;
         moveDirection.y = jumpSpeedAirMove;
-        controller.Move(moveDirection * Time.deltaTime);
+		controller.Move(moveDirection * Time.deltaTime);
     }
 
 
@@ -84,6 +95,11 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(1);
         }
     }
+
+	void JumpParticles() 
+	{
+		Instantiate(Particles, transform.position, new Quaternion(0,0,0,90));
+	}
 
     void OnGUI()
     {
