@@ -18,7 +18,7 @@ public class MarkerCollisionController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         teleportationController = gameObject.GetComponent<TeleportationController>();
-        manMoveController = gameObject.GetComponent<MandalaMovementController>();
+        manMoveController = gameObject.GetComponentInParent<MandalaMovementController>();
         
         distanceToGround = 0;
         fYvalueRay = 100;
@@ -45,10 +45,12 @@ public class MarkerCollisionController : MonoBehaviour {
                 manMoveController.ChangeMandalaHeight(distanceToGround);
 
                 teleportationController.ChangeMandalaHeight(distanceToGround);
+                teleportationController.canActivateTele = true;
             }
             else {
                 manMoveController.ChangeMandalaHeight(playerObj.position.y);
                 teleportationController.ChangeMandalaHeight(playerObj.position.y);
+                teleportationController.canActivateTele = false;
             }
             
         }

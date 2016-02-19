@@ -6,17 +6,17 @@ public class MagnifyMandala : MonoBehaviour {
 	void OnTriggerEnter (Collider col) {
         if (col.gameObject.name == "Player")
         {
-            tc.increaseRadius();
-            tc.onMag = true;
+            //tc.increaseRadius();
+            //tc.onMag = true;
         }
 	}
     void OnTriggerExit (Collider col)
     {
         if (col.gameObject.name == "Player")
         {
-            tc.transform.position = tc.getPlayerOrigin();
-            tc.active = false;
-            tc.onMag = false;
+            //tc.transform.position = tc.getPlayerOrigin();
+           // tc.active = false;
+           // tc.onMag = false;
         }
     }
 }

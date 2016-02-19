@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         bDisplayEnd = false;
         canPlayerControl = true;
-        teleportationController = Marker.GetComponent<TeleportationController>();
+        teleportationController = Marker.GetComponentInChildren<TeleportationController>();
         mandalaMovementController = Marker.GetComponent<MandalaMovementController>();
     }
 
