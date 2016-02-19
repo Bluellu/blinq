@@ -24,6 +24,10 @@ public class TeleportationController : MonoBehaviour {
     private float timeBetweenActivation = 0.5f;
     private float timestamp;
 
+    private MandalaMovementController mandalaMovementController;
+
+
+
     // Use this for initialization
     void Start () {
         playerObject = GameObject.FindGameObjectWithTag("Player");
@@ -42,6 +46,8 @@ public class TeleportationController : MonoBehaviour {
         fLerpingValue = 0.0f;
         fRotationSpeed = 4.0f;
         nState = 0;
+
+        mandalaMovementController = transform.GetComponent<MandalaMovementController>();
     }
 
 
@@ -50,71 +56,18 @@ public class TeleportationController : MonoBehaviour {
     {
         if (canTeleport)
         {
-            vPlayerOrigin = PlayerObj.transform.position;
+            //vPlayerOrigin = PlayerObj.transform.position;
 
             //state 0 is movement
             if (nState == 0)
             {
-                if (bFirstTime)
+
+                if (Input.GetButton("Teleport"))
                 {
-                    transform.position = new Vector3(transform.position.x, fMandelaHeight + 1, transform.position.z);
-                    
-                }
-                else
-                {
-                    transform.position = new Vector3(transform.position.x, fMandelaHeight + 1, transform.position.z);
-                }
-                if (canPlayerControl)
-                {
-                    if (Mathf.Abs(Input.GetAxis("RightH")) == 1 || Mathf.Abs(Input.GetAxis("RightV")) == 1)
-                    {
-                        float distH = Input.GetAxis("RightH") * 6.5f;
-                        float distV = Input.GetAxis("RightV") * 6.5f;
+                    mandalaMovementController.bFirstTime = false;
+                    ResetMandala();
+                }                    
 
-                        Vector3 vNewpos = new Vector3(distH, 0, -distV);
-                        
-                        
-                        transform.position = vPlayerOrigin + vNewpos;
-
-                      
-                    }
-
-                    if (Input.GetKey("i") && Time.time >= timestamp)
-                    {
-                        if (!active)
-                        {
-                            Vector3 vNewpos = Vector3.left * 6.5f;
-                            transform.position = vPlayerOrigin + vNewpos;
-                            active = true;
-                        } else if (active)
-                        {
-                            transform.position = vPlayerOrigin;
-                            active = false;
-                        }
-                        timestamp = Time.time + timeBetweenActivation;
-                    }
-
-                    
-
-
-
-                    if (Input.GetKey("j") || Input.GetKey("joystick button 1"))
-                    {
-                        transform.RotateAround(vPlayerOrigin, axis, fRotationSpeed);
-
-                    }
-                    if (Input.GetKey("l") || Input.GetKey("joystick button 2"))
-                    {
-                        transform.RotateAround(vPlayerOrigin, axis, -fRotationSpeed);
-                    }
-
-                    if (Input.GetButton("Teleport"))
-                    {
-                        bFirstTime = false;
-                        ResetMandala();
-                    }
-                    
-                }
             }
             //move player to telelocation
             else if (nState == 1)

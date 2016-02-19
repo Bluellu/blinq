@@ -5,39 +5,64 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public GameObject Marker;
-    public float speed = 6.0F;
-    public float jumpSpeed = 8.0F;
-    public float gravity = 20.0F;
-    public float rotateSpeed = 1.0F;
-    private Vector3 moveDirection = Vector3.zero;
+    public float speed = 8.0F;
+    public float jumpSpeed = 6.0F;
+    public float gravity = 15.0F;
+    public float rotateSpeed = 3.0F;
+    public float jumpSpeedAirMove;
+    public Vector3 moveDirection = Vector3.zero;
     public bool canPlayerControl;
+	public bool isGrounded;
+	public GameObject Particles;
 
     private bool bDisplayEnd;
 
     private TeleportationController teleportationController;
-    void Start()
+    private MandalaMovementController mandalaMovementController;
+
+	void Start()
     {
         bDisplayEnd = false;
         canPlayerControl = true;
         teleportationController = Marker.GetComponent<TeleportationController>();
+        mandalaMovementController = Marker.GetComponent<MandalaMovementController>();
     }
 
     void FixedUpdate()
     {
         CharacterController controller = GetComponent<CharacterController>();
+
+        if (!controller)
+            controller = GetComponent<CharacterController>();
+
+        // Setup move directions
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection *= speed;
+
+        // Jump!
         if (controller.isGrounded)
         {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
-        }
-        moveDirection.y -= gravity * Time.deltaTime;
-        if (canPlayerControl)
-        {
-            controller.Move(moveDirection * Time.deltaTime);
-        }
+            jumpSpeedAirMove = 0;                 // a grounded character has zero vertical speed unless...
+			if (Input.GetButtonDown("Jump"))
+            {     // ...Jump is pressed!
+                jumpSpeedAirMove = jumpSpeed;
+				//Particle effects
+				JumpParticles();
+            }
+        } 
+		else 									// Variable Jump height
+		{
+			if (!Input.GetButton("Jump"))
+			{     // If jump is not held, the characters jump is cut short
+				jumpSpeedAirMove = Mathf.Min(jumpSpeedAirMove, 1);
+			}
+		}
+
+        // Apply gravity and move the player controller
+        jumpSpeedAirMove -= gravity * Time.deltaTime;
+        moveDirection.y = jumpSpeedAirMove;
+		controller.Move(moveDirection * Time.deltaTime);
     }
 
 
@@ -46,8 +71,9 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "ActivationBoundary")
         {
             Marker.transform.parent = gameObject.transform;
-            teleportationController.setRadius(new Vector3(transform.position.x, transform.position.y + 2, transform.position.z));
+            Marker.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             teleportationController.canTeleport = true;
+            mandalaMovementController.canTeleport = true;
             Destroy(other.gameObject);
         }
 
@@ -69,6 +95,11 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(1);
         }
     }
+
+	void JumpParticles() 
+	{
+		Instantiate(Particles, transform.position, new Quaternion(0,0,0,90));
+	}
 
     void OnGUI()
     {
