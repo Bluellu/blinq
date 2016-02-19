@@ -6,14 +6,14 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject Marker;
     public float speed = 8.0F;
-    public float jumpSpeed = 6.0F;
+    public float jumpSpeed = 8.0F;
     public float gravity = 15.0F;
     public float rotateSpeed = 3.0F;
     public float jumpSpeedAirMove;
     public Vector3 moveDirection = Vector3.zero;
     public bool canPlayerControl;
 	public bool isGrounded;
-	public GameObject Particles;
+	//public GameObject Particles;
 
     private bool bDisplayEnd;
 
@@ -28,8 +28,9 @@ public class PlayerController : MonoBehaviour
         mandalaMovementController = Marker.GetComponent<MandalaMovementController>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
+
         CharacterController controller = GetComponent<CharacterController>();
 
         if (!controller)
@@ -44,25 +45,25 @@ public class PlayerController : MonoBehaviour
         if (controller.isGrounded)
         {
             jumpSpeedAirMove = 0;                 // a grounded character has zero vertical speed unless...
-			if (Input.GetButtonDown("Jump"))
+            if (Input.GetButton("Jump"))
             {     // ...Jump is pressed!
                 jumpSpeedAirMove = jumpSpeed;
-				//Particle effects
-				JumpParticles();
+                //Particle effects
+                //JumpParticles();
             }
-        } 
-		else 									// Variable Jump height
-		{
-			if (!Input.GetButton("Jump"))
-			{     // If jump is not held, the characters jump is cut short
-				jumpSpeedAirMove = Mathf.Min(jumpSpeedAirMove, 1);
-			}
-		}
+        }
+        else 									// Variable Jump height
+        {
+            if (!Input.GetButton("Jump"))
+            {     // If jump is not held, the characters jump is cut short
+                jumpSpeedAirMove = Mathf.Min(jumpSpeedAirMove, 1);
+            }
+        }
 
         // Apply gravity and move the player controller
         jumpSpeedAirMove -= gravity * Time.deltaTime;
         moveDirection.y = jumpSpeedAirMove;
-		controller.Move(moveDirection * Time.deltaTime);
+        controller.Move(moveDirection * Time.deltaTime);
     }
 
 
@@ -96,10 +97,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-	void JumpParticles() 
-	{
-		Instantiate(Particles, transform.position, new Quaternion(0,0,0,90));
-	}
+	//void JumpParticles() 
+	//{
+	//	Instantiate(Particles, transform.position, new Quaternion(0,0,0,90));
+	//}
 
     void OnGUI()
     {
