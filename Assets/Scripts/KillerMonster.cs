@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class MandalaEatingMonster : MonoBehaviour {
+public class KillerMonster : MonoBehaviour
+{
 
-    public GameObject mandalaObj;
-    public Transform mandala;
-    public TeleportationController tc;
-    public MandalaKillerMonster nearbyKiller;
+    public Transform player;
 
     private NavMeshAgent monster;
 
@@ -18,38 +17,42 @@ public class MandalaEatingMonster : MonoBehaviour {
     private bool returning;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         monster = GetComponent<NavMeshAgent>();
         monsterTr = GetComponent<Transform>();
         startPos = monsterTr.position;
 
         attacking = false;
-        moving  = false;
+        moving = false;
         returning = false;
     }
 
-	
-	// Update is called once per frame
-	void Update ()  {
+
+    // Update is called once per frame
+    void Update()
+    {
         //Maintain movement cycle.
-        if (!moving && !attacking && !returning) { 
+        if (!moving && !attacking && !returning)
+        {
             StartCoroutine(movementCycle());
         }
 
-        //Begins attack if mandala is close enough.
-        if (!returning && (Vector3.Distance(mandala.position, monsterTr.position) < 8))
+        //Begins attack if player is close enough.
+        if (!returning && (Vector3.Distance(player.position, monsterTr.position) < 8))
             attacking = true;
 
 
         //Attack cycle.
-        if (attacking) {
+        if (attacking)
+        {
             //Chase
-            monsterTr.LookAt(mandala);
+            monsterTr.LookAt(player);
             monsterTr.Translate(5 * Vector3.forward * Time.deltaTime);
 
             StartCoroutine(setAttackLimit());
         }
-        
+
 
         //Monster is back to its origin spot.
         if (Vector3.Distance(monsterTr.position, startPos) <= 1)
@@ -57,33 +60,20 @@ public class MandalaEatingMonster : MonoBehaviour {
     }
 
 
-    void OnTriggerEnter(Collider obj)   {
-        if (obj.gameObject.name == "Mandala") {
-            //Disable teleportation and hide mandala.
-            tc.canTeleport = false;
-            //            mandalaObj.SetActive(false);
-            mandala.GetComponent<Renderer>().enabled = false;
-
-            //Notify possible killer.
-            if (nearbyKiller != null) {
-                nearbyKiller.attacking = true;
-            }
-
-            StartCoroutine(reenableTeleportation());
+    void OnTriggerEnter(Collider obj)
+    {
+        if (obj.gameObject.name == "Player")
+        {
+            //Reset level
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
 
-    IEnumerator reenableTeleportation()   {
-        yield return new WaitForSeconds(3); //time until teleportation is reactivated.
-        tc.canTeleport = true;
-        //mandalaObj.SetActive(true);
-        mandala.GetComponent<Renderer>().enabled = true;
-    }
-
 
     /* Monster's movement cycle. Based on a random pattern of movement. */
-    IEnumerator movementCycle() {
+    IEnumerator movementCycle()
+    {
         moving = true;
 
         NavMeshHit hit;
@@ -94,11 +84,12 @@ public class MandalaEatingMonster : MonoBehaviour {
 
         yield return new WaitForSeconds(3); // wait before allowing cycle to repeat.
         moving = false;
-        
+
     }
 
     /* Takes monster back to starting point after some time. */
-    IEnumerator setAttackLimit() {
+    IEnumerator setAttackLimit()
+    {
         //Stop chasing after a time limit.
         yield return new WaitForSeconds(7);
         attacking = false;
@@ -108,8 +99,4 @@ public class MandalaEatingMonster : MonoBehaviour {
         monster.destination = startPos;
     }
 
-    /* Disables mandala temporarily. */
-    IEnumerator disableMandala() {
-        yield return new WaitForSeconds(7);
-    }
 }
