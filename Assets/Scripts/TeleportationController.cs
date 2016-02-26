@@ -8,6 +8,7 @@ public class TeleportationController : MonoBehaviour {
 
     public bool canPlayerControl;
 	public bool canTeleport, canActivateTele;
+    public bool isAttached;
 
     public GameObject Particles;
 
@@ -40,7 +41,10 @@ public class TeleportationController : MonoBehaviour {
 
 		canTeleport = false;
         canActivateTele = true;
-
+        if (isAttached)
+        {
+            canTeleport = true;
+        }
 
 
         fLerpingValue = 0.0f;

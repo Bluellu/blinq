@@ -5,6 +5,7 @@ public class MandalaMovementController : MonoBehaviour {
 
     public bool canPlayerControl;
     public bool canTeleport;
+    public bool isAttached;
     public GameObject MandalaMarker;
     private Vector3 axis = Vector3.up;
     private Vector3 vPlayerOrigin;
@@ -26,6 +27,11 @@ public class MandalaMovementController : MonoBehaviour {
 
         canTeleport = false;
         canPlayerControl = true;
+
+        if (isAttached)
+        {
+            canTeleport = true;
+        }
         fLerpingValue = 0.0f;
         moved = false;
         fMandelaHeight = vPlayerOrigin.y + 10;
