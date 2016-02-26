@@ -62,11 +62,11 @@ public class MandalaMovementController : MonoBehaviour {
                 MandalaMarker.transform.position = new Vector3(MandalaMarker.transform.position.x, fMandelaHeight, MandalaMarker.transform.position.z);
 
             }
-            else
-            {
-                MandalaMarker.transform.position = playerObject.transform.position;
-                moved = false;
-            }
+            //else
+            //{
+            //    MandalaMarker.transform.position = playerObject.transform.position;
+            //    moved = false;
+            //}
         }
     }
 
