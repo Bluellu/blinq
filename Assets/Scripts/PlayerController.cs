@@ -30,51 +30,40 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+
         CharacterController controller = GetComponent<CharacterController>();
+
+        if (!controller)
+            controller = GetComponent<CharacterController>();
+
+        // Setup move directions
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection *= speed;
+
+        // Jump!
         if (controller.isGrounded)
         {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
+            jumpSpeedAirMove = 0;                 // a grounded character has zero vertical speed unless...
             if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
-
+            {     // ...Jump is pressed!
+                jumpSpeedAirMove = jumpSpeed;
+                //Particle effects
+                //JumpParticles();
+            }
         }
-        moveDirection.y -= gravity * Time.deltaTime;
+        else 									// Variable Jump height
+        {
+            if (!Input.GetButton("Jump"))
+            {     // If jump is not held, the characters jump is cut short
+                jumpSpeedAirMove = Mathf.Min(jumpSpeedAirMove, 1);
+            }
+        }
+
+        // Apply gravity and move the player controller
+        jumpSpeedAirMove -= gravity * Time.deltaTime;
+        moveDirection.y = jumpSpeedAirMove;
         controller.Move(moveDirection * Time.deltaTime);
-        //CharacterController controller = GetComponent<CharacterController>();
-
-        //if (!controller)
-        //    controller = GetComponent<CharacterController>();
-
-        //// Setup move directions
-        //moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        //moveDirection = transform.TransformDirection(moveDirection);
-        //moveDirection *= speed;
-
-        //// Jump!
-        //if (controller.isGrounded)
-        //{
-        //    jumpSpeedAirMove = 0;                 // a grounded character has zero vertical speed unless...
-        //    if (Input.GetButton("Jump"))
-        //    {     // ...Jump is pressed!
-        //        jumpSpeedAirMove = jumpSpeed;
-        //        //Particle effects
-        //        //JumpParticles();
-        //    }
-        //}
-        //else 									// Variable Jump height
-        //{
-        //    if (!Input.GetButton("Jump"))
-        //    {     // If jump is not held, the characters jump is cut short
-        //        jumpSpeedAirMove = Mathf.Min(jumpSpeedAirMove, 1);
-        //    }
-        //}
-
-        //// Apply gravity and move the player controller
-        //jumpSpeedAirMove -= gravity * Time.deltaTime;
-        //moveDirection.y = jumpSpeedAirMove;
-        //controller.Move(moveDirection * Time.deltaTime);
     }
 
 
