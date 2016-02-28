@@ -73,6 +73,8 @@ public class PlayerController : MonoBehaviour
         {
             Marker.transform.parent = gameObject.transform;
             Marker.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            Transform MandalaObject = Marker.transform.GetChild(0);
+            MandalaObject.transform.Translate(Vector3.forward * 8, Space.Self);
             teleportationController.canTeleport = true;
             mandalaMovementController.canTeleport = true;
             Destroy(other.gameObject);
@@ -95,12 +97,14 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
+
+        //if (other.tag == "MovingPlatform")
+        //{
+        //    Debug.Log("entered Trigger");
+        //    transform.parent = other.transform;
+        //}
     }
 
-	//void JumpParticles() 
-	//{
-	//	Instantiate(Particles, transform.position, new Quaternion(0,0,0,90));
-	//}
 
     void OnGUI()
     {

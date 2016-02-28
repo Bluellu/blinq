@@ -6,7 +6,7 @@ public class MandalaMovementController : MonoBehaviour {
     public bool canPlayerControl;
     public bool canTeleport;
     public bool isAttached;
-    public GameObject MandalaMarker;
+    public GameObject MandalaObject;
     private Vector3 axis = Vector3.up;
     private Vector3 vPlayerOrigin;
     public float fRotationSpeed;
@@ -34,8 +34,14 @@ public class MandalaMovementController : MonoBehaviour {
         }
         fLerpingValue = 0.0f;
         moved = false;
-        fMandelaHeight = vPlayerOrigin.y + 10;
+        //fMandelaHeight = vPlayerOrigin.y + 10;
         movingMandala = false;
+
+        if (canTeleport)
+        {
+            MandalaObject.transform.Translate(Vector3.forward * fRadius, Space.Self);
+        }
+        fMandelaHeight = transform.position.y;
 
     }
 
@@ -46,34 +52,30 @@ public class MandalaMovementController : MonoBehaviour {
         {
             Vector3 targetDirection = new Vector3(Input.GetAxis("RightH"), 0f, -Input.GetAxis("RightV"));
 
-            vCurDirection = targetDirection; 
+            MandalaObject.transform.position = new Vector3(MandalaObject.transform.position.x, fMandelaHeight, MandalaObject.transform.position.z);
 
             if (Mathf.Abs(Input.GetAxis("RightH")) == 1 || Mathf.Abs(Input.GetAxis("RightV")) == 1)
             {
                 Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
-                transform.rotation = targetRotation;                
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10);
+            }
 
-                if (Vector3.Magnitude(MandalaMarker.transform.position - transform.position) < fRadius)
-                {
-                    MandalaMarker.transform.Translate(Vector3.forward / 2, Space.Self);
-                    Debug.Log(fMandelaHeight);
-                    
-                }
-                MandalaMarker.transform.position = new Vector3(MandalaMarker.transform.position.x, fMandelaHeight, MandalaMarker.transform.position.z);
+            if (Input.GetKey("j") || Input.GetKey("joystick button 1"))
+            {
+                transform.RotateAround(playerObject.transform.position, axis, fRotationSpeed);
 
             }
-            //else
-            //{
-            //    MandalaMarker.transform.position = playerObject.transform.position;
-            //    moved = false;
-            //}
+            if (Input.GetKey("l") || Input.GetKey("joystick button 2"))
+            {
+                transform.RotateAround(playerObject.transform.position, axis, -fRotationSpeed);
+            }
+
         }
     }
 
     public void ChangeMandalaHeight(float fAmount)
     {
         fMandelaHeight = fAmount;
-
     }
 
 
