@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
         {
             //Need to implement restart condition if player hits bounding wall
             //transform.position = new Vector3(-45f, 4.7f, -8f);
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         if (other.tag == "LevelEnd")

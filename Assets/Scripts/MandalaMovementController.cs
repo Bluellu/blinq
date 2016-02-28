@@ -8,22 +8,25 @@ public class MandalaMovementController : MonoBehaviour {
     public bool isAttached;
     public GameObject MandalaObject;
     private Vector3 axis = Vector3.up;
-    private Vector3 vPlayerOrigin;
+
     public float fRotationSpeed;
 
-    private GameObject playerObject;
+    private GameObject playerObject, Mandala;
     private PlayerController playerController;
+    private TeleportationController teleportationController;
     public float fTeleHeight, fMandelaHeight, fLerpingValue;
 
+    public Vector3 targetDirection;
+    public Quaternion targetRotation;
 
-    private bool  moved, movingMandala;
     public float fRadius;
 
-    private Vector3 vCurDirection, vPrevDirection;
     // Use this for initialization
     void Start () {
         playerObject = GameObject.FindGameObjectWithTag("Player");
+        Mandala = GameObject.FindGameObjectWithTag("Mandala");
         playerController = playerObject.GetComponent<PlayerController>();
+        teleportationController = Mandala.GetComponent<TeleportationController>();
 
         canTeleport = false;
         canPlayerControl = true;
@@ -33,13 +36,12 @@ public class MandalaMovementController : MonoBehaviour {
             canTeleport = true;
         }
         fLerpingValue = 0.0f;
-        moved = false;
-        //fMandelaHeight = vPlayerOrigin.y + 10;
-        movingMandala = false;
+
 
         if (canTeleport)
         {
-            MandalaObject.transform.Translate(Vector3.forward * fRadius, Space.Self);
+            AddMandalaRadius(fRadius);
+           
         }
         fMandelaHeight = transform.position.y;
 
@@ -48,15 +50,19 @@ public class MandalaMovementController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        //AddMandalaRadius(fRadius);
+        teleportationController.fRadius = fRadius;
+        teleportationController.targetRotation = targetRotation;
+
         if (canTeleport)
         {
-            Vector3 targetDirection = new Vector3(Input.GetAxis("RightH"), 0f, -Input.GetAxis("RightV"));
+            targetDirection = new Vector3(Input.GetAxis("RightH"), 0f, -Input.GetAxis("RightV"));
 
             MandalaObject.transform.position = new Vector3(MandalaObject.transform.position.x, fMandelaHeight, MandalaObject.transform.position.z);
 
             if (Mathf.Abs(Input.GetAxis("RightH")) == 1 || Mathf.Abs(Input.GetAxis("RightV")) == 1)
             {
-                Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
+                targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10);
             }
 
@@ -76,6 +82,23 @@ public class MandalaMovementController : MonoBehaviour {
     public void ChangeMandalaHeight(float fAmount)
     {
         fMandelaHeight = fAmount;
+    }
+
+    public void AddMandalaRadius(float fRadius)
+    {
+        float fDistance = Vector3.Distance(MandalaObject.transform.position, transform.position);
+        
+        while(fDistance <= fRadius)
+        {
+            fDistance = Vector3.Distance(MandalaObject.transform.position , transform.position);
+            MandalaObject.transform.Translate(Vector3.forward * Time.deltaTime, Space.Self);
+
+        }
+            
+    }
+    public void SubMandalaRadius(float fRadius)
+    {
+        MandalaObject.transform.Translate(Vector3.back * fRadius, Space.Self);
     }
 
 
