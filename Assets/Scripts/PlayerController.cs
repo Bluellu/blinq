@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         if (controller.isGrounded)
         {
             jumpSpeedAirMove = 0;                 // a grounded character has zero vertical speed unless...
-            if (Input.GetButton("Jump"))
+            if (Input.GetButtonDown("Jump"))
             {     // ...Jump is pressed!
                 jumpSpeedAirMove = jumpSpeed;
                 //Particle effects
