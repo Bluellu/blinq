@@ -71,15 +71,13 @@ public class TeleportationController : MonoBehaviour {
             //state 0 is movement
             if (nState == 0)
             {
-                
                 if (Input.GetButton("Teleport") && canActivateTele)
                 {
                     //Particles.transform.position = PlayerObj.transform.position;
                     Instantiate(Particles, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
-                    
-                    ResetMandala();
-                }                    
 
+                    ResetMandala();
+                }         
             }
             //move player to telelocation
             else if (nState == 1)
