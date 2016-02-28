@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
 
         CharacterController controller = GetComponent<CharacterController>();
 
+        
         if (!controller)
             controller = GetComponent<CharacterController>();
 
@@ -63,7 +64,8 @@ public class PlayerController : MonoBehaviour
         // Apply gravity and move the player controller
         jumpSpeedAirMove -= gravity * Time.deltaTime;
         moveDirection.y = jumpSpeedAirMove;
-        controller.Move(moveDirection * Time.deltaTime);
+        if (canPlayerControl)
+            controller.Move(moveDirection * Time.deltaTime);
     }
 
 

@@ -97,13 +97,10 @@ public class TeleportationController : MonoBehaviour {
             //Move marker to saved angle location
             else if (nState == 2)
             {
-                
-
                 if (LerpingTranslate(new Vector3(vPlayerOriginEnd.x, fMandelaHeight, vPlayerOriginEnd.z), new Vector3(vSavedDestination.x, fMandelaHeight, vSavedDestination.z), gameObject))
                 {
                     mandalaMovementController.canTeleport = true;
                     RenderPlayerModel(true);
-
                     nState = 0;
                     transform.parent = MarkerObj.transform;
                     canPlayerControl = true;
