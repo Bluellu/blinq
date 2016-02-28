@@ -11,8 +11,8 @@ public class TeleportationController : MonoBehaviour {
     public bool isAttached;
 
     public GameObject Particles;
+    public Quaternion targetRotation;
 
-    
     public int nState;
     private Vector3 vPlayerOrigin, 
                     vMarkerPosition, 
@@ -28,7 +28,7 @@ public class TeleportationController : MonoBehaviour {
 
     private float fLerpingValue;
 
-
+    public float fRadius;
     private MandalaMovementController mandalaMovementController;
 
 
@@ -71,15 +71,13 @@ public class TeleportationController : MonoBehaviour {
             //state 0 is movement
             if (nState == 0)
             {
-                
                 if (Input.GetButton("Teleport") && canActivateTele)
                 {
                     //Particles.transform.position = PlayerObj.transform.position;
                     Instantiate(Particles, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
-                    
-                    ResetMandala();
-                }                    
 
+                    ResetMandala();
+                }         
             }
             //move player to telelocation
             else if (nState == 1)
@@ -90,7 +88,15 @@ public class TeleportationController : MonoBehaviour {
                     vPlayerOriginEnd = vMarkerPosition;
                     nState = 2;
                     Instantiate(Particles, transform.position, new Quaternion(0, 0, 0, 90));
-                    vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x, fTeleHeight, vMarkerDirection.z);
+
+                    //vSavedDestination =  mandalaMovementController.targetDirection;
+                    //vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x, fTeleHeight, vMarkerDirection.z);
+                    GameObject newStuff = new GameObject();
+                    newStuff.transform.position = PlayerObj.transform.position;
+                    newStuff.transform.rotation = targetRotation;
+                    newStuff.transform.Translate(Vector3.forward * fRadius, Space.Self);
+                    vSavedDestination = newStuff.transform.position;
+                    Destroy(newStuff);
 
                 }
             }

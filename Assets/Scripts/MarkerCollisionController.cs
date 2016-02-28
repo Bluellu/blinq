@@ -3,20 +3,21 @@ using System.Collections;
 
 public class MarkerCollisionController : MonoBehaviour {
 
-    private float distanceToGround, distanceToGroundInside;
+    private float distanceToGround;
 
     public Transform playerObj;
 
     private TeleportationController teleportationController;
     private MandalaMovementController manMoveController;
 
-
+    public bool onDisableTile;
 
     Vector3 vAdjustedOrigin;
     public float fYvalueRay;
     
     // Use this for initialization
     void Start () {
+        onDisableTile = false;
         teleportationController = gameObject.GetComponent<TeleportationController>();
         manMoveController = gameObject.GetComponentInParent<MandalaMovementController>();
         
@@ -45,6 +46,7 @@ public class MarkerCollisionController : MonoBehaviour {
                 manMoveController.ChangeMandalaHeight(distanceToGround);
 
                 teleportationController.ChangeMandalaHeight(distanceToGround);
+                if(!onDisableTile)
                 teleportationController.canActivateTele = true;
             }
             else {
