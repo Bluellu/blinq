@@ -14,7 +14,6 @@ public class TeleportationController : MonoBehaviour {
 
     
     public int nState;
-    private Vector3 axis = Vector3.up;
     private Vector3 vPlayerOrigin, 
                     vMarkerPosition, 
                     vMarkerDirection, 
@@ -138,8 +137,6 @@ public class TeleportationController : MonoBehaviour {
     }
 
     bool LerpingTranslate(Vector3 vStart, Vector3 vEnd, GameObject goToMove) {
-
-        //Debug.Log(fLerpingValue);
         if (fLerpingValue < 1.0f)
         {
             fLerpingValue += Time.deltaTime * 5.4f;

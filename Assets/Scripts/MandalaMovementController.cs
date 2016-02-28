@@ -34,13 +34,14 @@ public class MandalaMovementController : MonoBehaviour {
         }
         fLerpingValue = 0.0f;
         moved = false;
-        fMandelaHeight = vPlayerOrigin.y + 10;
+        //fMandelaHeight = vPlayerOrigin.y + 10;
         movingMandala = false;
 
         if (canTeleport)
         {
             MandalaObject.transform.Translate(Vector3.forward * fRadius, Space.Self);
         }
+        fMandelaHeight = transform.position.y;
 
     }
 
@@ -61,12 +62,12 @@ public class MandalaMovementController : MonoBehaviour {
 
             if (Input.GetKey("j") || Input.GetKey("joystick button 1"))
             {
-                transform.RotateAround(vPlayerOrigin, axis, fRotationSpeed);
+                transform.RotateAround(playerObject.transform.position, axis, fRotationSpeed);
 
             }
             if (Input.GetKey("l") || Input.GetKey("joystick button 2"))
             {
-                transform.RotateAround(vPlayerOrigin, axis, -fRotationSpeed);
+                transform.RotateAround(playerObject.transform.position, axis, -fRotationSpeed);
             }
 
         }

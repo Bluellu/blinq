@@ -15,10 +15,6 @@ public class AnimationController : MonoBehaviour {
 	void Update () {
         vert = Input.GetAxis("Vertical");
         horiz = Input.GetAxis("Horizontal");
-        //anim.SetFloat("turn", horiz);
-        //anim.SetFloat("walk", vert);
-
-        Debug.Log(vert +"---" + horiz);
 
         if (Input.GetButton("Jump"))
         {

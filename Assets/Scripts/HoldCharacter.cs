@@ -3,19 +3,23 @@ using System.Collections;
 
 public class HoldCharacter : MonoBehaviour {
 
+
 	void OnTriggerEnter (Collider col)
     {
-        if (col.gameObject.name == "Player")
+        if (col.gameObject.tag == "Player")
         {
-            col.transform.parent = gameObject.transform;
+            Debug.Log("entered Trigger");
+            col.transform.parent = gameObject.transform.parent;
         }
         
     }
 
     void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.name == "Player")
+        
+        if (col.gameObject.tag == "Player")
         {
+            Debug.Log("exitered Trigger");
             col.transform.parent = null;
         }
     }
