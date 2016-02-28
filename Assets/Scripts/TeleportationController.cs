@@ -15,7 +15,12 @@ public class TeleportationController : MonoBehaviour {
     
     public int nState;
     private Vector3 axis = Vector3.up;
-    private Vector3 vPlayerOrigin, vMarkerPosition, vMarkerDirection, vPlayerOriginEnd, vPlayerOriginStart;
+    private Vector3 vPlayerOrigin, 
+                    vMarkerPosition, 
+                    vMarkerDirection, 
+                    vPlayerOriginEnd, 
+                    vPlayerOriginStart,
+                    vSavedDestination;
     public float fRotationSpeed;
     
     private GameObject playerObject;
@@ -86,19 +91,25 @@ public class TeleportationController : MonoBehaviour {
                     vPlayerOriginEnd = vMarkerPosition;
                     nState = 2;
                     Instantiate(Particles, transform.position, new Quaternion(0, 0, 0, 90));
+                    vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x, fTeleHeight, vMarkerDirection.z);
 
                 }
             }
             //Move marker to saved angle location
             else if (nState == 2)
             {
-                mandalaMovementController.canTeleport = true;
-                RenderPlayerModel(true);
+                
 
-                nState = 0;
-                transform.parent = MarkerObj.transform;
-                canPlayerControl = true;
-                playerController.canPlayerControl = true;
+                if (LerpingTranslate(new Vector3(vPlayerOriginEnd.x, fMandelaHeight, vPlayerOriginEnd.z), new Vector3(vSavedDestination.x, fMandelaHeight, vSavedDestination.z), gameObject))
+                {
+                    mandalaMovementController.canTeleport = true;
+                    RenderPlayerModel(true);
+
+                    nState = 0;
+                    transform.parent = MarkerObj.transform;
+                    canPlayerControl = true;
+                    playerController.canPlayerControl = true;
+                }
 
             }
         }
