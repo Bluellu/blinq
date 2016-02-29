@@ -23,6 +23,8 @@ public class KillerMonster : MonoBehaviour   {
     private bool moving;
     private bool returning;
 
+    public Animator anim;
+
     // Use this for initialization
     void Start()  {
         moveInterval = 3;
@@ -76,6 +78,7 @@ public class KillerMonster : MonoBehaviour   {
     //Detect player kill.
     void OnTriggerEnter(Collider obj)     {
         if (obj.gameObject.name == "PlayerAttached")   {
+            anim.SetTrigger("bite"); // Bite animation.
             //Reset level
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }

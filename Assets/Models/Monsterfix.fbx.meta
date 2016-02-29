@@ -35,6 +35,7 @@ ModelImporter:
     400026: transform2
     4300000: pSphere1
     7400000: Take 001
+    7400002: Take 0010
     9500000: //RootNode
     13700000: pSphere1
   materials:
@@ -57,7 +58,119 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 104
+      lastFrame: 136
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pSphere1
+        weight: 1
+      - path: transform1
+        weight: 1
+      - path: transform1/joint1
+        weight: 1
+      - path: transform1/joint1/joint2
+        weight: 1
+      - path: transform1/joint1/joint2/joint3
+        weight: 1
+      - path: transform1/joint1/joint2/joint3/joint4
+        weight: 1
+      - path: transform1/joint1/joint2/joint3/joint4/joint5
+        weight: 1
+      - path: transform1/joint1/transform2
+        weight: 1
+      - path: transform1/joint1/transform2/joint6
+        weight: 1
+      - path: transform1/joint1/transform2/joint6/joint7
+        weight: 1
+      - path: transform1/joint1/transform2/joint6/joint7/joint9
+        weight: 1
+      - path: transform1/joint1/transform2/joint6/joint7/joint10
+        weight: 1
+      - path: transform1/joint1/transform2/joint6/joint8
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Take 0010
+      takeName: Take 001
+      firstFrame: 144
+      lastFrame: 158
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pSphere1
+        weight: 1
+      - path: transform1
+        weight: 1
+      - path: transform1/joint1
+        weight: 1
+      - path: transform1/joint1/joint2
+        weight: 1
+      - path: transform1/joint1/joint2/joint3
+        weight: 1
+      - path: transform1/joint1/joint2/joint3/joint4
+        weight: 1
+      - path: transform1/joint1/joint2/joint3/joint4/joint5
+        weight: 1
+      - path: transform1/joint1/transform2
+        weight: 1
+      - path: transform1/joint1/transform2/joint6
+        weight: 1
+      - path: transform1/joint1/transform2/joint6/joint7
+        weight: 1
+      - path: transform1/joint1/transform2/joint6/joint7/joint9
+        weight: 1
+      - path: transform1/joint1/transform2/joint6/joint7/joint10
+        weight: 1
+      - path: transform1/joint1/transform2/joint6/joint8
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []

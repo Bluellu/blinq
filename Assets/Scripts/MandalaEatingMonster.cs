@@ -17,6 +17,8 @@ public class MandalaEatingMonster : MonoBehaviour {
     private TeleportationController tc;
     public MandalaKillerMonster nearbyKiller;
 
+    //private GameObject facingSphere; //To fix the F-d up facing.
+
     private NavMeshAgent monster;
 
     private Vector3 startPos;
@@ -26,8 +28,12 @@ public class MandalaEatingMonster : MonoBehaviour {
     private bool moving;
     private bool returning;
 
+    public Animator anim;
+
     // Use this for initialization
     void Start () {
+
+        //Initialize monster parameters.
         moveInterval = 3;
         chaseTime = 8;
         chaseVelocity = 5.5f;
@@ -64,12 +70,17 @@ public class MandalaEatingMonster : MonoBehaviour {
         }
 
         //Attack cycle.
-        if (attacking) {
+        if (attacking && !returning && mandala.activeSelf) {
             //Chase
             monsterTr.LookAt(mandala.transform);
             monsterTr.Translate(chaseVelocity * Vector3.forward * Time.deltaTime);
 
             StartCoroutine(setAttackLimit());
+        }
+
+        if (returning && !attacking) {
+            //monsterTr.position = Vector3.MoveTowards(monsterTr.position, startPos, chaseVelocity * Time.deltaTime);
+            monster.destination = startPos;
         }
         
         //Monster is back to its origin spot.
@@ -80,7 +91,11 @@ public class MandalaEatingMonster : MonoBehaviour {
 
     //Attack cycle.
     void OnTriggerEnter(Collider obj)   {
-        if (obj.gameObject.name == "Mandala") {
+        // If object is the mandala and  player is not currently teleporting:
+        if ((obj.gameObject.name == "Mandala") && tc.nState==0) {
+
+            anim.SetTrigger("bite"); // Bite animation.
+
             //Disable teleportation and hide mandala.
             tc.canTeleport = false;
             mandala.SetActive(false);
@@ -111,8 +126,11 @@ public class MandalaEatingMonster : MonoBehaviour {
         NavMeshHit hit;
         // Set a random point as destination.
         Vector3 radomPos = (Random.insideUnitSphere * 3) + startPos;
-        NavMesh.SamplePosition(radomPos, out hit, 10, 1);
+        NavMesh.SamplePosition(radomPos, out hit, 20, 1);
+        
+        monsterTr.rotation = Quaternion.LookRotation(hit.position.normalized);
         monster.destination = hit.position;
+
 
         yield return new WaitForSeconds(moveInterval); // wait before allowing cycle to repeat.
         moving = false;        
@@ -127,6 +145,6 @@ public class MandalaEatingMonster : MonoBehaviour {
 
         //Send monster back to start point.
         returning = true;
-        monster.destination = startPos;
     }
+
 }

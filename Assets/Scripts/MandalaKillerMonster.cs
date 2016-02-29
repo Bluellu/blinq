@@ -41,7 +41,6 @@ public class MandalaKillerMonster : MonoBehaviour {
 
     // Update is called once per frame
     void Update()   {
-
         //Begins attack if player is close enough.
         if (!returning && !attacking && (Vector3.Distance(player.transform.position, monsterTr.position) < chaseProximity))  
             attacking = true;
