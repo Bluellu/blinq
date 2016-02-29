@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 95071365a0482954e91f00a6c22ebec2
+timeCreated: 1456704119
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Cube.001
+    100004: Cube.002
+    100006: Cube.003
+    100008: Cube.004
+    100010: Cube.007
+    100012: Cube.008
+    100014: Cube.009
+    100016: Cube.010
+    100018: Cube.012
+    100020: Icosphere
+    100022: Icosphere.001
+    100024: Icosphere.002
+    100026: Icosphere.003
+    100028: Icosphere.004
+    100030: Icosphere.005
+    100032: Lamp
+    100034: Plane
+    100036: //RootNode
+    400000: Camera
+    400002: Cube.001
+    400004: Cube.002
+    400006: Cube.003
+    400008: Cube.004
+    400010: Cube.007
+    400012: Cube.008
+    400014: Cube.009
+    400016: Cube.010
+    400018: Cube.012
+    400020: Icosphere
+    400022: Icosphere.001
+    400024: Icosphere.002
+    400026: Icosphere.003
+    400028: Icosphere.004
+    400030: Icosphere.005
+    400032: Lamp
+    400034: Plane
+    400036: //RootNode
+    2300000: Cube.001
+    2300002: Cube.002
+    2300004: Cube.003
+    2300006: Cube.004
+    2300008: Cube.007
+    2300010: Cube.008
+    2300012: Cube.009
+    2300014: Cube.010
+    2300016: Cube.012
+    2300018: Icosphere
+    2300020: Icosphere.001
+    2300022: Icosphere.002
+    2300024: Icosphere.003
+    2300026: Icosphere.004
+    2300028: Icosphere.005
+    2300030: Plane
+    3300000: Cube.001
+    3300002: Cube.002
+    3300004: Cube.003
+    3300006: Cube.004
+    3300008: Cube.007
+    3300010: Cube.008
+    3300012: Cube.009
+    3300014: Cube.010
+    3300016: Cube.012
+    3300018: Icosphere
+    3300020: Icosphere.001
+    3300022: Icosphere.002
+    3300024: Icosphere.003
+    3300026: Icosphere.004
+    3300028: Icosphere.005
+    3300030: Plane
+    4300000: Cube.012
+    4300002: Cube.010
+    4300004: Cube.009
+    4300006: Cube.007
+    4300008: Cube.008
+    4300010: Cube.004
+    4300012: Icosphere.005
+    4300014: Icosphere.004
+    4300016: Icosphere.003
+    4300018: Cube.003
+    4300020: Cube.002
+    4300022: Icosphere.002
+    4300024: Icosphere.001
+    4300026: Icosphere
+    4300028: Cube.001
+    4300030: Plane
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
