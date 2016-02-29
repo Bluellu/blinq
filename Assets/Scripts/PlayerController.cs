@@ -45,6 +45,11 @@ public class PlayerController : MonoBehaviour
         // Jump!
         if (controller.isGrounded)
         {
+            if (teleportationController.numTeleports == 0)
+            {
+                if(teleportationController.nState == 0)
+                    teleportationController.numTeleports = 1;
+            }
             jumpSpeedAirMove = 0;                 // a grounded character has zero vertical speed unless...
             if (Input.GetButtonDown("Jump"))
             {     // ...Jump is pressed!
@@ -95,9 +100,9 @@ public class PlayerController : MonoBehaviour
             bDisplayEnd = true;
         }
 
-        if (other.tag == "NextLevel")
+        if (other.tag == "Level3")
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("ThirdScene");
         }
 
         //if (other.tag == "MovingPlatform")
