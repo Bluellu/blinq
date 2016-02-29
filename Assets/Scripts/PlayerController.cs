@@ -88,9 +88,7 @@ public class PlayerController : MonoBehaviour
         }
 
         if (other.tag == "Floor")
-        {
-            //Need to implement restart condition if player hits bounding wall
-            //transform.position = new Vector3(-45f, 4.7f, -8f);
+        {            
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
@@ -103,13 +101,7 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Level3")
         {
             SceneManager.LoadScene("ThirdScene");
-        }
-
-        //if (other.tag == "MovingPlatform")
-        //{
-        //    Debug.Log("entered Trigger");
-        //    transform.parent = other.transform;
-        //}
+        }    
     }
 
 

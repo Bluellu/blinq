@@ -69,9 +69,7 @@ public class TeleportationController : MonoBehaviour {
     {
         if (canTeleport)
         {
-            Debug.Log(numTeleports);
-            //vPlayerOrigin = PlayerObj.transform.position;
-
+            
             //state 0 is movement
             if (nState == 0)
             {
@@ -86,8 +84,7 @@ public class TeleportationController : MonoBehaviour {
             }
             //move player to telelocation
             else if (nState == 1)
-            {
-                
+            {                
                 if (LerpingTranslate(vPlayerOriginEnd, new Vector3(vMarkerPosition.x, fTeleHeight, vMarkerPosition.z), playerObject))
                 {
                     vPlayerOriginEnd = vMarkerPosition;
