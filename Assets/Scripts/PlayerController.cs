@@ -101,7 +101,11 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Level3")
         {
             SceneManager.LoadScene("ThirdScene");
-        }    
+        }
+        if (other.tag == "Level4")
+        {
+            SceneManager.LoadScene("monsterTest");
+        }
     }
 
 
