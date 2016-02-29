@@ -52,7 +52,8 @@ public class MandalaMovementController : MonoBehaviour {
     {
         teleportationController.fRadius = fRadius;
         teleportationController.targetRotation = transform.rotation;
-
+        if(teleportationController.nState == 0)
+            AddMandalaRadius(fRadius);
         if (canTeleport)
         {
             targetDirection = new Vector3(Input.GetAxis("RightH"), 0f, -Input.GetAxis("RightV"));
@@ -98,6 +99,7 @@ public class MandalaMovementController : MonoBehaviour {
     }
     public void SubMandalaRadius(float fRadius)
     {
+
         MandalaObject.transform.Translate(Vector3.back * fRadius, Space.Self);
     }
 
