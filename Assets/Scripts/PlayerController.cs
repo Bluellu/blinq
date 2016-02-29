@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
             Transform MandalaObject = Marker.transform.GetChild(0);
             MandalaObject.transform.Translate(Vector3.forward * 8, Space.Self);
             teleportationController.canTeleport = true;
+
             mandalaMovementController.canTeleport = true;
             Destroy(other.gameObject);
         }
