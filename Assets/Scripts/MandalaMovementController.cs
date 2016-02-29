@@ -50,9 +50,8 @@ public class MandalaMovementController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //AddMandalaRadius(fRadius);
         teleportationController.fRadius = fRadius;
-        teleportationController.targetRotation = targetRotation;
+        teleportationController.targetRotation = transform.rotation;
 
         if (canTeleport)
         {
@@ -68,6 +67,7 @@ public class MandalaMovementController : MonoBehaviour {
 
             if (Input.GetKey("j") || Input.GetKey("joystick button 1"))
             {
+                Debug.Log("pressed");
                 transform.RotateAround(playerObject.transform.position, axis, fRotationSpeed);
 
             }

@@ -71,7 +71,7 @@ public class TeleportationController : MonoBehaviour {
             //state 0 is movement
             if (nState == 0)
             {
-                if (Input.GetButton("Teleport") && canActivateTele)
+                if ((Input.GetButton("Teleport") && canActivateTele )|| (Input.GetKey("e") && canActivateTele))
                 {
                     //Particles.transform.position = PlayerObj.transform.position;
                     Instantiate(Particles, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));

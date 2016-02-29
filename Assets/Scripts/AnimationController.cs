@@ -4,7 +4,8 @@ using System.Collections;
 public class AnimationController : MonoBehaviour {
 
     private Animator anim;
-    private float vert, horiz;
+	private float vert, horiz; 
+	private int jumpLength;
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
@@ -16,12 +17,19 @@ public class AnimationController : MonoBehaviour {
         vert = Input.GetAxis("Vertical");
         horiz = Input.GetAxis("Horizontal");
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
-            anim.SetBool("jump", true);
+			anim.SetBool("jump", true);
+			jumpLength = 30;
         }
-        else {
-            anim.SetBool("jump", false);
+		else if (jumpLength > 0)
+		{
+			jumpLength -= 1;
+
+			if (jumpLength == 0)
+			{
+            	anim.SetBool("jump", false);
+			}
         }
 
 
