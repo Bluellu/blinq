@@ -45,6 +45,11 @@ public class PlayerController : MonoBehaviour
         // Jump!
         if (controller.isGrounded)
         {
+            if (teleportationController.numTeleports == 0)
+            {
+                if(teleportationController.nState == 0)
+                    teleportationController.numTeleports = 1;
+            }
             jumpSpeedAirMove = 0;                 // a grounded character has zero vertical speed unless...
             if (Input.GetButtonDown("Jump"))
             {     // ...Jump is pressed!
@@ -83,9 +88,7 @@ public class PlayerController : MonoBehaviour
         }
 
         if (other.tag == "Floor")
-        {
-            //Need to implement restart condition if player hits bounding wall
-            //transform.position = new Vector3(-45f, 4.7f, -8f);
+        {            
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
@@ -95,16 +98,10 @@ public class PlayerController : MonoBehaviour
             bDisplayEnd = true;
         }
 
-        if (other.tag == "NextLevel")
+        if (other.tag == "Level3")
         {
-            SceneManager.LoadScene(1);
-        }
-
-        //if (other.tag == "MovingPlatform")
-        //{
-        //    Debug.Log("entered Trigger");
-        //    transform.parent = other.transform;
-        //}
+            SceneManager.LoadScene("ThirdScene");
+        }    
     }
 
 

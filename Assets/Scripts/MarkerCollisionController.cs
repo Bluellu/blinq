@@ -41,7 +41,7 @@ public class MarkerCollisionController : MonoBehaviour {
         if (Physics.Raycast(vAdjustedOrigin, Vector3.down, out hit_below, Mathf.Infinity, layerMask))
         {
             if (hit_below.collider.tag == "LevelModel")
-            {
+            {                
                 distanceToGround = hit_below.point.y;
                 manMoveController.ChangeMandalaHeight(distanceToGround);
 
@@ -52,7 +52,7 @@ public class MarkerCollisionController : MonoBehaviour {
             else {
                 manMoveController.ChangeMandalaHeight(playerObj.position.y);
                 teleportationController.ChangeMandalaHeight(playerObj.position.y);
-                teleportationController.canActivateTele = false;
+                //teleportationController.canActivateTele = false;
             }
             
         }

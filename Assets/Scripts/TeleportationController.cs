@@ -31,10 +31,13 @@ public class TeleportationController : MonoBehaviour {
     public float fRadius;
     private MandalaMovementController mandalaMovementController;
 
+    public int numTeleports;
+
 
 
     // Use this for initialization
     void Start () {
+        numTeleports = 1;
         playerObject = GameObject.FindGameObjectWithTag("Player");
         playerController = playerObject.GetComponent<PlayerController>();
         canPlayerControl = true;
@@ -66,13 +69,13 @@ public class TeleportationController : MonoBehaviour {
     {
         if (canTeleport)
         {
-            //vPlayerOrigin = PlayerObj.transform.position;
-
+            
             //state 0 is movement
             if (nState == 0)
             {
-                if ((Input.GetButton("Teleport") && canActivateTele )|| (Input.GetKey("e") && canActivateTele))
+                if ((Input.GetButton("Teleport") && canActivateTele && numTeleports > 0) || (Input.GetKey("e") && canActivateTele && numTeleports > 0))
                 {
+                    numTeleports -= 1;
                     //Particles.transform.position = PlayerObj.transform.position;
                     Instantiate(Particles, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
 
@@ -81,16 +84,13 @@ public class TeleportationController : MonoBehaviour {
             }
             //move player to telelocation
             else if (nState == 1)
-            {
-                
+            {                
                 if (LerpingTranslate(vPlayerOriginEnd, new Vector3(vMarkerPosition.x, fTeleHeight, vMarkerPosition.z), playerObject))
                 {
                     vPlayerOriginEnd = vMarkerPosition;
                     nState = 2;
                     Instantiate(Particles, transform.position, new Quaternion(0, 0, 0, 90));
-
-                    //vSavedDestination =  mandalaMovementController.targetDirection;
-                    //vSavedDestination = vPlayerOriginStart + new Vector3(vMarkerDirection.x, fTeleHeight, vMarkerDirection.z);
+                    
                     GameObject newStuff = new GameObject();
                     newStuff.transform.position = PlayerObj.transform.position;
                     newStuff.transform.rotation = targetRotation;
@@ -108,6 +108,7 @@ public class TeleportationController : MonoBehaviour {
                     mandalaMovementController.canTeleport = true;
                     RenderPlayerModel(true);
                     nState = 0;
+                    numTeleports = 0;
                     transform.parent = MarkerObj.transform;
                     canPlayerControl = true;
                     playerController.canPlayerControl = true;
