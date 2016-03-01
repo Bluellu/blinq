@@ -3,46 +3,52 @@ using System.Collections;
 
 public class MovingPlatform : MonoBehaviour
 {
-    /* Public Variables */
-    public Transform movingPlatform;
-    public Transform start;
-    public Transform end;
-    public Vector3 newPosition;
-    public float smooth;
-    public float resetTime;
-    /* Private Variables */
-    public string currentState;
+    public GameObject toObject;
+    private Vector3 origPoint;
+    float distance;
+    public float fSpeed;
+    bool reached = false;
 
-    // Use this for initialization
-    void Start()
+    public void Start()
     {
-        ChangeTarget();
+        origPoint = transform.position;
+
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    public void FixedUpdate()
     {
-        movingPlatform.position = Vector3.Lerp(movingPlatform.position, newPosition, smooth * Time.deltaTime);
+
+        if (!reached)
+        {
+            move(transform.position, toObject.transform.position);
+        }
+        else
+        {
+            distance = Vector3.Distance(transform.position, origPoint);
+            if (distance > .1)
+            {
+                move(transform.position, origPoint);
+            }
+            else
+            {
+                reached = false;
+            }
+        }
     }
 
-    void ChangeTarget()
+    void move(Vector3 pos, Vector3 towards)
     {
-        if (currentState == "Moving to start")
+        Vector3 direction = (towards - pos).normalized;
+        transform.Translate(direction * Time.deltaTime * fSpeed);
+        float distanceleft = Vector3.Distance(transform.position, toObject.transform.position);
+
+        
+        if (distanceleft <= 1)
         {
-            currentState = "Moving to end";
-            newPosition = end.position;
-        }
-        else if (currentState == "Moving to end")
-        {
-            currentState = "Moving to start";
-            newPosition = start.position;
-        }
-        else if (currentState == "")
-        {
-            currentState = "Moving to end";
-            newPosition = end.position;
+            reached = true;
         }
 
-        Invoke("ChangeTarget", resetTime);
     }
+
+
 }

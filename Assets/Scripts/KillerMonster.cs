@@ -2,10 +2,17 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class KillerMonster : MonoBehaviour
-{
+/* Monster which chases and kills the player (restarting the current level). */
+public class KillerMonster : MonoBehaviour   {
 
-    public Transform player;
+    /* Movement parameters. */
+    private float moveInterval;   //Seconds between each move.
+    private float chaseTime;      //Number of seconds monster will chase for.
+    private float chaseVelocity;  //How fast monster chases.
+    private float chaseProximity; //How close player has to be to trigger chase.
+    private float chaseLimitDist;     //Distance at which monster will quit chasing.
+
+    private Transform player;
 
     private NavMeshAgent monster;
 
@@ -16,9 +23,17 @@ public class KillerMonster : MonoBehaviour
     private bool moving;
     private bool returning;
 
+    public Animator anim;
+
     // Use this for initialization
-    void Start()
-    {
+    void Start()  {
+        moveInterval = 3;
+        chaseTime = 8;
+        chaseVelocity = 5.5f;
+        chaseProximity = 8;
+        //chaseLimitDist = 10;
+
+        player = GameObject.Find("PlayerAttached").GetComponent<Transform>();
         monster = GetComponent<NavMeshAgent>();
         monsterTr = GetComponent<Transform>();
         startPos = monsterTr.position;
@@ -30,68 +45,65 @@ public class KillerMonster : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update()   {
+
         //Maintain movement cycle.
-        if (!moving && !attacking && !returning)
-        {
+        if (!moving && !attacking && !returning)  {
             StartCoroutine(movementCycle());
         }
 
         //Begins attack if player is close enough.
-        if (!returning && (Vector3.Distance(player.position, monsterTr.position) < 8))
+        if (!returning && !attacking && (Vector3.Distance(player.position, monsterTr.position) < chaseProximity)) {
             attacking = true;
-
+            moving = false;
+        }
 
         //Attack cycle.
-        if (attacking)
-        {
+        if (attacking)   {
             //Chase
             monsterTr.LookAt(player);
-            monsterTr.Translate(5 * Vector3.forward * Time.deltaTime);
+            monsterTr.Translate(chaseVelocity * Vector3.forward * Time.deltaTime);
 
             StartCoroutine(setAttackLimit());
         }
 
-
         //Monster is back to its origin spot.
-        if (Vector3.Distance(monsterTr.position, startPos) <= 1)
+        if (returning && Vector3.Distance(monsterTr.position, startPos) <= 1) {
+            Debug.Log("back to start");
             returning = false;
+        }
     }
 
 
-    void OnTriggerEnter(Collider obj)
-    {
-        if (obj.gameObject.name == "Player")
-        {
+    //Detect player kill.
+    void OnTriggerEnter(Collider obj)     {
+        if (obj.gameObject.name == "PlayerAttached")   {
+            anim.SetTrigger("bite"); // Bite animation.
             //Reset level
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
 
-
     /* Monster's movement cycle. Based on a random pattern of movement. */
-    IEnumerator movementCycle()
-    {
+    IEnumerator movementCycle()   {
         moving = true;
 
         NavMeshHit hit;
         // Set a random point as destination.
-        Vector3 radomPos = (Random.insideUnitSphere * 3) + startPos;
-        NavMesh.SamplePosition(radomPos, out hit, 20, 1);
+        Vector3 randomPos = (Random.insideUnitSphere * 3) + startPos;
+        NavMesh.SamplePosition(randomPos, out hit, 10, 1);
         monster.destination = hit.position;
 
-        yield return new WaitForSeconds(3); // wait before allowing cycle to repeat.
+        yield return new WaitForSeconds(moveInterval); // wait before allowing cycle to repeat.
         moving = false;
-
     }
 
+
     /* Takes monster back to starting point after some time. */
-    IEnumerator setAttackLimit()
-    {
+    IEnumerator setAttackLimit()    {
         //Stop chasing after a time limit.
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(chaseTime);
         attacking = false;
 
         //Send monster back to start point.
