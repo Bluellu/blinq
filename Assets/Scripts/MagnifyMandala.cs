@@ -5,14 +5,14 @@ public class MagnifyMandala : MonoBehaviour {
 
     public float MagnificationAmount;
     private MandalaMovementController MMC;
-    private TeleportationController TC;
-    private GameObject MandalaObject, Mandala;
+    //private TeleportationController TC;
+    private GameObject MandalaObject;
     void Start()
     {
         MandalaObject = GameObject.FindGameObjectWithTag("MandalaMarker");
-        Mandala = GameObject.FindGameObjectWithTag("Mandala");
+        //Mandala = GameObject.FindGameObjectWithTag("Mandala");
         MMC = MandalaObject.GetComponent<MandalaMovementController>();
-        TC = Mandala.GetComponent<TeleportationController>();
+        //TC = Mandala.GetComponent<TeleportationController>();
 
     }
 	void OnTriggerEnter (Collider col) {

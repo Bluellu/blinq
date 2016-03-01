@@ -16,7 +16,6 @@ public class TeleportationController : MonoBehaviour {
     public int nState;
     private Vector3 vPlayerOrigin, 
                     vMarkerPosition, 
-                    vMarkerDirection, 
                     vPlayerOriginEnd,                     
                     vSavedDestination;
     public float fRotationSpeed;
@@ -129,7 +128,6 @@ public class TeleportationController : MonoBehaviour {
         transform.parent = null;
         canPlayerControl = false;
         playerController.canPlayerControl = false;
-        vMarkerDirection = transform.position - playerObject.transform.position;
         RenderPlayerModel(false);
         vMarkerPosition = transform.position;
         vPlayerOriginEnd = PlayerObj.transform.position;

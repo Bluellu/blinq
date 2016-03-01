@@ -12,7 +12,7 @@ public class MandalaMovementController : MonoBehaviour {
     public float fRotationSpeed;
 
     private GameObject playerObject, Mandala;
-    private PlayerController playerController;
+    //private PlayerController playerController;
     private TeleportationController teleportationController;
     public float fTeleHeight, fMandelaHeight, fLerpingValue;
 
@@ -25,7 +25,7 @@ public class MandalaMovementController : MonoBehaviour {
     void Start () {
         playerObject = GameObject.FindGameObjectWithTag("Player");
         Mandala = GameObject.FindGameObjectWithTag("Mandala");
-        playerController = playerObject.GetComponent<PlayerController>();
+        //playerController = playerObject.GetComponent<PlayerController>();
         teleportationController = Mandala.GetComponent<TeleportationController>();
 
         canTeleport = false;
