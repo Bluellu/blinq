@@ -3,34 +3,47 @@ using System.Collections;
 
 public class FallingPlatform : MonoBehaviour {
     private Transform platform;
-    
+
+    public float fallingTime;
+    public float fallingSpeed;
+    public float destroyTime;
+
+    private bool isFalling;
+
 	// Use this for initialization
 	void Start () {
         platform = GetComponent<Transform>();
+        isFalling = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    void Update() {
+        if (isFalling) {
+            //Move platform downwards continuously.
+            transform.Translate(Vector3.down * fallingSpeed * Time.deltaTime);
+        }
+    }
+
 
     // If player touches platform, start falling routine.
     void OnTriggerEnter(Collider obj)  {
-        if (obj.gameObject.name == "Player")  {
-            Debug.Log("COLLISION");
+        if (obj.gameObject.name == "PlayerAttached")  {
             StartCoroutine(falling());    
         }
     }
 
-    /* Drop platform after a few seconds */
+
+    /* Drop platform after the delimited seconds. */
     IEnumerator falling() { 
-        yield return new WaitForSeconds(0.8f);
-        platform.position = Vector3.MoveTowards(platform.position, new Vector3(platform.position.x, platform.position.y - 20, platform.position.z), 5 * Time.deltaTime);
+        yield return new WaitForSeconds(fallingTime);
+        isFalling = true;
+
         StartCoroutine(destroyPlatform());
     }
 
+
+    /* Destroy platform after the delimited seconds. */
     IEnumerator destroyPlatform() {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(destroyTime);
         Destroy(gameObject);
     }
 }

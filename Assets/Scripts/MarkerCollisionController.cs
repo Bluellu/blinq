@@ -3,18 +3,24 @@ using System.Collections;
 
 public class MarkerCollisionController : MonoBehaviour {
 
-    private float distanceToGround, distanceToGroundInside;
+    private float distanceToGround;
 
     public Transform playerObj;
 
-    private TeleportationController teleController;
+    private TeleportationController teleportationController;
+    private MandalaMovementController manMoveController;
+
+    public bool onDisableTile;
 
     Vector3 vAdjustedOrigin;
     public float fYvalueRay;
     
     // Use this for initialization
     void Start () {
-        teleController = gameObject.GetComponent<TeleportationController>();
+        onDisableTile = false;
+        teleportationController = gameObject.GetComponent<TeleportationController>();
+        manMoveController = gameObject.GetComponentInParent<MandalaMovementController>();
+        
         distanceToGround = 0;
         fYvalueRay = 100;
         vAdjustedOrigin = new Vector3(transform.position.x, fYvalueRay, transform.position.z);
@@ -35,12 +41,18 @@ public class MarkerCollisionController : MonoBehaviour {
         if (Physics.Raycast(vAdjustedOrigin, Vector3.down, out hit_below, Mathf.Infinity, layerMask))
         {
             if (hit_below.collider.tag == "LevelModel")
-            {
+            {                
                 distanceToGround = hit_below.point.y;
-                teleController.ChangeMandalaHeight(distanceToGround);
+                manMoveController.ChangeMandalaHeight(distanceToGround);
+
+                teleportationController.ChangeMandalaHeight(distanceToGround);
+                if(!onDisableTile)
+                teleportationController.canActivateTele = true;
             }
             else {
-                teleController.ChangeMandalaHeight(playerObj.position.y);
+                manMoveController.ChangeMandalaHeight(playerObj.position.y);
+                teleportationController.ChangeMandalaHeight(playerObj.position.y);
+                //teleportationController.canActivateTele = false;
             }
             
         }
