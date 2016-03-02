@@ -18,8 +18,7 @@ public class TriggeredTileMovement : MonoBehaviour {
     }
 
     public void FixedUpdate()
-    {
-        Debug.Log(Vector3.Distance(transform.position, toObject.transform.position));
+    {    
         if(on)
             move(transform.position, toObject.transform.position);
         else
