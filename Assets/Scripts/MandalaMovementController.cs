@@ -62,10 +62,10 @@ public class MandalaMovementController : MonoBehaviour {
 
             MandalaObject.transform.position = new Vector3(MandalaObject.transform.position.x, fMandelaHeight, MandalaObject.transform.position.z);
 
-            if (Mathf.Abs(Input.GetAxis("RightH")) == 1 || Mathf.Abs(Input.GetAxis("RightV")) == 1)
+            if (Mathf.Abs(Input.GetAxis("RightH")) >= 0.4f || Mathf.Abs(Input.GetAxis("RightV")) >= 0.4f)
             {
                 targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 7);
             }
 
             if (Input.GetKey("j") || Input.GetKey("joystick button 1"))
