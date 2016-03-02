@@ -7,6 +7,7 @@ public class MovingPlatform : MonoBehaviour
     private Vector3 origPoint;
     float distance;
     public float fSpeed;
+    public bool stay;
     bool reached = false;
 
     public void Start()
@@ -24,15 +25,18 @@ public class MovingPlatform : MonoBehaviour
         }
         else
         {
-            distance = Vector3.Distance(transform.position, origPoint);
-            if (distance > .1)
+            if (!stay)
             {
-                move(transform.position, origPoint);
-            }
-            else
-            {
-                reached = false;
-            }
+                distance = Vector3.Distance(transform.position, origPoint);
+                if (distance > .1)
+                {
+                    move(transform.position, origPoint);
+                }
+                else
+                {
+                    reached = false;
+                }
+            }   
         }
     }
 
