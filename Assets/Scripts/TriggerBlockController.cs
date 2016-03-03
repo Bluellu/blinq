@@ -33,11 +33,15 @@ public class TriggerBlockController : MonoBehaviour {
         }
         else if (bMovingUp)
         {
-            TTM.on = false;
+
             if (fIncrement > 0)
             {
                 objectTotrigger.transform.Translate(Vector3.up * Time.deltaTime);
                 fIncrement -= Time.deltaTime;
+            }
+            else
+            {
+                TTM.on = false;
             }
             
                 
