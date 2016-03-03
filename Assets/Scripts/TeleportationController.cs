@@ -10,7 +10,7 @@ public class TeleportationController : MonoBehaviour {
 	public bool canTeleport, canActivateTele;
     public bool isAttached;
 
-    public GameObject Particles;
+    public GameObject Particles, Particles2;
     public Quaternion targetRotation;
 
     public int nState;
@@ -88,7 +88,8 @@ public class TeleportationController : MonoBehaviour {
                     vPlayerOriginEnd = vMarkerPosition;
                     nState = 2;
                     Instantiate(Particles, transform.position, new Quaternion(0, 0, 0, 90));
-                    
+					Instantiate(Particles2, transform.position, new Quaternion(0, 0, 0, 90));
+
                     GameObject newStuff = new GameObject();
                     newStuff.transform.position = PlayerObj.transform.position;
                     newStuff.transform.rotation = targetRotation;
