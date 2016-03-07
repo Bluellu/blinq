@@ -1,10 +1,15 @@
 fileFormatVersion: 2
 guid: 1429236094017b8469556da87939c9c8
-timeCreated: 1456519646
+timeCreated: 1457319965
 licenseType: Pro
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - PlayerObj: {instanceID: 0}
+  - MarkerObj: {instanceID: 0}
+  - Particles: {fileID: 141730, guid: e2bc5960f5ddc4a42a1d3717fa504649, type: 2}
+  - Particles2: {fileID: 197120, guid: f8c28cf9f23c0b54fbb4ef5e5426ba0e, type: 2}
+  - Particles3: {fileID: 198726, guid: 0dbdd46dc0a8e244a83fd7a0e8298fbb, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
