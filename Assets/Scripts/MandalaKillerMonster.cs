@@ -24,7 +24,7 @@ public class MandalaKillerMonster : MonoBehaviour {
     // Use this for initialization
     void Start()     {
         chaseTime = 8;
-        chaseVelocity = 5.5f;
+        chaseVelocity = 6f;
         chaseProximity = 5;
         //chaseLimitDist = 10;
 

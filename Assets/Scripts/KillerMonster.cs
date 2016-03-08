@@ -29,8 +29,8 @@ public class KillerMonster : MonoBehaviour   {
     void Start()  {
         moveInterval = 3;
         chaseTime = 8;
-        chaseVelocity = 5.5f;
-        chaseProximity = 8;
+        chaseVelocity = 7.5f;
+        chaseProximity = 12;
         //chaseLimitDist = 10;
 
         player = GameObject.Find("PlayerAttached").GetComponent<Transform>();

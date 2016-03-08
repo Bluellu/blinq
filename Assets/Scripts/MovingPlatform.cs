@@ -9,6 +9,7 @@ public class MovingPlatform : MonoBehaviour
     public float fSpeed;
     public bool stay;
     bool reached = false;
+    public bool activate;
 
     public void Start()
     {
@@ -18,25 +19,20 @@ public class MovingPlatform : MonoBehaviour
 
     public void FixedUpdate()
     {
+        if (activate) {
 
-        if (!reached)
-        {
-            move(transform.position, toObject.transform.position);
-        }
-        else
-        {
-            if (!stay)
-            {
-                distance = Vector3.Distance(transform.position, origPoint);
-                if (distance > .1)
-                {
-                    move(transform.position, origPoint);
+            if (!reached) {
+                move(transform.position, toObject.transform.position);
+            } else {
+                if (!stay) {
+                    distance = Vector3.Distance(transform.position, origPoint);
+                    if (distance > .1) {
+                        move(transform.position, origPoint);
+                    } else {
+                        reached = false;
+                    }
                 }
-                else
-                {
-                    reached = false;
-                }
-            }   
+            }
         }
     }
 

@@ -36,7 +36,7 @@ public class MandalaEatingMonster : MonoBehaviour {
         //Initialize monster parameters.
         moveInterval = 3;
         chaseTime = 8;
-        chaseVelocity = 5.5f;
+        chaseVelocity = 7.5f;
         chaseProximity = 8;
         //chaseLimitDist = 10;
         teleportDisableTime = 4;
