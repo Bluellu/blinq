@@ -76,7 +76,7 @@ public class MandalaMovementController : MonoBehaviour {
                 {
                     nMovingState = 1;
                 }
-                fMovingSpeed = 150;
+                fMovingSpeed = 500;
             }
             if (nMovingState == 1)
             {
@@ -110,12 +110,12 @@ public class MandalaMovementController : MonoBehaviour {
             if (Input.GetKey("j") || Input.GetKey("joystick button 1"))
             {
                 Debug.Log("pressed");
-                transform.RotateAround(playerObject.transform.position, axis, fRotationSpeed);
+                transform.RotateAround(playerObject.transform.position, axis, 2);
 
             }
             if (Input.GetKey("l") || Input.GetKey("joystick button 2"))
             {
-                transform.RotateAround(playerObject.transform.position, axis, -fRotationSpeed);
+                transform.RotateAround(playerObject.transform.position, axis, -2);
             }
 
         }
