@@ -68,6 +68,9 @@ public class MandalaMovementController : MonoBehaviour {
 
             if (targetDirection.magnitude > 0.9f)
                 targetRotation = Quaternion.LookRotation(new Vector3(Input.GetAxis("RightH"), 0f, -Input.GetAxis("RightV")));
+            else
+                nMovingState = 1;
+
             MandalaObject.transform.position = new Vector3(MandalaObject.transform.position.x, fMandelaHeight, MandalaObject.transform.position.z);
 
             if(nMovingState == 0)
