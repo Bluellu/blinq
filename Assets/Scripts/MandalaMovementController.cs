@@ -90,25 +90,10 @@ public class MandalaMovementController : MonoBehaviour {
                 fMovingSpeed = 150;
             }
             
-
-            Debug.Log(fMovingSpeed);
-
-
             if (targetDirection.magnitude > 0.9f)
                 {
-
-                    //targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
-                    
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * fMovingSpeed);
-
-                }
-
-            
-            
-
-
-            //if (Mathf.Abs(Input.GetAxis("RightH")) >= 0.9f || Mathf.Abs(Input.GetAxis("RightV")) >= 0.9f)
-            
+                }         
 
             if (Input.GetKey("j") || Input.GetKey("joystick button 1"))
             {
