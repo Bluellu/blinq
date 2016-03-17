@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public GameObject Marker;
     public float speed = 8.0F;
     public float jumpSpeed = 8.0F;
+    public float jumpHeightIncrease = 1.5F;
     public float gravity = 15.0F;
     public float rotateSpeed = 3.0F;
     public float jumpSpeedAirMove;
@@ -68,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
         // Apply gravity and move the player controller
         jumpSpeedAirMove -= gravity * Time.deltaTime;
-        moveDirection.y = jumpSpeedAirMove;
+        moveDirection.y = jumpSpeedAirMove * jumpHeightIncrease;
         if (canPlayerControl)
             controller.Move(moveDirection * Time.deltaTime);
     }

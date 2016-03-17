@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
   disables teleportation.*/
 public class MandalaKillerMonster : MonoBehaviour {
 
+    private GameObject mandala;
+    private TeleportationController tc; 
+
     /* Movement parameters. */
     private float chaseTime;      //Number of seconds monster will chase for.
     private float chaseVelocity;  //How fast monster chases.
@@ -18,6 +21,7 @@ public class MandalaKillerMonster : MonoBehaviour {
     private Vector3 startPos;
     private Transform monsterTr;
 
+
     public bool attacking; //Public for access by the mandala-eating partner.
     private bool returning;
 
@@ -28,7 +32,13 @@ public class MandalaKillerMonster : MonoBehaviour {
         chaseProximity = 5;
         //chaseLimitDist = 10;
 
-        player = GameObject.Find("PlayerAttached");
+        //Get Mandala information.
+        mandala = GameObject.Find("Mandala");
+        if (mandala != null) {
+            tc = mandala.GetComponent<TeleportationController>();
+        }
+
+        player = GameObject.FindWithTag("Player");
 
         monster = GetComponent<NavMeshAgent>();
         monsterTr = GetComponent<Transform>();
@@ -62,7 +72,7 @@ public class MandalaKillerMonster : MonoBehaviour {
 
 
     void OnTriggerEnter(Collider obj)    {
-        if (obj.gameObject.name == "PlayerAttached") {
+        if ((obj.gameObject.name == "PlayerAttached") && (tc.nState == 0)) {
             //Reset level
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }

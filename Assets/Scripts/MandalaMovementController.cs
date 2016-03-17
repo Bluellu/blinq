@@ -21,6 +21,9 @@ public class MandalaMovementController : MonoBehaviour {
 
     public float fRadius;
 
+    private bool bReached;
+    private float nMovingState, fMovingSpeed;
+
     // Use this for initialization
     void Start () {
         playerObject = GameObject.FindGameObjectWithTag("Player");
@@ -44,6 +47,9 @@ public class MandalaMovementController : MonoBehaviour {
            
         }
         fMandelaHeight = transform.position.y;
+        nMovingState = 0;
+        fMovingSpeed = 400f;
+        bReached = false;
 
     }
 
@@ -60,23 +66,44 @@ public class MandalaMovementController : MonoBehaviour {
         {
             targetDirection = new Vector3(Input.GetAxis("RightH"), 0f, -Input.GetAxis("RightV"));
 
+            if (targetDirection.magnitude > 0.9f)
+                targetRotation = Quaternion.LookRotation(new Vector3(Input.GetAxis("RightH"), 0f, -Input.GetAxis("RightV")));
+            else
+                nMovingState = 1;
+
             MandalaObject.transform.position = new Vector3(MandalaObject.transform.position.x, fMandelaHeight, MandalaObject.transform.position.z);
 
-            if (Mathf.Abs(Input.GetAxis("RightH")) >= 0.4f || Mathf.Abs(Input.GetAxis("RightV")) >= 0.4f)
+            if(nMovingState == 0)
             {
-                targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 7);
+                if ((Quaternion.Angle(transform.rotation, targetRotation) < 2))
+                {
+                    nMovingState = 1;
+                }
+                fMovingSpeed = 500;
             }
+            if (nMovingState == 1)
+            {
+                if (Quaternion.Angle(transform.rotation, targetRotation) > 150)
+                {
+                    nMovingState = 0;
+                }
+                fMovingSpeed = 150;
+            }
+            
+            if (targetDirection.magnitude > 0.9f)
+                {
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * fMovingSpeed);
+                }         
 
             if (Input.GetKey("j") || Input.GetKey("joystick button 1"))
             {
                 Debug.Log("pressed");
-                transform.RotateAround(playerObject.transform.position, axis, fRotationSpeed);
+                transform.RotateAround(playerObject.transform.position, axis, 2);
 
             }
             if (Input.GetKey("l") || Input.GetKey("joystick button 2"))
             {
-                transform.RotateAround(playerObject.transform.position, axis, -fRotationSpeed);
+                transform.RotateAround(playerObject.transform.position, axis, -2);
             }
 
         }
