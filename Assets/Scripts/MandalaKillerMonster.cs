@@ -72,7 +72,7 @@ public class MandalaKillerMonster : MonoBehaviour {
 
 
     void OnTriggerEnter(Collider obj)    {
-        if ((obj.gameObject.name == "PlayerAttached") && (tc.nState == 0)) {
+        if ((obj.gameObject.tag == "Player") && (tc.nState == 0)) {
             //Reset level
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
