@@ -100,9 +100,13 @@ public class PlayerController : MonoBehaviour
             bDisplayEnd = true;
         }
 
+        if (other.tag == "Level2") {
+            SceneManager.LoadScene("LongScene");
+        }
+
         if (other.tag == "Level3")
         {
-            SceneManager.LoadScene("ThirdScene");
+            SceneManager.LoadScene("LongScene");
         }
         if (other.tag == "Level4")
         {
