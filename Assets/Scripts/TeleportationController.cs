@@ -14,8 +14,12 @@ public class TeleportationController : MonoBehaviour {
     public Quaternion targetRotation;
 
     public int nState;
-    private Vector3 vPlayerOrigin, 
-                    vMarkerPosition, 
+
+    public bool onRelocationTile;
+
+    public Vector3 vRelocationTilePos;
+    private Vector3 vPlayerOrigin,
+                    vMarkerPosition,
                     vPlayerOriginEnd,                     
                     vSavedDestination;
     public float fRotationSpeed;
@@ -40,7 +44,7 @@ public class TeleportationController : MonoBehaviour {
         playerController = playerObject.GetComponent<PlayerController>();
         canPlayerControl = true;
         fTeleHeight = 1.0f;
-
+        onRelocationTile = false;
         vPlayerOrigin = PlayerObj.transform.position;
         fMandelaHeight = vPlayerOrigin.y + 10;
 
@@ -130,7 +134,14 @@ public class TeleportationController : MonoBehaviour {
         canPlayerControl = false;
         playerController.canPlayerControl = false;
         RenderPlayerModel(false);
-        vMarkerPosition = transform.position;
+        if(onRelocationTile)
+            {
+            vMarkerPosition = vRelocationTilePos;
+            }
+        else {
+            vMarkerPosition = transform.position;
+        }
+        
         vPlayerOriginEnd = PlayerObj.transform.position;
         
         nState = 1;
