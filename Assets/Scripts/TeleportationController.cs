@@ -103,8 +103,12 @@ public class TeleportationController : MonoBehaviour {
             }
             //move player to telelocation
             else if (nState == 1)
-            {                
-                if (LerpingTranslate(vPlayerOriginEnd, new Vector3(vMarkerPosition.x, fTeleHeight, vMarkerPosition.z), playerObject))
+            {
+                Vector3 vToVector = new Vector3(vMarkerPosition.x, fTeleHeight, vMarkerPosition.z);
+                if (onRelocationTile)
+                    vToVector = new Vector3(vMarkerPosition.x, vMarkerPosition.y, vMarkerPosition.z);
+
+                if (LerpingTranslate(vPlayerOriginEnd, vToVector, playerObject))
                 {
                     vPlayerOriginEnd = vMarkerPosition;
                     nState = 2;
