@@ -44,15 +44,15 @@ public class MarkerCollisionController : MonoBehaviour {
             {                
                 distanceToGround = hit_below.point.y;
                 manMoveController.ChangeMandalaHeight(distanceToGround);
-
+                teleportationController.MandalaInAir = false;
                 teleportationController.ChangeMandalaHeight(distanceToGround);
                 if(!onDisableTile)
-                teleportationController.canActivateTele = true;
+                    teleportationController.canActivateTele = true;
             }
             else {
                 manMoveController.ChangeMandalaHeight(playerObj.position.y);
                 teleportationController.ChangeMandalaHeight(playerObj.position.y);
-                //teleportationController.canActivateTele = false;
+                teleportationController.MandalaInAir = true;
             }
             
         }

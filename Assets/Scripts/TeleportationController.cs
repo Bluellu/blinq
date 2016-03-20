@@ -33,13 +33,14 @@ public class TeleportationController : MonoBehaviour {
     public float fRadius;
     private MandalaMovementController mandalaMovementController;
 
-    public int numTeleports;
+    public bool MandalaInAir;
+    private bool InAir;
 
 
 
     // Use this for initialization
     void Start () {
-        numTeleports = 1;
+        InAir = false;
         playerObject = GameObject.FindGameObjectWithTag("Player");
         playerController = playerObject.GetComponent<PlayerController>();
         canPlayerControl = true;
@@ -75,10 +76,8 @@ public class TeleportationController : MonoBehaviour {
             //state 0 is movement
             if (nState == 0)
             {
-                if ((Input.GetButton("Teleport") && canActivateTele && numTeleports > 0) || (Input.GetKey("e") && canActivateTele && numTeleports > 0))
-                {
-                    numTeleports -= 1;
-                    //Particles.transform.position = PlayerObj.transform.position;
+                if ((Input.GetButton("Teleport") && canActivateTele && !InAir) || (Input.GetKey("e") && canActivateTele && !InAir))
+                {                    
                     Instantiate(Particles, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
 					Instantiate(Particles3, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
                     ResetMandala();
@@ -110,11 +109,12 @@ public class TeleportationController : MonoBehaviour {
                 {
                     mandalaMovementController.canTeleport = true;
                     RenderPlayerModel(true);
-                    nState = 0;
-                    numTeleports = 0;
+                    nState = 0;                    
                     transform.parent = MarkerObj.transform;
                     canPlayerControl = true;
                     playerController.canPlayerControl = true;
+                    if (MandalaInAir)
+                        InAir = true;
                 }
 
             }
