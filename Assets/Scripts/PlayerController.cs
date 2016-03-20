@@ -45,8 +45,7 @@ public class PlayerController : MonoBehaviour
 
         // Jump!
         if (controller.isGrounded)
-        {
-
+        {            
             jumpSpeedAirMove = 0;                 // a grounded character has zero vertical speed unless...
             if (Input.GetButtonDown("Jump"))
             {     
@@ -93,7 +92,10 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0;
             bDisplayEnd = true;
         }
-
+        if (other.tag == "Level1")
+        {
+            SceneManager.LoadScene("Level1");
+        }
         if (other.tag == "Level2") {
             SceneManager.LoadScene("LongScene");
         }
