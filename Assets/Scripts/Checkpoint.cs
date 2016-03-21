@@ -12,7 +12,7 @@ public class Checkpoint : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void OnTriggerEnter (Collider obj) {
+	void OnTriggerStay (Collider obj) {
         if (obj.gameObject.tag == "Player") {
             player.transform.position = spawnPoint.position;
         }
