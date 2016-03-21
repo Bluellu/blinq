@@ -11,7 +11,7 @@ public class MarkerCollisionController : MonoBehaviour {
     private MandalaMovementController manMoveController;
 
     public bool onDisableTile;
-
+    public bool InAir;
     Vector3 vAdjustedOrigin;
     public float fYvalueRay;
     
@@ -46,10 +46,12 @@ public class MarkerCollisionController : MonoBehaviour {
                 manMoveController.ChangeMandalaHeight(distanceToGround);
                 teleportationController.MandalaInAir = false;
                 teleportationController.ChangeMandalaHeight(distanceToGround);
-                if(!onDisableTile)
+                Debug.Log("OnGround");
+                if (!onDisableTile)
                     teleportationController.canActivateTele = true;
             }
             else {
+                Debug.Log("InAir");
                 manMoveController.ChangeMandalaHeight(playerObj.position.y);
                 teleportationController.ChangeMandalaHeight(playerObj.position.y);
                 teleportationController.MandalaInAir = true;

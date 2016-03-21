@@ -76,22 +76,24 @@ public class TeleportationController : MonoBehaviour {
             //state 0 is movement
             if (nState == 0)
             {
+                //Debug.Log(MandalaInAir);
                 if ((Input.GetButton("Teleport") && canActivateTele) || (Input.GetKey("e") && canActivateTele))
                 {
-
+                    int layerMask = 1 << 9;
+                    layerMask = ~layerMask;
                     RaycastHit hit_below;
-                    if (Physics.Raycast(PlayerObj.transform.position, Vector3.down, out hit_below, Mathf.Infinity))
+                    if (Physics.Raycast(PlayerObj.transform.position, Vector3.down, out hit_below, Mathf.Infinity, layerMask))
                     {
                         if (hit_below.collider.tag != "Floor")
                         {
-                            Debug.Log("hittelepor");
+                            InAir = false;
                             Instantiate(Particles, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
                             Instantiate(Particles3, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
                             ResetMandala();
                         }                    
 
                     }
-                    if(!MandalaInAir)
+                    if (!MandalaInAir)
                     {
                         Instantiate(Particles, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
                         Instantiate(Particles3, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
@@ -99,7 +101,8 @@ public class TeleportationController : MonoBehaviour {
                     }
 
 
-                }         
+
+                }
             }
             //move player to telelocation
             else if (nState == 1)
@@ -120,12 +123,15 @@ public class TeleportationController : MonoBehaviour {
                     newStuff.transform.rotation = targetRotation;
                     newStuff.transform.Translate(Vector3.forward * fRadius, Space.Self);
                     vSavedDestination = newStuff.transform.position;
+
                     if (MandalaInAir)
                         InAir = true;
-                    
-                        
+                    else
+                        InAir = false;
 
-                    
+
+
+
                     Destroy(newStuff);
 
                 }
@@ -194,12 +200,7 @@ public class TeleportationController : MonoBehaviour {
     public void ChangeMandalaHeight(float fAmount)
     {
         fMandelaHeight = fAmount;
-
     }
-
-
-
-
 
     public void RenderPlayerModel(bool bSwitch)
     {
