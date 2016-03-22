@@ -48,35 +48,29 @@ public class CameraController : MonoBehaviour
             }
             else
             {
-                range = Vector3.Distance(transform.position, EndObj.transform.position);
-                //if (range >= chaseRange)
-                //{
-
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                transform.Translate(Vector3.forward * 8 * Time.deltaTime);
 
             }
         }
         else
-        if (!LC.ReachedEnd)
         {
-            Vector3 cameraPosit = transform.position;
+            if (!LC.ReachedEnd)
+            {
+                Vector3 cameraPosit = transform.position;
 
-            float cameraX = ((PlayerChar.transform.position.x + cameraXval) * .05F) + (transform.position.x * .95F);
-            float cameraY = ((PlayerChar.transform.position.y + cameraYval) * .05F) + (transform.position.y * .95F);
-            float cameraZ = ((PlayerChar.transform.position.z + cameraZval) * .05F) + (transform.position.z * .95F);
+                float cameraX = ((PlayerChar.transform.position.x + cameraXval) * .05F) + (transform.position.x * .95F);
+                float cameraY = ((PlayerChar.transform.position.y + cameraYval) * .05F) + (transform.position.y * .95F);
+                float cameraZ = ((PlayerChar.transform.position.z + cameraZval) * .05F) + (transform.position.z * .95F);
 
-            transform.position = new Vector3(cameraX, cameraY, cameraZ);
-            cameraPosit = new Vector3(cameraX - cameraXval, cameraY - cameraYval, cameraZ - cameraZval);
-            transform.LookAt(cameraPosit);
-        }
-        else
-        {
-            range = Vector3.Distance(transform.position, EndObj.transform.position);
-            //if (range >= chaseRange)
-            //{
+                transform.position = new Vector3(cameraX, cameraY, cameraZ);
+                cameraPosit = new Vector3(cameraX - cameraXval, cameraY - cameraYval, cameraZ - cameraZval);
+                transform.LookAt(cameraPosit);
+            }
+            else
+            {
+                transform.Translate(Vector3.forward * 14 * Time.deltaTime);
 
-            transform.Translate(Vector3.forward * 8 * Time.deltaTime);
-
+            }
         }
 
 
