@@ -46,7 +46,7 @@ public class LampStagController : MonoBehaviour
     IEnumerator Example()
     {
         print(Time.time);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         SceneManager.LoadScene(SceneToTransitionTo);
 
         print(Time.time);
