@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {     
                 jumpSpeedAirMove = jumpSpeed;
+				//Instantiate(Particles, transform.position, new Quaternion(0, 0, 0, 90));
             }
         }
         else 									// Variable Jump height

@@ -89,7 +89,95 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: centre
+        weight: 1
+      - path: centre/back
+        weight: 1
+      - path: centre/back/neck_base
+        weight: 1
+      - path: centre/back/neck_base/left_sh
+        weight: 1
+      - path: centre/back/neck_base/left_sh/left_el
+        weight: 1
+      - path: centre/back/neck_base/left_sh/left_el/left_ha
+        weight: 1
+      - path: centre/back/neck_base/neck_mid
+        weight: 1
+      - path: centre/back/neck_base/neck_mid/neck_top
+        weight: 1
+      - path: centre/back/neck_base/neck_mid/neck_top/head
+        weight: 1
+      - path: centre/back/neck_base/neck_mid/neck_top/head/left_ear
+        weight: 1
+      - path: centre/back/neck_base/neck_mid/neck_top/head/right_ear
+        weight: 1
+      - path: centre/back/neck_base/right_sh
+        weight: 1
+      - path: centre/back/neck_base/right_sh/right_el
+        weight: 1
+      - path: centre/back/neck_base/right_sh/right_el/right_ha
+        weight: 1
+      - path: centre/butt
+        weight: 1
+      - path: centre/butt/left_hip
+        weight: 1
+      - path: centre/butt/left_hip/left_knee
+        weight: 1
+      - path: centre/butt/left_hip/left_knee/left_foot
+        weight: 1
+      - path: centre/butt/left_hip/left_knee/left_foot/left_hoof
+        weight: 1
+      - path: centre/butt/right_hip
+        weight: 1
+      - path: centre/butt/right_hip/right_knee
+        weight: 1
+      - path: centre/butt/right_hip/right_knee/right_foot
+        weight: 1
+      - path: centre/butt/right_hip/right_knee/right_foot/right_hoof
+        weight: 1
+      - path: centre/butt/tail
+        weight: 1
+      - path: ikHandle1
+        weight: 1
+      - path: imagePlane1
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform1
+        weight: 1
+      - path: stag:polySurface1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
