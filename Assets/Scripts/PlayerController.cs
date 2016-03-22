@@ -31,6 +31,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //Quit game.
+        if (Input.GetKey("escape"))   {
+            SceneManager.LoadScene(0);
+        }
 
         CharacterController controller = GetComponent<CharacterController>();
 
