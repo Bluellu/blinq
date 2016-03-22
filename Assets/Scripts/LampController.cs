@@ -31,6 +31,9 @@ public class LampController : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+            playerObject.GetComponent<PlayerController>().enabled = false;
+
             Instantiate(Particles, transform.position, new Quaternion(0, 0, 0, 90));
             LampMR.enabled = false;
             //StagSMR.enabled = true;
@@ -46,7 +49,7 @@ public class LampController : MonoBehaviour {
     IEnumerator Example()
     {
         print(Time.time);
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(8);
         SceneManager.LoadScene(SceneToTransitionTo);
 
         print(Time.time);

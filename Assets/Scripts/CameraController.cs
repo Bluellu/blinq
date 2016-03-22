@@ -75,7 +75,7 @@ public class CameraController : MonoBehaviour
             //if (range >= chaseRange)
             //{
 
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * 8 * Time.deltaTime);
 
         }
 
