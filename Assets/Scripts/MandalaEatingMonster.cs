@@ -28,7 +28,8 @@ public class MandalaEatingMonster : MonoBehaviour {
     private bool moving;
     private bool returning;
 
-    public Animator anim;
+	public Animator anim;
+	public GameObject Particles;
 
     // Use this for initialization
     void Start () {
@@ -95,6 +96,7 @@ public class MandalaEatingMonster : MonoBehaviour {
         if ((obj.gameObject.name == "Mandala") && tc.nState==0) {
 
             anim.SetTrigger("bite"); // Bite animation.
+			Instantiate(Particles, transform.position, new Quaternion(0, 0, 0, 90));
 
             //Disable teleportation and hide mandala.
             tc.canTeleport = false;

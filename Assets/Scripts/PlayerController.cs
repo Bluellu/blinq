@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 moveDirection = Vector3.zero;
     public bool canPlayerControl;
 	public bool isGrounded;
-	//public GameObject Particles;
+	public GameObject Particles;
 
     private bool bDisplayEnd;
 
@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {     
                 jumpSpeedAirMove = jumpSpeed;
+				Instantiate(Particles, transform.position, new Quaternion(0, 0, 0, 90));
             }
         }
         else 									// Variable Jump height
