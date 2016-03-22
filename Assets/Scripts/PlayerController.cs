@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Level1");
         }
         if (other.tag == "Level2") {
-            SceneManager.LoadScene("LongScene");
+            SceneManager.LoadScene("monsterTest");
         }
 
         if (other.tag == "Level3")
