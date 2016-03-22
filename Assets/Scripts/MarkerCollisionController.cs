@@ -46,12 +46,12 @@ public class MarkerCollisionController : MonoBehaviour {
                 manMoveController.ChangeMandalaHeight(distanceToGround);
                 teleportationController.MandalaInAir = false;
                 teleportationController.ChangeMandalaHeight(distanceToGround);
-                Debug.Log("OnGround");
+                
                 if (!onDisableTile)
                     teleportationController.canActivateTele = true;
             }
             else {
-                Debug.Log("InAir");
+                
                 manMoveController.ChangeMandalaHeight(playerObj.position.y);
                 teleportationController.ChangeMandalaHeight(playerObj.position.y);
                 teleportationController.MandalaInAir = true;
