@@ -68,7 +68,7 @@ public class CameraController : MonoBehaviour
             }
             else
             {
-                transform.Translate(Vector3.forward * 14 * Time.deltaTime);
+                transform.Translate(Vector3.forward * 18 * Time.deltaTime);
 
             }
         }

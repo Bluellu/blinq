@@ -49,7 +49,7 @@ public class LampController : MonoBehaviour {
     IEnumerator Example()
     {
         print(Time.time);
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene(SceneToTransitionTo);
 
         print(Time.time);
