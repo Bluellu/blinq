@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LampStagController : MonoBehaviour
 {
@@ -12,9 +13,16 @@ public class LampStagController : MonoBehaviour
     private SkinnedMeshRenderer StagSMR;
     private MeshRenderer LampMR;
 
+    //Background music (attached to camera).
+    public AudioSource backgroundMusic;
+    public Text thanksText;
+
     // Use this for initialization
     void Start()
     {
+        //Make thank you text invisible.
+        thanksText.color = new Color(0, 0, 1, 0.0f);
+
         StagSMR = Stag.GetComponentInChildren<SkinnedMeshRenderer>();
         StagSMR.enabled = false;
         LampMR = Lamp.GetComponent<MeshRenderer>();
@@ -49,9 +57,25 @@ public class LampStagController : MonoBehaviour
     IEnumerator Example()
     {
         print(Time.time);
-        yield return new WaitForSeconds(10);
+
+        //Stop background music and play victory song.
+        backgroundMusic.Stop();
+        GetComponent<AudioSource>().Play();
+        StartCoroutine("thankYou");
+
+        yield return new WaitForSeconds(18);
         SceneManager.LoadScene(SceneToTransitionTo);
 
         print(Time.time);
     }
+
+    //Thank you text
+    IEnumerator thankYou() {
+        yield return new WaitForSeconds(7);
+        thanksText.color = new Color(0, 0.5f, 0.5f, 1.0f);
+        yield return new WaitForSeconds(8);
+
+        thanksText.CrossFadeAlpha(0.0f, 2.5f, false);
+    }
+    //
 }
