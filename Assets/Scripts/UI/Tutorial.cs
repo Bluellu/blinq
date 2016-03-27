@@ -21,7 +21,7 @@ public class Tutorial : MonoBehaviour {
 	}
 
     IEnumerator fade()    {
-        tutorialText.color = new Color(0, 0.1f, 0.5f, 1.0f);
+        tutorialText.color = new Color(1f, 0.1f, 0.3f, 1.0f);
         yield return new WaitForSeconds(8);
         //Color.Lerp(tutorialText.color, Color.clear, 10 * Time.deltaTime);
         tutorialText.CrossFadeAlpha(0.0f, 2.5f, false);
