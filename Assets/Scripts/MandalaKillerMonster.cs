@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
   disables teleportation.*/
 public class MandalaKillerMonster : MonoBehaviour {
 
+    public Transform respawnPoint;
+    public Animator anim;
+
     private GameObject mandala;
     private TeleportationController tc; 
 
@@ -74,7 +77,7 @@ public class MandalaKillerMonster : MonoBehaviour {
     void OnTriggerEnter(Collider obj)    {
         if ((obj.gameObject.tag == "Player") && (tc.nState == 0)) {
             //Reset level
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine("killPlayer");
         }
     }
 
@@ -89,5 +92,19 @@ public class MandalaKillerMonster : MonoBehaviour {
         returning = true;
         monster.destination = startPos;
     }
+
+    IEnumerator killPlayer() {
+        anim.SetTrigger("bite");
+        yield return new WaitForSeconds(0.0f);
+        if (respawnPoint)
+        {
+            player.transform.position = respawnPoint.position;
+        }
+        else {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+
 
 }

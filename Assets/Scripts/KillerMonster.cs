@@ -26,6 +26,7 @@ public class KillerMonster : MonoBehaviour   {
     private bool returning;
 
     public Animator anim;
+    public Transform respawnPoint;
 
     // Use this for initialization
     void Start()  {
@@ -85,9 +86,8 @@ public class KillerMonster : MonoBehaviour   {
     //Detect player kill.
     void OnTriggerEnter(Collider obj)     {
         if ((obj.gameObject.tag == "Player") && (tc.nState == 0))   {
-            anim.SetTrigger("bite"); // Bite animation.
             //Reset level
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine("killPlayer");
         }
     }
 
@@ -116,6 +116,19 @@ public class KillerMonster : MonoBehaviour   {
         //Send monster back to start point.
         returning = true;
         monster.destination = startPos;
+    }
+    
+    IEnumerator killPlayer()
+    {
+        anim.SetTrigger("bite");
+        yield return new WaitForSeconds(0.0f);
+        if (respawnPoint)
+        {
+            player.transform.position = respawnPoint.position;
+        }
+        else {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
 }
