@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
     private float chaseRange;
     private float range;
 
-    private bool BeginningAnim;
+    public static bool BeginningAnim = true;
     private bool toGoal;
     private float lerpingValue;
 
@@ -27,7 +27,7 @@ public class CameraController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        BeginningAnim = true;
+        //BeginningAnim = true;
         toGoal = true;
         lerpingValue = 1.3f;
         speed = 4.0f;
