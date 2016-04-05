@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ParticleDeath : MonoBehaviour
+public class CeaseWindZone : MonoBehaviour
 {
 
 	// Use this for initialization
 	void Start ()
 	{
-	var part = GetComponent<ParticleSystem>();
-		Destroy(gameObject, part.duration+part.startLifetime);
+		var wind = GetComponent<WindZone>();
+		Destroy(wind, 0.5F);
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
 	{
-	
+
 	}
 }
 
