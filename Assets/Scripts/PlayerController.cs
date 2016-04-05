@@ -92,8 +92,10 @@ public class PlayerController : MonoBehaviour
 
         if (other.tag == "Floor")
         {
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            transform.position = startPosition;
+            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            CameraController.BeginningAnim = false;
+
         }
 
         if (other.tag == "LevelEnd")

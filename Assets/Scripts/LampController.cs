@@ -31,6 +31,7 @@ public class LampController : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            
             GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
             playerObject.GetComponent<PlayerController>().enabled = false;
 
@@ -51,7 +52,7 @@ public class LampController : MonoBehaviour {
         print(Time.time);
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene(SceneToTransitionTo);
-
+        CameraController.BeginningAnim = true;
         print(Time.time);
     }
 }
