@@ -21,12 +21,15 @@ public class PlayerController : MonoBehaviour
     private TeleportationController teleportationController;
     private MandalaMovementController mandalaMovementController;
 
+    private Vector3 startPosition;
+
 	void Start()
     {
         bDisplayEnd = false;
         canPlayerControl = true;
         teleportationController = Marker.GetComponentInChildren<TeleportationController>();
         mandalaMovementController = Marker.GetComponent<MandalaMovementController>();
+        startPosition = transform.position;
     }
 
     void Update()
@@ -88,8 +91,9 @@ public class PlayerController : MonoBehaviour
         }
 
         if (other.tag == "Floor")
-        {            
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        {
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            transform.position = startPosition;
         }
 
         if (other.tag == "LevelEnd")

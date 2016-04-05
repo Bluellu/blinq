@@ -103,22 +103,30 @@ public class CameraController : MonoBehaviour
                 }
             }
         }
-
-        {
-            transform.position = Vector3.Lerp(StartCameraPosit, EndCameraPosit, lerpingValue);
-            if (toGoal)
+        else
             {
-                lerpingValue += Time.deltaTime * 0.2f;
-            }
-            else
-                lerpingValue -= Time.deltaTime * 0.2f;
+                PlayerChar.GetComponent<PlayerController>().enabled = false;
+                transform.position = Vector3.Lerp(StartCameraPosit, EndCameraPosit, lerpingValue);
+                if (toGoal)
+                {
+                    lerpingValue += Time.deltaTime * 0.2f;
+                }
+                else
+                    lerpingValue -= Time.deltaTime * 0.2f;
 
+                Debug.Log(lerpingValue);
 
-            if (lerpingValue >= 1)
-            {
-                toGoal = false;
-            }
-        }        
+                if (lerpingValue >= 1.3)
+                {
+                    toGoal = false;
+                }
+
+                if (lerpingValue <= 0)
+                {
+                    PlayerChar.GetComponent<PlayerController>().enabled = true;
+                    BeginningAnim = false;
+                }
+            }        
     }
 
 }
