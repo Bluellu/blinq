@@ -112,9 +112,7 @@ public class CameraController : MonoBehaviour
                     lerpingValue += Time.deltaTime * 0.2f;
                 }
                 else
-                    lerpingValue -= Time.deltaTime * 0.2f;
-
-                Debug.Log(lerpingValue);
+                    lerpingValue -= Time.deltaTime * 0.2f;             
 
                 if (lerpingValue >= 1.3)
                 {
