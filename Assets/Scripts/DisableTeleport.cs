@@ -15,7 +15,7 @@ public class DisableTeleport : MonoBehaviour {
         TC = Mandala.GetComponent<TeleportationController>();
         MColC = Mandala.GetComponent<MarkerCollisionController>();
     }
-    void OnTriggerEnter (Collider col)
+    void OnTriggerStay (Collider col)
 	{
         if (col.gameObject.tag == "Player")
         {
