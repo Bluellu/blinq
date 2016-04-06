@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Quit game.
-        if (Input.GetKey("escape"))   {
+        if (Input.GetButtonDown("Escape"))   {
             SceneManager.LoadScene(0);
         }
     }
