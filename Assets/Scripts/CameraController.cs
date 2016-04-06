@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
     private float chaseRange;
     private float range;
 
-    private bool BeginningAnim;
+    public static bool BeginningAnim = true;
     private bool toGoal;
     private float lerpingValue;
 
@@ -27,9 +27,9 @@ public class CameraController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        BeginningAnim = true;
+        //BeginningAnim = true;
         toGoal = true;
-        lerpingValue = 0.0f;
+        lerpingValue = 1.3f;
         speed = 4.0f;
         chaseRange = 10.0f;
         if(lastScene)
@@ -50,11 +50,9 @@ public class CameraController : MonoBehaviour
         float EndCameraZ = (EndObj.transform.position.z + cameraZval);
 
         EndCameraPosit = new Vector3(EndCameraX, EndCameraY, EndCameraZ);
-        //EndCameraLook = new Vector3(EndCameraX - cameraXval, EndCameraY - cameraYval, EndCameraZ - cameraZval);
         transform.position = StartCameraPosit;
         transform.LookAt(StartCameraLook);
 
-        //CameraLook = Vector3.Lerp(StartCameraLook, EndCameraLook, lerpingValue);
     }
 
     // Update is called once per frame
@@ -106,19 +104,8 @@ public class CameraController : MonoBehaviour
         else
             {
                 PlayerChar.GetComponent<PlayerController>().enabled = false;
-                transform.position = Vector3.Lerp(StartCameraPosit, EndCameraPosit, lerpingValue);
-                if (toGoal)
-                {
-                    lerpingValue += Time.deltaTime * 0.2f;
-                }
-                else
-                    lerpingValue -= Time.deltaTime * 0.2f;             
-
-                if (lerpingValue >= 1.3)
-                {
-                    toGoal = false;
-                }
-
+                transform.position = Vector3.Lerp(StartCameraPosit, EndCameraPosit, Mathf.SmoothStep(0.0f, 1.0f, lerpingValue));
+                lerpingValue -= Time.deltaTime * 0.3f;
                 if (lerpingValue <= 0)
                 {
                     PlayerChar.GetComponent<PlayerController>().enabled = true;
