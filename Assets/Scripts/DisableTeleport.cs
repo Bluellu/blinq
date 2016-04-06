@@ -21,9 +21,21 @@ public class DisableTeleport : MonoBehaviour {
         {
             Debug.Log("EnteredTrigger");
             TC.canActivateTele = false;
-            MMC.canTeleport = false;
+           // MMC.canTeleport = false;
             MColC.onDisableTile = true;
-            Mandala.GetComponent<MeshRenderer>().enabled = false;
+
+            foreach (Transform child in Mandala.transform)
+            {
+                if (child.name == "mandala_gold")
+                {
+                    child.GetComponent<SpriteRenderer>().enabled = false;
+                }
+                if (child.name == "mandala_bad")
+                {
+                    child.GetComponent<SpriteRenderer>().enabled = true;
+                }
+            }
+
         }
 	}
 
@@ -33,9 +45,20 @@ public class DisableTeleport : MonoBehaviour {
         {
             Debug.Log("ExitTrigger");
             TC.canActivateTele = true;
-            MMC.canTeleport = true;
+            //MMC.canTeleport = true;
             MColC.onDisableTile = false;
-            Mandala.GetComponent<MeshRenderer>().enabled = true;
+
+            foreach (Transform child in Mandala.transform)
+            {
+                if (child.name == "mandala_gold")
+                {
+                    child.GetComponent<SpriteRenderer>().enabled = true;
+                }
+                if (child.name == "mandala_bad")
+                {
+                    child.GetComponent<SpriteRenderer>().enabled = false;
+                }
+            }
         }
 	}
 
