@@ -43,7 +43,7 @@ public class MarkerCollisionController : MonoBehaviour {
             if (hit_below.collider.tag == "LevelModel")
             {                
                 distanceToGround = hit_below.point.y;
-                manMoveController.ChangeMandalaHeight(distanceToGround);
+                manMoveController.ChangeMandalaHeight(distanceToGround+0.5f);
                 teleportationController.MandalaInAir = false;
                 teleportationController.ChangeMandalaHeight(distanceToGround);
                 
