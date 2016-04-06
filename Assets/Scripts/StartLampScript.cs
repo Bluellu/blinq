@@ -12,7 +12,7 @@ public class StartLampScript : MonoBehaviour {
         PlayerChar = GameObject.FindGameObjectWithTag("Player");
         RenderPlayerModel(false);
         gameObject.GetComponent<MeshRenderer>().enabled = true;
-        PlayerChar.GetComponent<PlayerController>().enabled = false;
+        
 
 
     }
@@ -23,6 +23,7 @@ public class StartLampScript : MonoBehaviour {
         
         if (!CameraController.BeginningAnim)
         {
+            PlayerChar.GetComponent<PlayerController>().enabled = false;
             StartCoroutine(Example());
             
         }
@@ -45,8 +46,9 @@ public class StartLampScript : MonoBehaviour {
         yield return new WaitForSeconds(1);
         Instantiate(Particles, transform.position, new Quaternion(0, 0, 0, 90));
         RenderPlayerModel(true);
-        PlayerChar.GetComponent<PlayerController>().enabled = true;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
+        PlayerChar.GetComponent<PlayerController>().enabled = true;
+        
         Destroy(gameObject);
 
     }
