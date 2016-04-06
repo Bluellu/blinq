@@ -23,12 +23,16 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 startPosition;
 
+	private Animator anim;
+
+
 	void Start()
     {
         bDisplayEnd = false;
         canPlayerControl = true;
         teleportationController = Marker.GetComponentInChildren<TeleportationController>();
-        mandalaMovementController = Marker.GetComponent<MandalaMovementController>();
+		mandalaMovementController = Marker.GetComponent<MandalaMovementController>();
+		anim = GetComponentInChildren<Animator>();
         startPosition = transform.position;
     }
 
@@ -38,42 +42,42 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey("escape"))   {
             SceneManager.LoadScene(0);
         }
+    }
 
-        CharacterController controller = GetComponent<CharacterController>();
+	void FixedUpdate() 
+	{
+		CharacterController controller = GetComponent<CharacterController>();
 
-        
-        if (!controller)
-            controller = GetComponent<CharacterController>();
+		// Setup move directions
+		moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+		moveDirection = transform.TransformDirection(moveDirection);
+		moveDirection *= speed;
 
-        // Setup move directions
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        moveDirection = transform.TransformDirection(moveDirection);
-        moveDirection *= speed;
-
-        // Jump!
-        if (controller.isGrounded)
-        {            
-            jumpSpeedAirMove = 0;                 // a grounded character has zero vertical speed unless...
-            if (Input.GetButtonDown("Jump"))
-            {     
-                jumpSpeedAirMove = jumpSpeed;
+		// Jump!
+		if (controller.isGrounded)
+		{
+			jumpSpeedAirMove = 0;                 // a grounded character has zero vertical speed unless...
+			if (Input.GetButtonDown("Jump"))
+			{     
+				anim.SetTrigger ("jump");
+				jumpSpeedAirMove = jumpSpeed;
 				//Instantiate(Particles, transform.position, new Quaternion(0, 0, 0, 90));
-            }
-        }
-        else 									// Variable Jump height
+			}
+		}
+		/*else 									// Variable Jump height
         {
             if (!Input.GetButton("Jump"))
             {     // If jump is not held, the characters jump is cut short
                 jumpSpeedAirMove = Mathf.Min(jumpSpeedAirMove, 1);
             }
-        }
+        }*/
+		// Apply gravity and move the player controller
+		jumpSpeedAirMove -= gravity * Time.deltaTime;
+		moveDirection.y = jumpSpeedAirMove * jumpHeightIncrease;
 
-        // Apply gravity and move the player controller
-        jumpSpeedAirMove -= gravity * Time.deltaTime;
-        moveDirection.y = jumpSpeedAirMove * jumpHeightIncrease;
-        if (canPlayerControl)
-            controller.Move(moveDirection * Time.deltaTime);
-    }
+		if (canPlayerControl)
+			controller.Move(moveDirection * Time.deltaTime);
+	}
 
 
     void OnTriggerEnter(Collider other)
