@@ -8,7 +8,7 @@ public class ParticleDeath : MonoBehaviour
 	void Start ()
 	{
 	var part = GetComponent<ParticleSystem>();
-	Destroy(gameObject, part.duration);
+		Destroy(gameObject, part.duration+part.startLifetime);
 	}
 	
 	// Update is called once per frame

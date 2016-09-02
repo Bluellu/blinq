@@ -10,12 +10,16 @@ public class TeleportationController : MonoBehaviour {
 	public bool canTeleport, canActivateTele;
     public bool isAttached;
 
-    public GameObject Particles;
+    public GameObject Particles, Particles2, Particles3;
     public Quaternion targetRotation;
 
     public int nState;
-    private Vector3 vPlayerOrigin, 
-                    vMarkerPosition, 
+
+    public bool onRelocationTile;
+
+    public Vector3 vRelocationTilePos;
+    private Vector3 vPlayerOrigin,
+                    vMarkerPosition,
                     vPlayerOriginEnd,                     
                     vSavedDestination;
     public float fRotationSpeed;
@@ -29,18 +33,19 @@ public class TeleportationController : MonoBehaviour {
     public float fRadius;
     private MandalaMovementController mandalaMovementController;
 
-    public int numTeleports;
+    public bool MandalaInAir;
+    public bool InAir;
 
 
 
     // Use this for initialization
     void Start () {
-        numTeleports = 1;
+        InAir = false;
         playerObject = GameObject.FindGameObjectWithTag("Player");
         playerController = playerObject.GetComponent<PlayerController>();
         canPlayerControl = true;
         fTeleHeight = 1.0f;
-
+        onRelocationTile = false;
         vPlayerOrigin = PlayerObj.transform.position;
         fMandelaHeight = vPlayerOrigin.y + 10;
 
@@ -71,29 +76,62 @@ public class TeleportationController : MonoBehaviour {
             //state 0 is movement
             if (nState == 0)
             {
-                if ((Input.GetButton("Teleport") && canActivateTele && numTeleports > 0) || (Input.GetKey("e") && canActivateTele && numTeleports > 0))
+                //Debug.Log(MandalaInAir);
+                if ((Input.GetButton("Teleport") && canActivateTele) || (Input.GetKey("e") && canActivateTele))
                 {
-                    numTeleports -= 1;
-                    //Particles.transform.position = PlayerObj.transform.position;
-                    Instantiate(Particles, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
+                    int layerMask = 1 << 9;
+                    layerMask = ~layerMask;
+                    RaycastHit hit_below;
+                    if (Physics.Raycast(PlayerObj.transform.position, Vector3.down, out hit_below, Mathf.Infinity, layerMask))
+                    {
+                        if (hit_below.collider.tag != "Floor")
+                        {
+                            InAir = false;
+                            Instantiate(Particles, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
+                            Instantiate(Particles3, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
+                            ResetMandala();
+                        }                    
 
-                    ResetMandala();
-                }         
+                    }
+                    if (!MandalaInAir)
+                    {
+                        Instantiate(Particles, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
+                        Instantiate(Particles3, PlayerObj.transform.position, new Quaternion(0, 0, 0, 90));
+                        ResetMandala();
+                    }
+
+
+
+                }
             }
             //move player to telelocation
             else if (nState == 1)
-            {                
-                if (LerpingTranslate(vPlayerOriginEnd, new Vector3(vMarkerPosition.x, fTeleHeight, vMarkerPosition.z), playerObject))
+            {
+                Vector3 vToVector = new Vector3(vMarkerPosition.x, fTeleHeight, vMarkerPosition.z);
+                if (onRelocationTile)
+                    vToVector = new Vector3(vMarkerPosition.x, vMarkerPosition.y, vMarkerPosition.z);
+
+                if (LerpingTranslate(vPlayerOriginEnd, vToVector, playerObject))
                 {
                     vPlayerOriginEnd = vMarkerPosition;
                     nState = 2;
                     Instantiate(Particles, transform.position, new Quaternion(0, 0, 0, 90));
-                    
+					Instantiate(Particles2, transform.position, new Quaternion(0, 0, 0, 90));
+
                     GameObject newStuff = new GameObject();
                     newStuff.transform.position = PlayerObj.transform.position;
                     newStuff.transform.rotation = targetRotation;
                     newStuff.transform.Translate(Vector3.forward * fRadius, Space.Self);
                     vSavedDestination = newStuff.transform.position;
+
+                    if (MandalaInAir)
+                        InAir = true;
+                    else
+                        InAir = false;
+
+
+
+
                     Destroy(newStuff);
 
                 }
@@ -105,11 +143,11 @@ public class TeleportationController : MonoBehaviour {
                 {
                     mandalaMovementController.canTeleport = true;
                     RenderPlayerModel(true);
-                    nState = 0;
-                    numTeleports = 0;
+                    nState = 0;                    
                     transform.parent = MarkerObj.transform;
                     canPlayerControl = true;
                     playerController.canPlayerControl = true;
+                    
                 }
 
             }
@@ -129,7 +167,14 @@ public class TeleportationController : MonoBehaviour {
         canPlayerControl = false;
         playerController.canPlayerControl = false;
         RenderPlayerModel(false);
-        vMarkerPosition = transform.position;
+        if(onRelocationTile)
+            {
+            vMarkerPosition = vRelocationTilePos;
+            }
+        else {
+            vMarkerPosition = transform.position;
+        }
+        
         vPlayerOriginEnd = PlayerObj.transform.position;
         
         nState = 1;
@@ -155,12 +200,7 @@ public class TeleportationController : MonoBehaviour {
     public void ChangeMandalaHeight(float fAmount)
     {
         fMandelaHeight = fAmount;
-
     }
-
-
-
-
 
     public void RenderPlayerModel(bool bSwitch)
     {

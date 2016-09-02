@@ -1,0 +1,3773 @@
+fileFormatVersion: 2
+guid: 70c122a0db0c8e741b8aec8778ba82ec
+timeCreated: 1459907511
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Cylinder
+    100004: DogArmature
+    100006: Ear.L
+    100008: Ear.L_end
+    100010: Ear.R
+    100012: Ear.R_end
+    100014: EarBase.L
+    100016: EarBase.R
+    100018: FFoot.L
+    100020: FFoot.L_end
+    100022: FFoot.R
+    100024: FFoot.R_end
+    100026: FFootIK.L
+    100028: FFootIK.L_end
+    100030: FFootIK.R
+    100032: FFootIK.R_end
+    100034: FShin.L
+    100036: FShin.R
+    100038: FThigh.L
+    100040: FThigh.L.001
+    100042: FThigh.R
+    100044: FThigh.R.001
+    100046: FThighPole.L
+    100048: FThighPole.L_end
+    100050: FThighPole.R
+    100052: FThighPole.R_end
+    100054: Head
+    100056: Hip
+    100058: Hip.002
+    100060: Hip.003
+    100062: Hip.004
+    100064: Hip.005
+    100066: Hip.006
+    100068: Hip.006_end
+    100070: Lamp
+    100072: Master
+    100074: Neck
+    100076: Plane
+    100078: RFoot.L
+    100080: RFoot.L_end
+    100082: RFoot.R
+    100084: RFoot.R_end
+    100086: RFootIK.L
+    100088: RFootIK.L_end
+    100090: RFootIK.R
+    100092: RFootIK.R_end
+    100094: Ribcage
+    100096: RLeg.L
+    100098: RLeg.R
+    100100: RLegPole.L
+    100102: RLegPole.L_end
+    100104: RLegPole.R
+    100106: RLegPole.R_end
+    100108: RShin.L
+    100110: RShin.R
+    100112: RThigh.L
+    100114: RThigh.R
+    100116: //RootNode
+    100118: Spine
+    400000: Camera
+    400002: Cylinder
+    400004: DogArmature
+    400006: Ear.L
+    400008: Ear.L_end
+    400010: Ear.R
+    400012: Ear.R_end
+    400014: EarBase.L
+    400016: EarBase.R
+    400018: FFoot.L
+    400020: FFoot.L_end
+    400022: FFoot.R
+    400024: FFoot.R_end
+    400026: FFootIK.L
+    400028: FFootIK.L_end
+    400030: FFootIK.R
+    400032: FFootIK.R_end
+    400034: FShin.L
+    400036: FShin.R
+    400038: FThigh.L
+    400040: FThigh.L.001
+    400042: FThigh.R
+    400044: FThigh.R.001
+    400046: FThighPole.L
+    400048: FThighPole.L_end
+    400050: FThighPole.R
+    400052: FThighPole.R_end
+    400054: Head
+    400056: Hip
+    400058: Hip.002
+    400060: Hip.003
+    400062: Hip.004
+    400064: Hip.005
+    400066: Hip.006
+    400068: Hip.006_end
+    400070: Lamp
+    400072: Master
+    400074: Neck
+    400076: Plane
+    400078: RFoot.L
+    400080: RFoot.L_end
+    400082: RFoot.R
+    400084: RFoot.R_end
+    400086: RFootIK.L
+    400088: RFootIK.L_end
+    400090: RFootIK.R
+    400092: RFootIK.R_end
+    400094: Ribcage
+    400096: RLeg.L
+    400098: RLeg.R
+    400100: RLegPole.L
+    400102: RLegPole.L_end
+    400104: RLegPole.R
+    400106: RLegPole.R_end
+    400108: RShin.L
+    400110: RShin.R
+    400112: RThigh.L
+    400114: RThigh.R
+    400116: //RootNode
+    400118: Spine
+    2300000: Plane
+    3300000: Plane
+    4300000: Plane
+    4300002: Cylinder
+    7400000: 'DogArmature| '
+    7400002: DogArmature|Action
+    7400004: DogArmature|Action Loop
+    7400006: DogArmature|Action.001
+    7400008: DogArmature|Action.002
+    7400010: DogArmature|Default
+    7400012: DogArmature|FINAL Idle
+    7400014: DogArmature|FINAL Jump
+    7400016: DogArmature|FINAL Port End
+    7400018: DogArmature|FINAL Port Start
+    7400020: DogArmature|FINAL Run
+    7400022: DogArmature|FINAL Walk
+    7400024: DogArmature|Port End
+    7400026: DogArmature|Port End.002
+    7400028: DogArmature|Run
+    7400030: DogArmature|Run.001
+    7400032: DogArmature|Untitled
+    7400034: DogArmature|Walk Left Turn
+    7400036: Cylinder|Action.001
+    7400038: Cylinder|Action.002
+    7400040: Cylinder|FINAL Idle
+    7400042: Cylinder|Port End.002
+    7400044: Cylinder|Run.001
+    7400046: Cylinder|Untitled
+    9500000: //RootNode
+    13700000: Cylinder
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: 'DogArmature| '
+      takeName: 'DogArmature| '
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|Action
+      takeName: DogArmature|Action
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|Action Loop
+      takeName: DogArmature|Action Loop
+      firstFrame: 0
+      lastFrame: 311
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|Action.001
+      takeName: DogArmature|Action.001
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|Action.002
+      takeName: DogArmature|Action.002
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|Default
+      takeName: DogArmature|Default
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|FINAL Idle
+      takeName: DogArmature|FINAL Idle
+      firstFrame: 0
+      lastFrame: 540
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|FINAL Jump
+      takeName: DogArmature|FINAL Jump
+      firstFrame: 0
+      lastFrame: 38
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|FINAL Port End
+      takeName: DogArmature|FINAL Port End
+      firstFrame: 0
+      lastFrame: 17
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|FINAL Port Start
+      takeName: DogArmature|FINAL Port Start
+      firstFrame: 0
+      lastFrame: 3
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|FINAL Run
+      takeName: DogArmature|FINAL Run
+      firstFrame: 0
+      lastFrame: 22
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|FINAL Walk
+      takeName: DogArmature|FINAL Walk
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|Port End
+      takeName: DogArmature|Port End
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|Port End.002
+      takeName: DogArmature|Port End.002
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|Run
+      takeName: DogArmature|Run
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|Run.001
+      takeName: DogArmature|Run.001
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|Untitled
+      takeName: DogArmature|Untitled
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DogArmature|Walk Left Turn
+      takeName: DogArmature|Walk Left Turn
+      firstFrame: 0
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cylinder|Action.001
+      takeName: Cylinder|Action.001
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cylinder|Action.002
+      takeName: Cylinder|Action.002
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cylinder|FINAL Idle
+      takeName: Cylinder|FINAL Idle
+      firstFrame: 0
+      lastFrame: 540
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cylinder|Port End.002
+      takeName: Cylinder|Port End.002
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cylinder|Run.001
+      takeName: Cylinder|Run.001
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cylinder|Untitled
+      takeName: Cylinder|Untitled
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/FThighPole.L
+        weight: 1
+      - path: DogArmature/FThighPole.L/FThighPole.L_end
+        weight: 1
+      - path: DogArmature/FThighPole.R
+        weight: 1
+      - path: DogArmature/FThighPole.R/FThighPole.R_end
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L
+        weight: 1
+      - path: DogArmature/Master/FFootIK.L/FFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R
+        weight: 1
+      - path: DogArmature/Master/FFootIK.R/FFootIK.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip.002/Hip.003/Hip.004/Hip.005/Hip.006/Hip.006_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.L/RShin.L/RLeg.L/RFoot.L/RFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh.R/RShin.R/RLeg.R/RFoot.R/RFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.L.001/FThigh.L/FShin.L/FFoot.L/FFoot.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh.R.001/FThigh.R/FShin.R/FFoot.R/FFoot.R_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.L/Ear.L/Ear.L_end
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase.R/Ear.R/Ear.R_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L
+        weight: 1
+      - path: DogArmature/Master/RFootIK.L/RFootIK.L_end
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R
+        weight: 1
+      - path: DogArmature/Master/RFootIK.R/RFootIK.R_end
+        weight: 1
+      - path: DogArmature/RLegPole.L
+        weight: 1
+      - path: DogArmature/RLegPole.L/RLegPole.L_end
+        weight: 1
+      - path: DogArmature/RLegPole.R
+        weight: 1
+      - path: DogArmature/RLegPole.R/RLegPole.R_end
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

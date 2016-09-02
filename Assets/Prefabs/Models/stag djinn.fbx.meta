@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: 63f8e6a5ae829403c9a92aed9f3266e8
+timeCreated: 1458588581
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: back
+    100002: butt
+    100004: centre
+    100006: head
+    100008: ikHandle1
+    100010: imagePlane1
+    100012: left_ear
+    100014: left_el
+    100016: left_foot
+    100018: left_ha
+    100020: left_hip
+    100022: left_hoof
+    100024: left_knee
+    100026: left_sh
+    100028: neck_base
+    100030: neck_mid
+    100032: neck_top
+    100034: pCube1
+    100036: right_ear
+    100038: right_el
+    100040: right_foot
+    100042: right_ha
+    100044: right_hip
+    100046: right_hoof
+    100048: right_knee
+    100050: right_sh
+    100052: //RootNode
+    100054: stag:polySurface1
+    100056: tail
+    100058: transform1
+    400000: back
+    400002: butt
+    400004: centre
+    400006: head
+    400008: ikHandle1
+    400010: imagePlane1
+    400012: left_ear
+    400014: left_el
+    400016: left_foot
+    400018: left_ha
+    400020: left_hip
+    400022: left_hoof
+    400024: left_knee
+    400026: left_sh
+    400028: neck_base
+    400030: neck_mid
+    400032: neck_top
+    400034: pCube1
+    400036: right_ear
+    400038: right_el
+    400040: right_foot
+    400042: right_ha
+    400044: right_hip
+    400046: right_hoof
+    400048: right_knee
+    400050: right_sh
+    400052: //RootNode
+    400054: stag:polySurface1
+    400056: tail
+    400058: transform1
+    4300000: stag:polySurface1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: stag:polySurface1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: centre
+        weight: 1
+      - path: centre/back
+        weight: 1
+      - path: centre/back/neck_base
+        weight: 1
+      - path: centre/back/neck_base/left_sh
+        weight: 1
+      - path: centre/back/neck_base/left_sh/left_el
+        weight: 1
+      - path: centre/back/neck_base/left_sh/left_el/left_ha
+        weight: 1
+      - path: centre/back/neck_base/neck_mid
+        weight: 1
+      - path: centre/back/neck_base/neck_mid/neck_top
+        weight: 1
+      - path: centre/back/neck_base/neck_mid/neck_top/head
+        weight: 1
+      - path: centre/back/neck_base/neck_mid/neck_top/head/left_ear
+        weight: 1
+      - path: centre/back/neck_base/neck_mid/neck_top/head/right_ear
+        weight: 1
+      - path: centre/back/neck_base/right_sh
+        weight: 1
+      - path: centre/back/neck_base/right_sh/right_el
+        weight: 1
+      - path: centre/back/neck_base/right_sh/right_el/right_ha
+        weight: 1
+      - path: centre/butt
+        weight: 1
+      - path: centre/butt/left_hip
+        weight: 1
+      - path: centre/butt/left_hip/left_knee
+        weight: 1
+      - path: centre/butt/left_hip/left_knee/left_foot
+        weight: 1
+      - path: centre/butt/left_hip/left_knee/left_foot/left_hoof
+        weight: 1
+      - path: centre/butt/right_hip
+        weight: 1
+      - path: centre/butt/right_hip/right_knee
+        weight: 1
+      - path: centre/butt/right_hip/right_knee/right_foot
+        weight: 1
+      - path: centre/butt/right_hip/right_knee/right_foot/right_hoof
+        weight: 1
+      - path: centre/butt/tail
+        weight: 1
+      - path: ikHandle1
+        weight: 1
+      - path: imagePlane1
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform1
+        weight: 1
+      - path: stag:polySurface1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

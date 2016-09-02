@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 /* Monster which chases and kills the player (restarting the current level). */
 public class KillerMonster : MonoBehaviour   {
+    private GameObject mandala;
+    private TeleportationController tc;
 
     /* Movement parameters. */
     private float moveInterval;   //Seconds between each move.
@@ -29,11 +31,16 @@ public class KillerMonster : MonoBehaviour   {
     void Start()  {
         moveInterval = 3;
         chaseTime = 8;
-        chaseVelocity = 5.5f;
-        chaseProximity = 8;
+        chaseVelocity = 7.5f;
+        chaseProximity = 12;
         //chaseLimitDist = 10;
 
-        player = GameObject.Find("PlayerAttached").GetComponent<Transform>();
+        mandala = GameObject.Find("Mandala");
+        if (mandala != null) {
+            tc = mandala.GetComponent<TeleportationController>();
+        }
+
+        player = GameObject.FindWithTag("Player").GetComponent<Transform>();
         monster = GetComponent<NavMeshAgent>();
         monsterTr = GetComponent<Transform>();
         startPos = monsterTr.position;
@@ -77,7 +84,7 @@ public class KillerMonster : MonoBehaviour   {
 
     //Detect player kill.
     void OnTriggerEnter(Collider obj)     {
-        if (obj.gameObject.name == "PlayerAttached")   {
+        if ((obj.gameObject.tag == "Player") && (tc.nState == 0))   {
             anim.SetTrigger("bite"); // Bite animation.
             //Reset level
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

@@ -1,0 +1,1533 @@
+fileFormatVersion: 2
+guid: 438c90e39dcc7a34aad507b51ecbfc0a
+timeCreated: 1458172028
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cylinder
+    100002: DogArmature
+    100004: Ear_L
+    100006: Ear_R
+    100008: EarBase_L
+    100010: EarBase_R
+    100012: FFoot_L
+    100014: FFoot_R
+    100016: FShin_L
+    100018: FShin_R
+    100020: FThigh_L
+    100022: FThigh_L_001
+    100024: FThigh_R
+    100026: FThigh_R_001
+    100028: Head
+    100030: Hip
+    100032: Hip_002
+    100034: Hip_003
+    100036: Hip_004
+    100038: Hip_005
+    100040: Hip_006
+    100042: Master
+    100044: Neck
+    100046: Plane
+    100048: RFoot_L
+    100050: RFoot_R
+    100052: Ribcage
+    100054: RLeg_L
+    100056: RLeg_R
+    100058: RShin_L
+    100060: RShin_R
+    100062: RThigh_L
+    100064: RThigh_R
+    100066: //RootNode
+    100068: Spine
+    400000: Cylinder
+    400002: DogArmature
+    400004: Ear_L
+    400006: Ear_R
+    400008: EarBase_L
+    400010: EarBase_R
+    400012: FFoot_L
+    400014: FFoot_R
+    400016: FShin_L
+    400018: FShin_R
+    400020: FThigh_L
+    400022: FThigh_L_001
+    400024: FThigh_R
+    400026: FThigh_R_001
+    400028: Head
+    400030: Hip
+    400032: Hip_002
+    400034: Hip_003
+    400036: Hip_004
+    400038: Hip_005
+    400040: Hip_006
+    400042: Master
+    400044: Neck
+    400046: Plane
+    400048: RFoot_L
+    400050: RFoot_R
+    400052: Ribcage
+    400054: RLeg_L
+    400056: RLeg_R
+    400058: RShin_L
+    400060: RShin_R
+    400062: RThigh_L
+    400064: RThigh_R
+    400066: //RootNode
+    400068: Spine
+    2300000: Plane
+    3300000: Plane
+    4300000: Plane
+    4300002: Cylinder
+    7400000: Default Take
+    7400002: _
+    7400004: Action
+    7400006: Action_Loop
+    7400008: Default
+    7400010: FINAL_Idle
+    7400012: FINAL_Jump
+    7400014: FINAL_Port_End
+    7400016: FINAL_Port_Start
+    7400018: FINAL_Run
+    7400020: FINAL_Walk
+    7400022: Port_End
+    7400024: Run
+    7400026: Walk_Left_Turn
+    9500000: //RootNode
+    13700000: Cylinder
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 538
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: _
+      takeName: _
+      firstFrame: -1
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Action
+      takeName: Action
+      firstFrame: 5
+      lastFrame: 6
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Action_Loop
+      takeName: Action_Loop
+      firstFrame: -9
+      lastFrame: 302
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Default
+      takeName: Default
+      firstFrame: -1
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FINAL_Idle
+      takeName: FINAL_Idle
+      firstFrame: -1
+      lastFrame: 539
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FINAL_Jump
+      takeName: FINAL_Jump
+      firstFrame: -1
+      lastFrame: 37
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FINAL_Port_End
+      takeName: FINAL_Port_End
+      firstFrame: -1
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FINAL_Port_Start
+      takeName: FINAL_Port_Start
+      firstFrame: -1
+      lastFrame: 2
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FINAL_Run
+      takeName: FINAL_Run
+      firstFrame: -1
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FINAL_Walk
+      takeName: FINAL_Walk
+      firstFrame: -1
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Port_End
+      takeName: Port_End
+      firstFrame: 2
+      lastFrame: 3
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Run
+      firstFrame: -1
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk_Left_Turn
+      takeName: Walk_Left_Turn
+      firstFrame: -9
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: DogArmature
+        weight: 1
+      - path: DogArmature/Master
+        weight: 1
+      - path: DogArmature/Master/Hip
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005
+        weight: 1
+      - path: DogArmature/Master/Hip/Hip_002/Hip_003/Hip_004/Hip_005/Hip_006
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_L/RShin_L/RLeg_L/RFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R
+        weight: 1
+      - path: DogArmature/Master/Hip/RThigh_R/RShin_R/RLeg_R/RFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_L_001/FThigh_L/FShin_L/FFoot_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/FThigh_R_001/FThigh_R/FShin_R/FFoot_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R
+        weight: 1
+      - path: DogArmature/Master/Hip/Spine/Ribcage/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

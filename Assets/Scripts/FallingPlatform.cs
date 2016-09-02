@@ -26,7 +26,7 @@ public class FallingPlatform : MonoBehaviour {
 
     // If player touches platform, start falling routine.
     void OnTriggerEnter(Collider obj)  {
-        if (obj.gameObject.name == "PlayerAttached")  {
+        if (obj.gameObject.tag == "Player")  {
             StartCoroutine(falling());    
         }
     }
